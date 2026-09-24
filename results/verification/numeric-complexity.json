@@ -1,0 +1,29 @@
+{
+  "denominator_bits": {
+    "maximum": 82,
+    "median": 1.0,
+    "q90": 35
+  },
+  "exact_rational_values": 1061190,
+  "interpretation": [
+    "Scientific comparisons use exact integers and fractions; timing and memory remain machine dependent.",
+    "Bit length, not decimal digit count, is the relevant arithmetic-size indicator."
+  ],
+  "numerator_bits": {
+    "maximum": 84,
+    "median": 1.0,
+    "q90": 31
+  },
+  "worst_denominator": {
+    "denominator_bits": 82,
+    "file": "results/campaign/S030-all-pairs.json",
+    "numerator_bits": 83,
+    "path": "capacity_bound"
+  },
+  "worst_numerator": {
+    "denominator_bits": 81,
+    "file": "results/campaign/S033-all-pairs.json",
+    "numerator_bits": 84,
+    "path": "best_star_bound"
+  }
+}

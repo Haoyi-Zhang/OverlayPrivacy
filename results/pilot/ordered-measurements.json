@@ -1,0 +1,44 @@
+[
+  {
+    "case": "partial",
+    "bound": "1028/625",
+    "dense_obligations": 648,
+    "chain_obligations": 324,
+    "cpu_seconds": 0.02944667199999995,
+    "wall_seconds": 0.02945916299995588,
+    "max_rss_kib": 94252
+  },
+  {
+    "case": "padded",
+    "bound": "1",
+    "dense_obligations": 648,
+    "chain_obligations": 324,
+    "cpu_seconds": 0.021035389000000015,
+    "wall_seconds": 0.02103643100008412,
+    "max_rss_kib": 94508
+  },
+  {
+    "case": "overflow",
+    "bound": "1264/625",
+    "dense_obligations": 648,
+    "chain_obligations": 324,
+    "cpu_seconds": 0.02419266099999995,
+    "wall_seconds": 0.024193325999931403,
+    "max_rss_kib": 94508
+  },
+  {
+    "case": "equal",
+    "bound": "1",
+    "dense_obligations": 648,
+    "chain_obligations": 324,
+    "cpu_seconds": 0.021233873000000014,
+    "wall_seconds": 0.021234843999991426,
+    "max_rss_kib": 94508
+  },
+  {
+    "case": "nonordered-initial",
+    "dense_bound": "2",
+    "adjacent_bound": "3",
+    "ordered_mode_rejected": true
+  }
+]

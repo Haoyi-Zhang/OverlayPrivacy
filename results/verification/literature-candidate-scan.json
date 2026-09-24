@@ -1,0 +1,35 @@
+{
+  "search_date": "2026-09-20",
+  "queries": [
+    "anonymous communication traffic analysis queue timing linkability",
+    "website fingerprinting complete history defense leakage",
+    "total variation coupling certificate privacy leakage",
+    "minimum spanning tree pairwise total variation capacity",
+    "ordered adjacent pair certificate monotone coupling"
+  ],
+  "candidate_count": 0,
+  "candidates": [],
+  "errors": [
+    {
+      "query": "anonymous communication traffic analysis queue timing linkability",
+      "error": "URLError(gaierror(-3, 'Temporary failure in name resolution'))"
+    },
+    {
+      "query": "website fingerprinting complete history defense leakage",
+      "error": "URLError(gaierror(-3, 'Temporary failure in name resolution'))"
+    },
+    {
+      "query": "total variation coupling certificate privacy leakage",
+      "error": "URLError(gaierror(-3, 'Temporary failure in name resolution'))"
+    },
+    {
+      "query": "minimum spanning tree pairwise total variation capacity",
+      "error": "URLError(gaierror(-3, 'Temporary failure in name resolution'))"
+    },
+    {
+      "query": "ordered adjacent pair certificate monotone coupling",
+      "error": "URLError(gaierror(-3, 'Temporary failure in name resolution'))"
+    }
+  ],
+  "warning": "Automated candidates are not cited evidence until manually screened and, when substantively used, read in full."
+}

@@ -1,0 +1,52 @@
+{
+  "imports": [
+    "__future__",
+    "fractions",
+    "itertools",
+    "json",
+    "model",
+    "oracle",
+    "pathlib",
+    "resource",
+    "sys",
+    "time",
+    "typing",
+    "unittest"
+  ],
+  "integer_field_inventory": {
+    "deeper_cases": [
+      16
+    ],
+    "deeper_policy_tables": [
+      1856
+    ],
+    "errors": [
+      0
+    ],
+    "failures": [
+      0
+    ],
+    "peak_rss_kib": [
+      93864
+    ],
+    "test_methods": [
+      2
+    ],
+    "two_slot_cases": [
+      192
+    ],
+    "two_slot_policy_tables": [
+      2976
+    ]
+  },
+  "limitations": [
+    "Algorithmic independence reduces common-code risk but is not a proof-assistant verification or an external replication.",
+    "Both paths implement the same written finite model; a shared specification error remains possible."
+  ],
+  "production_imports": [],
+  "purpose": "Triangulate the production exact oracle against a source-independent deterministic-policy enumerator and closed-form calibration suite.",
+  "reference_implementation": "tests/test_oracle_bruteforce.py",
+  "reference_source_sha256": "74b7322d8852a8b00b9f3313d5404400ea875f35f3dd0953718c8bf2555b21fe",
+  "result_record": "results/oracle-bruteforce.json",
+  "result_sha256": "03ad90477139262b5c3e3014a3d4624a49a5d6ddb4bde10e4aedf322ca0ffd39"
+}

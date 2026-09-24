@@ -1,0 +1,42 @@
+{
+  "resource_contract": {
+    "cpu_core_ceiling": 4,
+    "memory_ceiling_bytes": 4294967296,
+    "swap_used": false,
+    "single_run_cpu_ceiling_seconds": 2700,
+    "campaign_cpu_ceiling_seconds": 28800,
+    "archive_ceiling_bytes": 134217728,
+    "scientific_worker_concurrency": 1,
+    "gpu_used": false,
+    "external_compute_used": false,
+    "model_api_used_by_experiments": false
+  },
+  "measured_retained_work": {
+    "pilot_cpu_seconds_from_retained_records": 3.300374927,
+    "main_and_repetition_child_cpu_seconds": 164.697868,
+    "certificate_test_cpu_seconds": 0.822943215,
+    "calibration_test_cpu_seconds": 1.700434709,
+    "clean_reproduction_child_cpu_seconds": 194.044708,
+    "sum_of_listed_measured_cpu_seconds": 365.037346641,
+    "largest_retained_main_rss_kib": 158676,
+    "largest_clean_reproduction_rss_kib": 158676,
+    "oracle_bruteforce_test_cpu_seconds": 0.4710177899999999,
+    "clean_reproduction_execution_note": "Resumable deterministic chunks; after a parent timeout left one Q018 parent-timing field incomplete, that case was intentionally refreshed. Its deterministic scientific payload was unchanged and no scientific case was removed."
+  },
+  "conservative_unmetered_allowances_seconds": {
+    "intake_and_exploratory_design": 1800,
+    "paper_data_preparation_and_static_checks": 1800,
+    "latex_compilation_and_pdf_inspection": 1800,
+    "packaging_and_final_rechecks": 1800,
+    "interpretation": "Upper allowances, not measured scientific-child time; included to avoid presenting retained child CPU as total project effort."
+  },
+  "campaign_budget_assessment": {
+    "conservative_total_seconds": 7565.037346641,
+    "campaign_ceiling_seconds": 28800,
+    "reserve_requirement_seconds": 7200,
+    "within_ceiling_with_one_quarter_reserve": true,
+    "note": "The campaign and clean reproduction are bounded finite CPU work. Literature reading and manuscript authorship are not scientific experiment executions and are not counted as worker CPU."
+  },
+  "reproduction_boundary": "Clean-extraction reproduction by the same executor; not independent human validation.",
+  "generated_utc_date": "2026-09-19"
+}

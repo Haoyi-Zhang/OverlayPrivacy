@@ -1,0 +1,14 @@
+{
+  "checker": "src/checker.py",
+  "sha256": "6738f7868336d43df297a40e1958c2a49a2eca651a8aa71ba28e6ca38580b10e",
+  "imports": [
+    "argparse",
+    "fractions",
+    "itertools",
+    "json",
+    "pathlib",
+    "re"
+  ],
+  "forbidden_producer_imports": [],
+  "interpretation": "Static import separation is narrower than independent implementation or formal verification."
+}

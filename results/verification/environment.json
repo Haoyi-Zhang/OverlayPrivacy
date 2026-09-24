@@ -1,0 +1,19 @@
+{
+  "captured_date": "2026-09-20",
+  "cpu_model": "AMD EPYC 9V74 80-Core Processor",
+  "dependencies": "Scientific code uses the Python standard library; PDF build uses the bundled LaTeX class/style plus the installed TeX toolchain.",
+  "host_memory_total": "6090736 kB",
+  "implementation": "CPython",
+  "locale": "LC_CTYPE=C.UTF-8;LC_NUMERIC=C;LC_TIME=C;LC_COLLATE=C;LC_MONETARY=C;LC_MESSAGES=C;LC_PAPER=C;LC_NAME=C;LC_ADDRESS=C;LC_TELEPHONE=C;LC_MEASUREMENT=C;LC_IDENTIFICATION=C",
+  "machine": "x86_64",
+  "platform": "Linux-6.18.44-x86_64-with-glibc2.41",
+  "privacy": "Host name, user name, and absolute working paths are intentionally omitted.",
+  "python": "3.13.5 (main, Jul 15 2026, 20:25:40) [GCC 14.2.0]",
+  "tools": {
+    "bibtex": "FileNotFoundError(2, 'No such file or directory')",
+    "git": "git version 2.47.3",
+    "make": "GNU Make 4.4.1",
+    "pdfinfo": "pdfinfo version 25.06.0",
+    "pdflatex": "pdfTeX 3.141592653-2.6-1.40.26 (TeX Live 2025/dev/Debian)"
+  }
+}

@@ -1,0 +1,1 @@
+{"cpu_quota_cores":4,"logical_cpu_affinity":5,"cgroup_memory_limit_bytes":4294967296,"memory_at_intake_bytes":359596032,"writable_free_bytes":32029835264,"worker_limit":1,"campaign_cpu_budget_seconds":28800,"repair_reserve_fraction":"1/4","rss_cap_bytes":3758096384,"swap_policy":"no swap use; host /proc/swaps inspected","template_expanded_bytes":353286}

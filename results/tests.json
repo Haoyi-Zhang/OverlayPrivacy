@@ -1,0 +1,15 @@
+{
+  "basic_certificate_mutations": 32,
+  "channel_seed": 821407,
+  "cpu_seconds": 0.544592655,
+  "errors": 0,
+  "exhaustive_summary_matrices": 854,
+  "failures": 0,
+  "ordered_specific_negative_checks": 5,
+  "peak_rss_kib": 95268,
+  "seeded_finite_channels": 280,
+  "seeded_summary_matrices": 140,
+  "successful": true,
+  "summary_seed": 913207,
+  "test_methods": 15
+}

@@ -1,0 +1,36 @@
+[
+  {
+    "scope": "all-pairs",
+    "synthesis_cpu_seconds": 1.2613064939999998,
+    "check_cpu_seconds": 1.474589969,
+    "wall_seconds": 2.7359812929998952,
+    "max_rss_kib": 158364,
+    "certificate_bytes": 4279837,
+    "valid": true,
+    "optimality_checked": true,
+    "optimality_domain": "declared-dense-summary",
+    "capacity_bound": "2229655204063652893915905/797264967690925973192704",
+    "bellman_obligations": 144000,
+    "coupling_entries": 15960,
+    "weighted_support_visits": 380160,
+    "potential_entries": 102000,
+    "maximum_rational_bits": 82
+  },
+  {
+    "scope": "ordered-chain",
+    "synthesis_cpu_seconds": 0.15474549000000026,
+    "check_cpu_seconds": 0.2498957820000003,
+    "wall_seconds": 0.4046676520001711,
+    "max_rss_kib": 158364,
+    "certificate_bytes": 542617,
+    "valid": true,
+    "optimality_checked": true,
+    "optimality_domain": "canonical-dense-family-via-order",
+    "capacity_bound": "2229655204063652893915905/797264967690925973192704",
+    "bellman_obligations": 18000,
+    "coupling_entries": 1995,
+    "weighted_support_visits": 47520,
+    "potential_entries": 12750,
+    "maximum_rational_bits": 82
+  }
+]

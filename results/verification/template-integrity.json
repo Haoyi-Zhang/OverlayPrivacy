@@ -1,0 +1,37 @@
+{
+  "records": [
+    {
+      "name": "IEEEtran.cls",
+      "delivered": [
+        "paper/IEEEtran.cls"
+      ],
+      "template_candidates": [
+        "IEEEtran.cls"
+      ],
+      "delivered_sha256": [
+        "c972aca108fda004c3514d63658e02816da2e54d9a1451e870b9bd970e003f55"
+      ],
+      "template_sha256": [
+        "c972aca108fda004c3514d63658e02816da2e54d9a1451e870b9bd970e003f55"
+      ],
+      "exact_match": true
+    },
+    {
+      "name": "IEEEtranS.bst",
+      "delivered": [
+        "paper/IEEEtranS.bst"
+      ],
+      "template_candidates": [
+        "IEEEtranS.bst"
+      ],
+      "delivered_sha256": [
+        "fca86cd4f041a5c5326295fa04dcce56eaf2c8a4bf3219549401235502f24c25"
+      ],
+      "template_sha256": [
+        "fca86cd4f041a5c5326295fa04dcce56eaf2c8a4bf3219549401235502f24c25"
+      ],
+      "exact_match": true
+    }
+  ],
+  "all_exact": true
+}

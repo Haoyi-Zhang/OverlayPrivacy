@@ -1,0 +1,20 @@
+{
+  "models": 73,
+  "dense": 73,
+  "ordered": 71,
+  "oracle_models": 40,
+  "repetition_runs": 30,
+  "all_ordered_bounds_equal": true,
+  "all_oracles_below_bounds": true,
+  "maximum_oracle_nodes": 80,
+  "maximum_potential_bits": 82,
+  "max_rss_kib": 158676,
+  "retained_process_cpu_seconds": 164.697868,
+  "process_cpu_fallback_records": [],
+  "exact_equals_certificate": 10,
+  "median_absolute_gap": 0.07919999999999999,
+  "maximum_absolute_gap": 0.7872,
+  "maximum_gap_case": "Q010",
+  "maximum_relative_bound_ratio": 1.396774193548387,
+  "note": "Exact finite validation, not deployment evidence. RSS is unadjusted process high-water mark including startup. CPU excludes discarded intake/pilot attempts; resource accounting documents allowance separately."
+}

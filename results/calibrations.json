@@ -1,0 +1,10 @@
+{
+  "successful": true,
+  "one_slot_cases": 600,
+  "continuity_cases": 108,
+  "continuity_seed": 229501,
+  "eligible_retained_rate_cases": 70,
+  "cpu_seconds": 1.261930113,
+  "peak_rss_kib": 93484,
+  "status": "Post-campaign validation of proved analytic calibrations; not a workload extension."
+}

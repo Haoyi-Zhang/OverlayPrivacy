@@ -1,0 +1,13 @@
+{
+  "adjacent_or_theory": 5,
+  "bibliography_entries": 69,
+  "canonical_urls": 69,
+  "full_text_calibration": 22,
+  "influential": 5,
+  "metadata_only": 47,
+  "project_paper_crosscheck_available": true,
+  "same_venue_tdsc": 12,
+  "schema": "reference-audit-result-v1",
+  "scope": "structural and retained-provenance consistency; not a live-Web validator or proof that metadata-only papers were read in full",
+  "successful": true
+}

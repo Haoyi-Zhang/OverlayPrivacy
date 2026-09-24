@@ -1,0 +1,13 @@
+{
+  "cpu_seconds": 0.6723168909999999,
+  "deeper_cases": 16,
+  "deeper_policy_tables": 1856,
+  "errors": 0,
+  "failures": 0,
+  "peak_rss_kib": 98608,
+  "retained_output": "scalar optima and aggregate counts only",
+  "successful": true,
+  "test_methods": 2,
+  "two_slot_cases": 192,
+  "two_slot_policy_tables": 2976
+}
