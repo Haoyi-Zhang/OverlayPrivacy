@@ -1,52 +1,57 @@
 {
-  "imports": [
-    "__future__",
-    "fractions",
-    "itertools",
-    "json",
-    "model",
-    "oracle",
-    "pathlib",
-    "resource",
-    "sys",
-    "time",
-    "typing",
-    "unittest"
-  ],
-  "integer_field_inventory": {
-    "deeper_cases": [
-      16
-    ],
-    "deeper_policy_tables": [
-      1856
-    ],
-    "errors": [
-      0
-    ],
-    "failures": [
-      0
-    ],
-    "peak_rss_kib": [
-      93864
-    ],
-    "test_methods": [
-      2
-    ],
-    "two_slot_cases": [
-      192
-    ],
-    "two_slot_policy_tables": [
-      2976
-    ]
-  },
-  "limitations": [
-    "Algorithmic independence reduces common-code risk but is not a proof-assistant verification or an external replication.",
-    "Both paths implement the same written finite model; a shared specification error remains possible."
-  ],
-  "production_imports": [],
-  "purpose": "Triangulate the production exact oracle against a source-independent deterministic-policy enumerator and closed-form calibration suite.",
+  "schema_version": 2,
+  "purpose": "Cross-check the production exact scalar dynamic program against direct deterministic public-history policy-table enumeration over the same declared one-step kernel.",
+  "claim_level": "algorithmically distinct paths with a shared declared one-step kernel",
   "reference_implementation": "tests/test_oracle_bruteforce.py",
-  "reference_source_sha256": "74b7322d8852a8b00b9f3313d5404400ea875f35f3dd0953718c8bf2555b21fe",
   "result_record": "results/oracle-bruteforce.json",
-  "result_sha256": "03ad90477139262b5c3e3014a3d4624a49a5d6ddb4bde10e4aedf322ca0ffd39"
+  "shared_dependencies": [
+    {
+      "path": "src/model.py",
+      "symbol": "kernel",
+      "used_by": "both paths",
+      "role": "Constructs the exact declared one-step transition kernel. This is a shared semantic dependency, not an independent reimplementation."
+    },
+    {
+      "path": "src/oracle.py",
+      "symbol": "capacity",
+      "used_by": "comparison entry only",
+      "role": "Provides the production value under test. The direct enumerator functions may not call or import this recursion."
+    },
+    {
+      "path": "Python standard library",
+      "symbol": "fractions.Fraction",
+      "used_by": "both paths",
+      "role": "Provides exact rational arithmetic."
+    }
+  ],
+  "forbidden_reference_reuse": [
+    "src/oracle.py mass-state recursion or memo table",
+    "src/producer.py certificate, coupling, tree, or Bellman synthesis",
+    "src/checker.py certificate validation",
+    "src/campaign.py or src/summarize.py derived scientific results"
+  ],
+  "required_coverage": {
+    "test_methods": 2,
+    "two_slot_cases": 192,
+    "two_slot_policy_tables": 2976,
+    "deeper_cases": 16,
+    "deeper_policy_tables": 1856
+  },
+  "required_scientific_validation": [
+    "The comparison suite exits successfully.",
+    "successful is true and failures and errors are zero.",
+    "All required coverage counts match the declared grids.",
+    "The retained optimum sums and exact-value histograms match a fresh recomputation.",
+    "Every generated input is recomputed by direct policy enumeration and compared exactly with the production scalar result."
+  ],
+  "environment_measurements": [
+    "cpu_seconds",
+    "peak_rss_kib"
+  ],
+  "snapshot_policy": "No source or result hash is promised. Removing the stale fingerprint fields cancels only a snapshot-fingerprint claim; scientific validation is performed by required-field checks and fresh recomputation.",
+  "limitations": [
+    "Algorithmic path diversity reduces common-code risk but is not proof-assistant verification or external replication.",
+    "Both paths depend on the same declared one-step kernel and may share a specification error.",
+    "Only scalar optima summaries and aggregate coverage are retained; no optimizing policy is stored."
+  ]
 }

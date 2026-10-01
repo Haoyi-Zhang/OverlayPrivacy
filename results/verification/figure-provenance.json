@@ -1,72 +1,43 @@
 {
-  "figures": [
+  "all_figures_editable_source": true,
+  "dependencies": [
     {
-      "source_tex": "paper/main.tex",
-      "line": 189,
-      "label": "fig:threshold",
-      "caption": "Threshold-component witness for $(d_ 01",
-      "editable_source": true
+      "exists": true,
+      "reference": "paper/figures/oracle-points.dat"
     },
     {
-      "source_tex": "paper/main.tex",
-      "line": 441,
-      "label": "fig:oracle",
-      "caption": "Canonical bound versus exact public-history capacity for all tiny models. Every point derives from retained rational results.",
-      "editable_source": true
+      "exists": true,
+      "reference": "paper/figures/runtime.dat"
     },
     {
-      "source_tex": "paper/main.tex",
-      "line": 482,
-      "label": "fig:runtime",
-      "caption": "Median CPU cost over five fresh processes per scope. Retained min--max ranges are reported in the artifact; these are checker costs, not network measurements.",
-      "editable_source": true
+      "exists": true,
+      "reference": "artifact/paper-generated/reviewer-metrics.tex"
     }
   ],
   "figure_count": 3,
-  "dependencies": [
+  "figures": [
     {
-      "source_tex": "paper/main.tex",
-      "kind": "addplot_table",
-      "reference": "figures/oracle-points.dat",
-      "line": 450,
-      "resolved": "paper/figures/oracle-points.dat",
-      "sha256": "6e7700bfe85d973e48e108366f55dc9fa0740a43c803bd6fc33b7bfcaa9b6a9f",
-      "bytes": 1421
+      "caption": "Threshold-component witness for the stated three-label example.",
+      "design": "native TikZ; retained unchanged",
+      "editable_source": true,
+      "label": "fig:threshold",
+      "source_tex": "paper/main.tex"
     },
     {
-      "source_tex": "paper/main.tex",
-      "kind": "addplot_table",
-      "reference": "figures/runtime.dat",
-      "line": 492,
-      "resolved": "paper/figures/runtime.dat",
-      "sha256": "4c17c96e9f9b177b6eae139c3227b83147005b73d03f7144597059d8e8f5edb3",
-      "bytes": 355
+      "caption": "Canonical bound versus exact public-history capacity for all tiny models.",
+      "design": "native PGFPlots from paper/figures/oracle-points.dat; retained unchanged",
+      "editable_source": true,
+      "label": "fig:oracle",
+      "source_tex": "paper/main.tex"
     },
     {
-      "source_tex": "paper/main.tex",
-      "kind": "addplot_table",
-      "reference": "figures/runtime.dat",
-      "line": 494,
-      "resolved": "paper/figures/runtime.dat",
-      "sha256": "4c17c96e9f9b177b6eae139c3227b83147005b73d03f7144597059d8e8f5edb3",
-      "bytes": 355
-    },
-    {
-      "source_tex": "paper/reviewer-audit.tex",
-      "kind": "input",
-      "reference": "../artifact/paper-generated/reviewer-metrics.tex",
-      "line": 86,
-      "missing": true
+      "caption": "Median CPU cost over five fresh processes per scope.",
+      "design": "native PGFPlots from paper/figures/runtime.dat; retained unchanged",
+      "editable_source": true,
+      "label": "fig:runtime",
+      "source_tex": "paper/main.tex"
     }
   ],
-  "missing_dependencies": [
-    {
-      "source_tex": "paper/reviewer-audit.tex",
-      "kind": "input",
-      "reference": "../artifact/paper-generated/reviewer-metrics.tex",
-      "line": 86,
-      "missing": true
-    }
-  ],
-  "all_figures_editable_source": true
+  "interpretation": "All current figure designs are retained; only manuscript text is revised. File checksums are deliberately not used.",
+  "missing_dependencies": []
 }

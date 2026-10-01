@@ -107,7 +107,8 @@ def check(model,cert):
     need(len(pairs)*(H+1)*(C+1)*(B+1)**2<=400000,'potential limit')
     if scope=='ordered-chain':
         rates=list(map(frac,c['arrival_rates']))
-        need(rates==sorted(rates) and c['initial_queues']==sorted(c['initial_queues']),'joint parameter order')
+        need(rates==sorted(rates) and c['initial_queues']==sorted(c['initial_queues']),
+             'given-index joint parameter order; checker does not relabel secrets')
         need(cert['tree']==[[i,i+1] for i in range(n-1)],'adjacent chain')
     gs={}
     expected={f'{i},{j},{q},{r},{a}' for i,j in pairs for q,r,a in product(range(B+1),range(B+1),range(2))}

@@ -26,7 +26,7 @@ def make(model, mode="all-pairs"):
     if mode=='ordered-chain':
         rates=list(map(F,c['arrival_rates']));initial=c['initial_queues']
         if rates!=sorted(rates) or initial!=sorted(initial):
-            raise ValueError('ordered-chain requires jointly ordered rates and initial queues')
+            raise ValueError('ordered-chain requires rates and initial queues ordered in the supplied label index; no automatic relabeling')
         pairs=[(i,i+1) for i in range(n-1)]
     else:
         pairs=list(combinations(range(n),2))

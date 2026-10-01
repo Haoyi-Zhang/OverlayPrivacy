@@ -1,0 +1,61 @@
+{
+  "exact_models": 40,
+  "interpretation": [
+    "Tightness is evaluated only on tiny models where the complete public-history optimum is exactly enumerable.",
+    "The ordered reduction compares two encodings of the same canonical certificate; it is not an empirical claim about all queueing models.",
+    "Ratios omit exact value zero to avoid division by zero."
+  ],
+  "schema_version": 2,
+  "selected_bound_field": "capacity_bound",
+  "selected_exact_field": "exact_capacity",
+  "source": "results/campaign/*-all-pairs.json and matching ordered-chain records",
+  "structural_reduction": {
+    "bellman_obligations": {
+      "all_nonnegative": true,
+      "dense_field": "bellman_obligations",
+      "maximum_reduction": 0.875,
+      "median_reduction": 0.5,
+      "minimum_reduction": 0.0,
+      "models_with_positive_work": 70,
+      "ordered_field": "bellman_obligations",
+      "zero_work_models": 1
+    },
+    "potentials": {
+      "all_nonnegative": true,
+      "dense_field": "potential_entries",
+      "maximum_reduction": 0.875,
+      "median_reduction": 0.5,
+      "minimum_reduction": 0.0,
+      "models_with_positive_work": 71,
+      "ordered_field": "potential_entries",
+      "zero_work_models": 0
+    }
+  },
+  "tightness": {
+    "absolute_gap": {
+      "maximum": 0.7872,
+      "mean": 0.12895583440903385,
+      "median": 0.07919999999999999,
+      "minimum": 0.0,
+      "q25": 0.003472222222222222,
+      "q75": 0.1373,
+      "q90": 0.36257
+    },
+    "bound_over_exact_ratio": {
+      "maximum": 1.396774193548387,
+      "mean": 1.0765697576553213,
+      "median": 1.050588370205709,
+      "minimum": 1.0,
+      "q90": 1.1995195203127478
+    },
+    "exact_hits": 10,
+    "worst_absolute_gap_record": {
+      "absolute_gap": "492/625",
+      "canonical_bound": "1732/625",
+      "exact": "248/125",
+      "model": "Q010",
+      "ratio": "1.396774193548387",
+      "source": "results/campaign/Q010-all-pairs.json"
+    }
+  }
+}

@@ -1,0 +1,651 @@
+{
+  "families": {
+    "A": 10,
+    "Q": 27,
+    "S": 36
+  },
+  "files": [
+    {
+      "bytes": 1164,
+      "file": "inputs/A001.json",
+      "top_level_keys": [
+        "config",
+        "kernel"
+      ]
+    },
+    {
+      "bytes": 1242,
+      "file": "inputs/A002.json",
+      "top_level_keys": [
+        "config",
+        "kernel"
+      ]
+    },
+    {
+      "bytes": 1015,
+      "file": "inputs/A003.json",
+      "top_level_keys": [
+        "config",
+        "kernel"
+      ]
+    },
+    {
+      "bytes": 479,
+      "file": "inputs/A004.json",
+      "top_level_keys": [
+        "config",
+        "kernel"
+      ]
+    },
+    {
+      "bytes": 479,
+      "file": "inputs/A005.json",
+      "top_level_keys": [
+        "config",
+        "kernel"
+      ]
+    },
+    {
+      "bytes": 1019,
+      "file": "inputs/A006.json",
+      "top_level_keys": [
+        "config",
+        "kernel"
+      ]
+    },
+    {
+      "bytes": 1019,
+      "file": "inputs/A007.json",
+      "top_level_keys": [
+        "config",
+        "kernel"
+      ]
+    },
+    {
+      "bytes": 1019,
+      "file": "inputs/A008.json",
+      "top_level_keys": [
+        "config",
+        "kernel"
+      ]
+    },
+    {
+      "bytes": 849,
+      "file": "inputs/A009.json",
+      "top_level_keys": [
+        "config",
+        "kernel"
+      ]
+    },
+    {
+      "bytes": 1236,
+      "file": "inputs/A010.json",
+      "top_level_keys": [
+        "config",
+        "kernel"
+      ]
+    },
+    {
+      "bytes": 1013,
+      "file": "inputs/Q001.json",
+      "top_level_keys": [
+        "config",
+        "kernel"
+      ]
+    },
+    {
+      "bytes": 1013,
+      "file": "inputs/Q002.json",
+      "top_level_keys": [
+        "config",
+        "kernel"
+      ]
+    },
+    {
+      "bytes": 1013,
+      "file": "inputs/Q003.json",
+      "top_level_keys": [
+        "config",
+        "kernel"
+      ]
+    },
+    {
+      "bytes": 1019,
+      "file": "inputs/Q004.json",
+      "top_level_keys": [
+        "config",
+        "kernel"
+      ]
+    },
+    {
+      "bytes": 1019,
+      "file": "inputs/Q005.json",
+      "top_level_keys": [
+        "config",
+        "kernel"
+      ]
+    },
+    {
+      "bytes": 1019,
+      "file": "inputs/Q006.json",
+      "top_level_keys": [
+        "config",
+        "kernel"
+      ]
+    },
+    {
+      "bytes": 949,
+      "file": "inputs/Q007.json",
+      "top_level_keys": [
+        "config",
+        "kernel"
+      ]
+    },
+    {
+      "bytes": 949,
+      "file": "inputs/Q008.json",
+      "top_level_keys": [
+        "config",
+        "kernel"
+      ]
+    },
+    {
+      "bytes": 949,
+      "file": "inputs/Q009.json",
+      "top_level_keys": [
+        "config",
+        "kernel"
+      ]
+    },
+    {
+      "bytes": 1013,
+      "file": "inputs/Q010.json",
+      "top_level_keys": [
+        "config",
+        "kernel"
+      ]
+    },
+    {
+      "bytes": 1013,
+      "file": "inputs/Q011.json",
+      "top_level_keys": [
+        "config",
+        "kernel"
+      ]
+    },
+    {
+      "bytes": 1013,
+      "file": "inputs/Q012.json",
+      "top_level_keys": [
+        "config",
+        "kernel"
+      ]
+    },
+    {
+      "bytes": 1019,
+      "file": "inputs/Q013.json",
+      "top_level_keys": [
+        "config",
+        "kernel"
+      ]
+    },
+    {
+      "bytes": 1019,
+      "file": "inputs/Q014.json",
+      "top_level_keys": [
+        "config",
+        "kernel"
+      ]
+    },
+    {
+      "bytes": 1019,
+      "file": "inputs/Q015.json",
+      "top_level_keys": [
+        "config",
+        "kernel"
+      ]
+    },
+    {
+      "bytes": 949,
+      "file": "inputs/Q016.json",
+      "top_level_keys": [
+        "config",
+        "kernel"
+      ]
+    },
+    {
+      "bytes": 949,
+      "file": "inputs/Q017.json",
+      "top_level_keys": [
+        "config",
+        "kernel"
+      ]
+    },
+    {
+      "bytes": 949,
+      "file": "inputs/Q018.json",
+      "top_level_keys": [
+        "config",
+        "kernel"
+      ]
+    },
+    {
+      "bytes": 1013,
+      "file": "inputs/Q019.json",
+      "top_level_keys": [
+        "config",
+        "kernel"
+      ]
+    },
+    {
+      "bytes": 1013,
+      "file": "inputs/Q020.json",
+      "top_level_keys": [
+        "config",
+        "kernel"
+      ]
+    },
+    {
+      "bytes": 1013,
+      "file": "inputs/Q021.json",
+      "top_level_keys": [
+        "config",
+        "kernel"
+      ]
+    },
+    {
+      "bytes": 1019,
+      "file": "inputs/Q022.json",
+      "top_level_keys": [
+        "config",
+        "kernel"
+      ]
+    },
+    {
+      "bytes": 1019,
+      "file": "inputs/Q023.json",
+      "top_level_keys": [
+        "config",
+        "kernel"
+      ]
+    },
+    {
+      "bytes": 1019,
+      "file": "inputs/Q024.json",
+      "top_level_keys": [
+        "config",
+        "kernel"
+      ]
+    },
+    {
+      "bytes": 949,
+      "file": "inputs/Q025.json",
+      "top_level_keys": [
+        "config",
+        "kernel"
+      ]
+    },
+    {
+      "bytes": 949,
+      "file": "inputs/Q026.json",
+      "top_level_keys": [
+        "config",
+        "kernel"
+      ]
+    },
+    {
+      "bytes": 949,
+      "file": "inputs/Q027.json",
+      "top_level_keys": [
+        "config",
+        "kernel"
+      ]
+    },
+    {
+      "bytes": 458,
+      "file": "inputs/S001.json",
+      "top_level_keys": [
+        "config",
+        "kernel"
+      ]
+    },
+    {
+      "bytes": 458,
+      "file": "inputs/S002.json",
+      "top_level_keys": [
+        "config",
+        "kernel"
+      ]
+    },
+    {
+      "bytes": 459,
+      "file": "inputs/S003.json",
+      "top_level_keys": [
+        "config",
+        "kernel"
+      ]
+    },
+    {
+      "bytes": 610,
+      "file": "inputs/S004.json",
+      "top_level_keys": [
+        "config",
+        "kernel"
+      ]
+    },
+    {
+      "bytes": 610,
+      "file": "inputs/S005.json",
+      "top_level_keys": [
+        "config",
+        "kernel"
+      ]
+    },
+    {
+      "bytes": 611,
+      "file": "inputs/S006.json",
+      "top_level_keys": [
+        "config",
+        "kernel"
+      ]
+    },
+    {
+      "bytes": 914,
+      "file": "inputs/S007.json",
+      "top_level_keys": [
+        "config",
+        "kernel"
+      ]
+    },
+    {
+      "bytes": 914,
+      "file": "inputs/S008.json",
+      "top_level_keys": [
+        "config",
+        "kernel"
+      ]
+    },
+    {
+      "bytes": 915,
+      "file": "inputs/S009.json",
+      "top_level_keys": [
+        "config",
+        "kernel"
+      ]
+    },
+    {
+      "bytes": 719,
+      "file": "inputs/S010.json",
+      "top_level_keys": [
+        "config",
+        "kernel"
+      ]
+    },
+    {
+      "bytes": 719,
+      "file": "inputs/S011.json",
+      "top_level_keys": [
+        "config",
+        "kernel"
+      ]
+    },
+    {
+      "bytes": 720,
+      "file": "inputs/S012.json",
+      "top_level_keys": [
+        "config",
+        "kernel"
+      ]
+    },
+    {
+      "bytes": 1023,
+      "file": "inputs/S013.json",
+      "top_level_keys": [
+        "config",
+        "kernel"
+      ]
+    },
+    {
+      "bytes": 1023,
+      "file": "inputs/S014.json",
+      "top_level_keys": [
+        "config",
+        "kernel"
+      ]
+    },
+    {
+      "bytes": 1024,
+      "file": "inputs/S015.json",
+      "top_level_keys": [
+        "config",
+        "kernel"
+      ]
+    },
+    {
+      "bytes": 1631,
+      "file": "inputs/S016.json",
+      "top_level_keys": [
+        "config",
+        "kernel"
+      ]
+    },
+    {
+      "bytes": 1631,
+      "file": "inputs/S017.json",
+      "top_level_keys": [
+        "config",
+        "kernel"
+      ]
+    },
+    {
+      "bytes": 1632,
+      "file": "inputs/S018.json",
+      "top_level_keys": [
+        "config",
+        "kernel"
+      ]
+    },
+    {
+      "bytes": 1238,
+      "file": "inputs/S019.json",
+      "top_level_keys": [
+        "config",
+        "kernel"
+      ]
+    },
+    {
+      "bytes": 1238,
+      "file": "inputs/S020.json",
+      "top_level_keys": [
+        "config",
+        "kernel"
+      ]
+    },
+    {
+      "bytes": 1239,
+      "file": "inputs/S021.json",
+      "top_level_keys": [
+        "config",
+        "kernel"
+      ]
+    },
+    {
+      "bytes": 1846,
+      "file": "inputs/S022.json",
+      "top_level_keys": [
+        "config",
+        "kernel"
+      ]
+    },
+    {
+      "bytes": 1846,
+      "file": "inputs/S023.json",
+      "top_level_keys": [
+        "config",
+        "kernel"
+      ]
+    },
+    {
+      "bytes": 1847,
+      "file": "inputs/S024.json",
+      "top_level_keys": [
+        "config",
+        "kernel"
+      ]
+    },
+    {
+      "bytes": 3062,
+      "file": "inputs/S025.json",
+      "top_level_keys": [
+        "config",
+        "kernel"
+      ]
+    },
+    {
+      "bytes": 3062,
+      "file": "inputs/S026.json",
+      "top_level_keys": [
+        "config",
+        "kernel"
+      ]
+    },
+    {
+      "bytes": 3063,
+      "file": "inputs/S027.json",
+      "top_level_keys": [
+        "config",
+        "kernel"
+      ]
+    },
+    {
+      "bytes": 2391,
+      "file": "inputs/S028.json",
+      "top_level_keys": [
+        "config",
+        "kernel"
+      ]
+    },
+    {
+      "bytes": 2391,
+      "file": "inputs/S029.json",
+      "top_level_keys": [
+        "config",
+        "kernel"
+      ]
+    },
+    {
+      "bytes": 2392,
+      "file": "inputs/S030.json",
+      "top_level_keys": [
+        "config",
+        "kernel"
+      ]
+    },
+    {
+      "bytes": 3711,
+      "file": "inputs/S031.json",
+      "top_level_keys": [
+        "config",
+        "kernel"
+      ]
+    },
+    {
+      "bytes": 3711,
+      "file": "inputs/S032.json",
+      "top_level_keys": [
+        "config",
+        "kernel"
+      ]
+    },
+    {
+      "bytes": 3712,
+      "file": "inputs/S033.json",
+      "top_level_keys": [
+        "config",
+        "kernel"
+      ]
+    },
+    {
+      "bytes": 6351,
+      "file": "inputs/S034.json",
+      "top_level_keys": [
+        "config",
+        "kernel"
+      ]
+    },
+    {
+      "bytes": 6351,
+      "file": "inputs/S035.json",
+      "top_level_keys": [
+        "config",
+        "kernel"
+      ]
+    },
+    {
+      "bytes": 6352,
+      "file": "inputs/S036.json",
+      "top_level_keys": [
+        "config",
+        "kernel"
+      ]
+    }
+  ],
+  "interpretation": [
+    "These are deterministic constructed stress cases, not a random or representative sample of deployed networks.",
+    "Coverage inventories parameter values present in the frozen inputs; it does not establish external validity.",
+    "No checksum or snapshot manifest is part of this coverage report."
+  ],
+  "model_count": 73,
+  "scalar_field_inventory": {
+    "config.horizon": {
+      "count": 73,
+      "maximum": 16,
+      "minimum": 0,
+      "unique_count": 6
+    },
+    "config.observe_overflow": {
+      "count": 73,
+      "unique_count": 2,
+      "values": [
+        "False",
+        "True"
+      ]
+    },
+    "config.padding": {
+      "count": 73,
+      "unique_count": 4,
+      "values": [
+        "0",
+        "1",
+        "1/2",
+        "3/4"
+      ]
+    },
+    "config.queue_capacity": {
+      "count": 73,
+      "maximum": 4,
+      "minimum": 1,
+      "unique_count": 3
+    },
+    "config.refill_period": {
+      "count": 73,
+      "maximum": 4,
+      "minimum": 1,
+      "unique_count": 3
+    },
+    "config.scheduler": {
+      "count": 73,
+      "unique_count": 1,
+      "values": [
+        "public-history"
+      ]
+    },
+    "config.token_capacity": {
+      "count": 73,
+      "maximum": 2,
+      "minimum": 1,
+      "unique_count": 2
+    }
+  },
+  "unique_model_encodings": 73
+}

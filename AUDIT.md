@@ -1,114 +1,148 @@
-# Final Internal Audit
+# Internal validation audit
 
-## Scope
+## Scope and claim boundary
 
-This record describes the final internal checks performed on the mathematical
-argument, executable artifact, bibliography provenance, and publication packet.
-It is evidence of same-executor checking, not independent peer review, formal
-proof-assistant verification, or a guarantee that an external system conforms to
-the finite queue model.
+This audit covers the delivered finite, exact-rational theory artifact for
+*Worst-Case Linkability Certificates for Finite Rate-Limited Overlays*. It
+records same-executor checks of code, proofs, retained synthetic inputs,
+scientific result files, bibliography provenance, and the compiled manuscript.
+It is not independent peer review, proof-assistant verification, deployment
+validation, or an acceptance prediction.
 
-## Corrections made during the final audit
+The ordered result preserves the dense **canonical certificate bound** under the
+stated common-order, shared-coin, finite-history, and exact-value hypotheses. It
+does not claim exact leakage for every queue model or conformance of a deployed
+anonymous network.
 
-- The manuscript now uses the supplied `IEEEtran.cls` with the valid
-  `letterpaper,journal` option pair. The matched template's literal
-  `lettersize` token is not recognized by the supplied class; `letterpaper`
-  preserves its intended page size without an unused-option warning.
-- The bibliography now uses the supplied, unmodified `IEEEtranS.bst`. The
-  previously added `IEEEtran.bst` was removed.
-- Bibliographic corrections include David L. Chaum's name, the final PriFi
-  record, the Dissent in Numbers page range, Jean-Pierre Smith as QCSD's first
-  author, the TCS journal record for van Breugel--Worrell, the author list for
-  Vlasman et al., and the peer-reviewed 2025 ISIT record for Makur--Singh.
-- Canonical identifiers were corrected for the Mittal CCS paper and the Luo
-  TDSC paper. Conference/journal or event/publication-year distinctions for
-  Tarzan, Hintz, Hopper, PriFi, and the Alvim ICALP chapter are recorded instead
-  of silently merging versions.
-- The standalone checker now enforces exact model/configuration/certificate
-  schemas, canonical reduced rational strings, and explicit list/entry shapes.
-  Unknown fields, duplicate keys, decimals, unreduced fractions, signed zero,
-  leading zeros, whitespace variants, and malformed rows are rejected rather
-  than silently normalized or ignored.
-- A 2026 freshness scan replaced two weaker bibliography entries with the current
-  ACM Computing Surveys website-fingerprinting survey and the CSL behavioural-
-  distance lower-bound-witness paper. The survey and CSL records remain
-  `metadata_only`; two relevant 2026 preprints are recorded only as boundary
-  evidence, not promoted to peer-reviewed support.
+## Fail-closed executable acceptance
 
-## Bibliography evidence
-
-`reference_audit.csv` has one row for each of the manuscript's 69 references and
-one unique canonical DOI or official publication page per row. The retained
-calibration claim is exactly 22 full-text papers: 12 TDSC papers, five influential
-field papers, and five adjacent-venue or theory papers. The other 47 records are
-explicitly marked `metadata_only`; no full-text reading claim is made for them.
-The current-source decision trail is retained in
-`results/verification/literature-freshness-2026-09-19.md`.
-
-`tests/test_reference_audit.py` checks the inventory, canonical identifiers,
-calibration counts, material corrections, and—when the test is run inside the
-full project—exact agreement with `paper/references.bib` and the citation keys in
-`paper/main.tex`. It is not a live resolver, does not test the scholarly validity
-of a cited conclusion, and cannot guarantee that a publisher's own metadata is
-error-free.
-
-## Executable checks
-
-The final validation command set is:
+All scientific acceptance paths in `tests/test_calibrations.py`, `src/worker.py`,
+and `src/summarize.py` use explicit checks rather than native Python `assert`.
+The documented test runner executes every `test_*.py` file in order and returns
+the first nonzero status. Both required modes are exercised:
 
 ```sh
 python3 -m compileall -q src tests
-python3 tests/test_certificates.py
-python3 tests/test_calibrations.py
-python3 tests/test_oracle_bruteforce.py
-python3 tests/test_reference_audit.py
-python3 src/checker.py inputs/Q014.json results/certificates/Q014-ordered-chain.json
+python3 tests/run_all.py
+python3 tests/run_all.py --optimized
+python3 src/checker.py inputs/Q014.json \
+  results/certificates/Q014-ordered-chain.json
+python3 -O src/checker.py inputs/Q014.json \
+  results/certificates/Q014-ordered-chain.json
 python3 src/summarize.py
 ```
 
-The certificate suite exercises 15 test methods, 854 exhaustive three-label
-summary matrices, 140 fixed-seed summaries, 280 fixed-seed finite channels,
-32 basic packet/schema mutations, five ordered-specific mutations, and semantic negative controls. The analytic suite checks 600
-one-slot instances, 108 continuity instances, and all 70 eligible retained
-rate-bound cases.
+`tests/test_fail_closed_validation.py` supplies micro-fixtures in ordinary and
+optimized modes. A deliberately wrong exact scalar, a copied retained record
+that violates the proved rate bound, and a corrupt campaign record must each
+exit nonzero. The calibration and summary paths may not leave a successful
+report, and the worker may not commit either a certificate or a campaign record.
+A separate runner fixture verifies that a failed test stops the loop and that a
+later test is not executed.
 
-The additional brute-force oracle test directly simulates exact secret-to-history
-channels for every enumerated deterministic public-history policy without reusing
-the scalar dynamic-program recursion. It agrees on 192 exhaustive two-slot
-model cases and 16 deeper cases, covering 4,832 policy tables in aggregate. Only
-scalar optima and aggregate counts are retained; no optimizing scheduler is
-stored or exposed.
+## Ordered-index convention
 
-The complete campaign is reproducible from an empty output directory. The
-final retained comparison covers 74 input files, 144 certificate encodings, and
-174 main or repetition records, all of whose deterministic scientific payloads
-match. Only an explicit allowlist of CPU-time and RSS fields is excluded. That
-run recorded 194.044708 process CPU seconds and 158,676 KiB peak RSS. One
-Q018 parent-timing record was intentionally refreshed after a parent timeout; its
-deterministic scientific payload was unchanged. This same-environment clean
-reproduction is useful fault-detection evidence, not an independent implementation.
+The frozen campaign evaluates ordered eligibility in the supplied secret-label
+index. The checker does not search for a relabeling. This convention yields 73
+dense results and 71 ordered results.
 
-## Mathematical and empirical boundary
+A004 and A005 are not counterexamples to existence of a common order. Their
+supplied arrays are unsorted: A004 has queues `(0,1,0)` and A005 has rates
+`(0,1,0)`. Permutation `(0,2,1)` jointly sorts each case. The regression suite
+regenerates the relabeled models and verifies that the adjacent and dense bounds
+both equal `2`. The original frozen inputs and the 73/71 supplied-index count are
+retained unchanged.
 
-The general guarantees remain handwritten proofs. Finite tests can refute an
-implementation or modeling mistake on the exercised cases but cannot establish a
-general theorem. The exact tiny-model recursion is capped and does not emit an
-operational linking policy. The 73-model campaign consists of constructed finite
-models; it is not a sample of deployed anonymous networks, and timings are not
-portable performance claims.
+## Numeric-complexity fields
 
-The ordered result is lossless only relative to the dense canonical certificate
-family under a common order of arrival rates and initial queues, the declared
-shared-coin grand coupling, exact canonical backward values, and the specified
-finite observation/scheduler semantics. It does not state that the canonical
-bound equals exact leakage for every model.
+`results/verification/numeric-complexity.json` inventories only declared
+scientific fields. The campaign field historically named
+`maximum_rational_bits` is recomputed from that certificate's Bellman potential
+values; it is not an all-fields maximum.
 
-## Publication-packet boundary
+- Maximum numerator or denominator width among all 457,555 retained potential
+  values: 82 bits.
+- S030 `capacity_bound` numerator: 83 bits.
+- S033 and S036 `best_star_bound` numerators: 84 bits.
+- Across the explicit aggregate field set (`capacity_bound`, `best_star_bound`,
+  `chain_bound`, `uniform_cover_bound`, `exact_capacity`, and
+  `exact_pair_summary_bound`), the maximum numerator width is 84 bits and the
+  maximum denominator width is 82 bits.
 
-The compiled main paper is required to remain exactly 12 letter-size,
-double-column pages including references, with a separate supplement. Both PDFs
-must be rebuilt from the delivered sources and visually inspected after any
-change. The packet is an internal draft. Before external use, the named authors
-must recheck current venue rules, every material theorem and citation, authorship,
-AI-use disclosure, originality, and the eventual repository link. No acceptance,
-submission, public upload, or independent review is represented here.
+The source program checks all 144 campaign `maximum_rational_bits` values against
+the matching certificate potentials and rejects field drift.
+
+## Tiny-oracle semantic cross-check
+
+The production scalar dynamic program and direct deterministic-policy enumerator
+are algorithmically distinct, but both deliberately share
+`src/model.py::kernel`, the written finite semantics, and exact rational
+arithmetic. The comparison entry may call `src/oracle.py::capacity` to obtain the
+value under test. Static checks prevent the direct enumeration functions from
+reusing the oracle's mass-state recursion or memo table and from calling
+certificate, tree, checker, campaign, or summary algorithms.
+
+The retained `results/oracle-bruteforce.json` is accepted only when all required
+fields are present, `successful` is true, failures and errors are zero, the
+coverage counts are exact, each histogram count and weighted sum is internally
+consistent, and a fresh recomputation has the same scientific payload. CPU time
+and peak RSS are separate environment measurements. Removing stale optional
+fingerprints cancels only a snapshot-fingerprint promise; it does not remove the
+fresh scientific validation.
+
+The direct comparison covers 192 exhaustive two-slot configurations and 16
+deeper configurations, totaling 4,832 deterministic public-history policy
+tables. Every scalar optimum agrees with the production dynamic program. Only
+scalar optima summaries and counts are retained; no optimizing policy is stored.
+
+## Certificate, calibration, and model checks
+
+The certificate suite retains 15 test methods, 32 basic packet/schema mutations,
+five ordered-specific negative checks, 854 exhaustive upper-summary matrices,
+140 fixed-seed summary matrices, and 280 fixed-seed finite channels. It also
+contains the two explicit relabeling controls above.
+
+The analytic suite checks 600 one-slot instances, 108 whole-row continuity
+instances, and all 70 eligible retained rate-bound cases. The input-coverage
+report verifies all 73 constructed model files, the 27/36/10 Q/S/A family split,
+and 73 distinct canonical model encodings without publishing a checksum
+manifest.
+
+## Bibliography evidence
+
+The manuscript contains 69 unique BibTeX records and cites every one. The
+provenance ledger has one row per key and distinguishes 22 full-text writing
+calibration papers (12 TDSC, five influential field papers, and five adjacent or
+theory papers) from 47 metadata-only records. The executable audit checks keys,
+identifiers, category counts, recorded material corrections, and agreement with
+the manuscript when the complete project is present. It is not a live resolver
+and cannot prove that every scholarly interpretation is correct.
+
+## Reproduction and environment boundary
+
+The full campaign regenerates 74 input files including selection metadata, 144
+certificate encodings, and 174 principal or repetition records. Deterministic
+scientific payloads are compared exactly. CPU time, wall time, startup RSS, and
+process RSS are explicitly treated as environment-dependent measurements rather
+than correctness fields.
+
+A clean rerun by the same codebase is useful fault-detection evidence, not an
+independent implementation or external replication. After the current repairs,
+a fresh empty-directory run matched all 74 inputs, 144 certificate encodings,
+and 174 result records. The retained report records 122.390209 process CPU
+seconds and 158,740 KiB peak RSS; these environment measurements are not
+scientific identity fields.
+
+## Publication packet
+
+The main manuscript must remain exactly 12 US-Letter IEEE double-column pages,
+including references, with the supplement separate. The supplied class and
+bibliography style remain unmodified. All figures retain their existing native
+TikZ/PGFPlots design and underlying data; only text or local layout corrections
+needed by these repairs are permitted. After any source change, both PDFs must
+be rebuilt and every page rendered and inspected for unresolved references,
+overfull material, clipping, overlap, and unreadable content.
+
+The packet retains its substantive AI-use disclosure and all limitations. It
+contains no fabricated repository URL, external submission claim, independent
+review claim, or guarantee of acceptance.

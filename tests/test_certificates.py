@@ -129,12 +129,29 @@ class CertificateTests(unittest.TestCase):
         self.rejected(self.model,c,'minimum tree cycle property')
         self.assertTrue(check(self.model,sparsify(c))['valid'])
     def test_order_and_canonical_specific_mutations(self):
-        changed=base(m=3,B=1,H=1);changed.update(arrival_rates=['0']*3,initial_queues=[0,1,0],padding='0')
-        m=kernel(changed);d=make(m)
-        self.assertEqual(d['capacity_bound'],'2')
-        self.assertEqual(1+sum(F(d['distances'][f'{i},{i+1}']) for i in range(2)),3)
-        with self.assertRaises(ValueError):make(m,'ordered-chain')
-        c=sparsify(d);c['scope']='ordered-chain';self.rejected(m,c,'joint parameter order')
+        # A004 and A005 are rejected only in their supplied label index.  Both
+        # admit the common permutation (0,2,1); the checker intentionally does
+        # not search for that relabeling.
+        for case in ('A004','A005'):
+            original=read(ROOT/'inputs'/f'{case}.json')
+            dense=make(original)
+            self.assertEqual(dense['capacity_bound'],'2')
+            self.assertEqual(1+sum(F(dense['distances'][f'{i},{i+1}']) for i in range(2)),3)
+            with self.assertRaises(ValueError):make(original,'ordered-chain')
+            rejected=sparsify(dense);rejected['scope']='ordered-chain'
+            self.rejected(original,rejected,'given-index joint parameter order')
+
+            permutation=(0,2,1)
+            config=copy.deepcopy(original['config'])
+            config['arrival_rates']=[config['arrival_rates'][i] for i in permutation]
+            config['initial_queues']=[config['initial_queues'][i] for i in permutation]
+            relabeled=kernel(config)
+            relabeled_dense=make(relabeled)
+            relabeled_chain=make(relabeled,'ordered-chain')
+            self.assertEqual(check(relabeled,relabeled_dense)['capacity_bound'],'2')
+            self.assertEqual(check(relabeled,relabeled_chain)['capacity_bound'],'2')
+        COUNTS['relabelled_order_controls']=2
+
         c=copy.deepcopy(self.chain);key='0,1,0,0,1';left=self.model['kernel']['0,0,1'];right=self.model['kernel']['1,0,1']
         c['couplings'][key]=[[yi,qi,yj,qj,str(F(pi)*F(pj))] for yi,qi,pi in left for yj,qj,pj in right]
         self.rejected(self.model,c,'canonical ordered coupling')

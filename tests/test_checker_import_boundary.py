@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 from __future__ import annotations
-import ast, hashlib, json
+import ast
 from pathlib import Path
 import unittest
 ROOT=Path(__file__).resolve().parents[1]
@@ -14,6 +14,15 @@ class CheckerImportBoundaryTests(unittest.TestCase):
             elif isinstance(n,ast.ImportFrom): imported.append(n.module or '')
         bad=[x for x in imported if any(tok in x.lower() for tok in ('campaign','generator','synthes','producer'))]
         self.assertEqual([],bad)
-    def test_checker_source_hash_is_recordable(self):
-        self.assertEqual(64,len(hashlib.sha256(CHECKER.read_bytes()).hexdigest()))
+    def test_checker_has_no_dynamic_import_escape(self):
+        tree=ast.parse(CHECKER.read_text(encoding='utf-8'),filename=str(CHECKER))
+        dynamic=[]
+        for n in ast.walk(tree):
+            if not isinstance(n,ast.Call):
+                continue
+            if isinstance(n.func,ast.Name) and n.func.id=='__import__':
+                dynamic.append(('__import__',n.lineno))
+            if isinstance(n.func,ast.Attribute) and n.func.attr=='import_module':
+                dynamic.append(('import_module',n.lineno))
+        self.assertEqual([],dynamic)
 if __name__=='__main__': unittest.main(verbosity=2)

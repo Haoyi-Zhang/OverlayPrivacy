@@ -19,6 +19,11 @@ all schema, Bellman, tree, and bound conditions it implements hold.
 - ordered-mode eligibility and the ordered claim encoded by the certificate;
 - the final rational upper-bound arithmetic.
 
+Ordered-mode eligibility is deliberately a supplied-label-index check. The
+checker does not search over secret permutations. Thus frozen A004 and A005 are
+rejected in ordered scope even though `(0,2,1)` jointly sorts either case; tests
+regenerate the relabeled forms and verify adjacent and dense bounds both equal 2.
+
 The mutation suite contains positive controls plus targeted changes for each
 class. Optimized Python execution is part of the regression suite so these
 checks cannot be disabled by removal of native `assert` statements.
@@ -36,8 +41,15 @@ program. The checker and producer still trust:
 - the input model supplied to both programs;
 - the operating system and hardware.
 
-The direct policy enumerator and closed-form calibrations reduce common-code
-risk for tiny instances, but they do not remove common specification risk.
+The direct policy enumerator and production scalar dynamic program are
+algorithmically distinct but share `src/model.py::kernel`, exact rational
+arithmetic, and the written model. The comparison entry is allowed to call
+`src/oracle.py::capacity` to obtain the value under test. Static checks prevent
+the direct enumeration functions themselves from reusing that mass-state
+recursion or memo table, and from importing certificate, tree, checker, campaign,
+or summary algorithms. Closed-form calibrations provide a third bounded path.
+These layers reduce common-code risk for tiny instances but do not remove common
+specification risk or amount to an independent semantics implementation.
 
 ## Properties outside certificate checking
 

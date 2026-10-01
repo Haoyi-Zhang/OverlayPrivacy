@@ -16,7 +16,7 @@
     "worker_cpu_seconds",
     "worker_wall_seconds"
   ],
-  "fresh_retained_process_cpu_seconds": 194.044708,
-  "fresh_max_rss_kib": 158676,
+  "fresh_retained_process_cpu_seconds": 122.390209,
+  "fresh_max_rss_kib": 158740,
   "interpretation": "Clean-extraction reproduction by the same executor; not independent human validation."
 }

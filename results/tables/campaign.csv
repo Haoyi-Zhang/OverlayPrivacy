@@ -1,4 +1,4 @@
-case,group,scope,m,B,H,R,C,padding,overflow,bound,bound_decimal,exact,exact_pair_bound,best_star,uniform_cover,obligations,potentials,support_visits,bits,bytes,generation_cpu,checking_cpu,peak_rss_kib
+case,group,scope,m,B,H,R,C,padding,overflow,bound,bound_decimal,exact,exact_pair_bound,best_star,uniform_cover,obligations,potentials,support_visits,max_potential_value_bits,bytes,generation_cpu,checking_cpu,peak_rss_kib
 Q001,queue-grid,all-pairs,4,2,2,1,1,0,False,52/25,2.080000000,44/25,44/25,59/25,4,324,324,756,5,12878,0.0027158600000000144,0.007992113999999995,93104
 Q001,queue-grid,ordered-chain,4,2,2,1,1,0,False,52/25,2.080000000,,,,,162,162,378,5,6496,0.0010299790000000142,0.003995993999999947,92980
 Q002,queue-grid,all-pairs,4,2,2,2,1,0,False,42/25,1.680000000,8/5,42/25,47/25,4,324,324,756,5,12675,0.0021303249999999885,0.007998533999999946,93104

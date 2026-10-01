@@ -1,16 +1,18 @@
 id,likely_objection,resolution_or_evidence,status,remaining_limitation
-R01,Novelty is an assembly of known tools,"Claim boundary isolates the new conjunction; related-work matrix and 2026 freshness scan distinguish each ingredient",addressed internally,External novelty judgment remains
-R02,Ordered equality follows only from triangle inequality,"Proof explicitly requires canonical threshold-component structure plus MST cut characterization",addressed internally,Applies only under listed hypotheses
-R03,The theorem is inferred from experiments,"Human proof is separate from finite falsification tests and claim ledger",addressed internally,No proof-assistant check
-R04,Initial order or shared randomness is underspecified,"Supplement lists six necessary hypotheses and extension checklist",addressed internally,Other model classes need new proofs
-R05,Certificate is confused with exact leakage,"Main and supplement distinguish upper certificate exact tiny oracle and deployment leakage",addressed internally,Large-model exact leakage remains unavailable
-R06,Certificate tightness is unreported,"Generated per-model gap ratio quantiles exact hits and worst case",addressed internally,Only tiny exact-enumerable slice
-R07,Reduction has no practical value,"Dense versus adjacent potentials and Bellman obligations quantify verifier/synthesis savings",addressed internally,Not a reduction in leakage value
-R08,Generator and oracle share code,"Direct policy enumerator has no production imports; one-slot closed forms provide a third path",addressed internally,Shared specification error remains possible
-R09,Python -O removes scientific checks,"Production native asserts removed; AST gate and optimized-mode entry-point test added",addressed internally,Interpreter/platform diversity is finite
-R10,Malformed certificates may be accepted,"Canonical-rational schema and mutation rejection suite fail closed",addressed internally,Not a formally verified parser
-R11,References are padded or fabricated,"69-key provenance ledger; full-text versus metadata-only labels; live DOI/title check",addressed internally,Publisher metadata can contain errors
-R12,Results are nondeterministic,"Clean ZIP reproduction and hash-seed comparison cover deterministic payloads",addressed internally,Timing and RSS vary by environment
-R13,Real-world validity is overstated,"Threats-to-validity and deployment mapping requirements are explicit",addressed internally,No real-network validation
-R14,Work creates operational privacy harm,"Constructed inputs only; no user traces live probes or released linking workflow",addressed internally,Dual-use interpretation cannot be eliminated
-R15,Internal audit is described as independent review,"All reports explicitly identify same-environment same-executor scope",addressed internally,External replication is still absent
+R01,Novelty is an assembly of known tools,Claim boundary isolates the new conjunction; related-work matrix and 2026 freshness scan distinguish each ingredient,addressed internally,External novelty judgment remains
+R02,Ordered equality follows only from triangle inequality,Proof explicitly requires canonical threshold-component structure plus MST cut characterization,addressed internally,Applies only under listed hypotheses
+R03,The theorem is inferred from experiments,Human proof is separate from finite falsification tests and claim ledger,addressed internally,No proof-assistant check
+R04,Initial order or shared randomness is underspecified,Supplement lists six necessary hypotheses and extension checklist,addressed internally,Other model classes need new proofs
+R05,Certificate is confused with exact leakage,Main and supplement distinguish upper certificate exact tiny oracle and deployment leakage,addressed internally,Large-model exact leakage remains unavailable
+R06,Certificate tightness is unreported,Generated per-model gap ratio quantiles exact hits and worst case,addressed internally,Only tiny exact-enumerable slice
+R07,Reduction has no practical value,Dense versus adjacent potentials and Bellman obligations quantify verifier/synthesis savings,addressed internally,Not a reduction in leakage value
+R08,Generator and oracle share code,"Direct policy enumeration is algorithmically distinct but shares model.kernel; static checks forbid reuse of the tested recursion, memo table, and certificate/tree algorithms; fresh payload recomputation is required",addressed internally,A shared kernel or written-specification error remains possible
+R09,Python -O removes scientific checks,"Calibration, worker, and summary acceptance use explicit checks; ordinary and -O micro-fixtures force wrong scalar, rate-bound, and campaign failures with no success output; runner propagates failure",addressed internally,Interpreter/platform diversity is finite
+R10,Malformed certificates may be accepted,Canonical-rational schema and mutation rejection suite fail closed,addressed internally,Not a formally verified parser
+R11,References are padded or fabricated,69-key provenance ledger; full-text versus metadata-only labels; live DOI/title check,addressed internally,Publisher metadata can contain errors
+R12,Results are nondeterministic,Clean extraction reproduction and multiple PYTHONHASHSEED values compare deterministic scientific payloads; no checksum manifest is treated as validation,addressed internally,Timing and RSS vary by environment
+R13,Real-world validity is overstated,Threats-to-validity and deployment mapping requirements are explicit,addressed internally,No real-network validation
+R14,Work creates operational privacy harm,Constructed inputs only; no user traces live probes or released linking workflow,addressed internally,Dual-use interpretation cannot be eliminated
+R15,Internal audit is described as independent review,All reports explicitly identify same-environment same-executor scope,addressed internally,External replication is still absent
+R16,A004/A005 are said to lack a common label order,"The paper now states they are unsorted only in the frozen supplied index; permutation (0,2,1) jointly sorts each and regenerated adjacent/dense bounds both equal 2",addressed internally,The checker intentionally does not search over relabelings
+R17,The 82-bit statement conflicts with wider aggregate fractions,Numeric inventory limits 82 bits to certificate potential values and separately records S030 capacity numerator at 83 bits and S033/S036 best-star numerators at 84 bits,addressed internally,"Bit widths describe retained finite exact arithmetic, not asymptotic complexity"

@@ -1,29 +1,438 @@
 {
-  "denominator_bits": {
-    "maximum": 82,
-    "median": 1.0,
-    "q90": 35
+  "aggregate_result_fields": {
+    "by_field": {
+      "best_star_bound": {
+        "denominator_witnesses": [
+          {
+            "case": "S033",
+            "file": "results/campaign/S033-all-pairs.json",
+            "scope": "all-pairs",
+            "value": "10754792593893929175104371/1594529935381851946385408"
+          },
+          {
+            "case": "S036",
+            "file": "results/campaign/S036-all-pairs.json",
+            "scope": "all-pairs",
+            "value": "10479599565704130457832119/1594529935381851946385408"
+          }
+        ],
+        "maximum_denominator_bits": 81,
+        "maximum_numerator_bits": 84,
+        "numerator_witnesses": [
+          {
+            "case": "S033",
+            "file": "results/campaign/S033-all-pairs.json",
+            "scope": "all-pairs",
+            "value": "10754792593893929175104371/1594529935381851946385408"
+          },
+          {
+            "case": "S036",
+            "file": "results/campaign/S036-all-pairs.json",
+            "scope": "all-pairs",
+            "value": "10479599565704130457832119/1594529935381851946385408"
+          }
+        ],
+        "records": 73
+      },
+      "capacity_bound": {
+        "denominator_witnesses": [
+          {
+            "case": "S030",
+            "file": "results/campaign/S030-all-pairs.json",
+            "scope": "all-pairs",
+            "value": "9013435616319042053091529/3189059870763703892770816"
+          },
+          {
+            "case": "S030",
+            "file": "results/campaign/S030-ordered-chain.json",
+            "scope": "ordered-chain",
+            "value": "9013435616319042053091529/3189059870763703892770816"
+          }
+        ],
+        "maximum_denominator_bits": 82,
+        "maximum_numerator_bits": 83,
+        "numerator_witnesses": [
+          {
+            "case": "S030",
+            "file": "results/campaign/S030-all-pairs.json",
+            "scope": "all-pairs",
+            "value": "9013435616319042053091529/3189059870763703892770816"
+          },
+          {
+            "case": "S030",
+            "file": "results/campaign/S030-ordered-chain.json",
+            "scope": "ordered-chain",
+            "value": "9013435616319042053091529/3189059870763703892770816"
+          }
+        ],
+        "records": 144
+      },
+      "chain_bound": {
+        "denominator_witnesses": [
+          {
+            "case": "S030",
+            "file": "results/campaign/S030-all-pairs.json",
+            "scope": "all-pairs",
+            "value": "9013435616319042053091529/3189059870763703892770816"
+          }
+        ],
+        "maximum_denominator_bits": 82,
+        "maximum_numerator_bits": 83,
+        "numerator_witnesses": [
+          {
+            "case": "S030",
+            "file": "results/campaign/S030-all-pairs.json",
+            "scope": "all-pairs",
+            "value": "9013435616319042053091529/3189059870763703892770816"
+          }
+        ],
+        "records": 73
+      },
+      "exact_capacity": {
+        "denominator_witnesses": [
+          {
+            "case": "S028",
+            "file": "results/campaign/S028-all-pairs.json",
+            "scope": "all-pairs",
+            "value": "109433/78608"
+          },
+          {
+            "case": "S031",
+            "file": "results/campaign/S031-all-pairs.json",
+            "scope": "all-pairs",
+            "value": "110153/78608"
+          },
+          {
+            "case": "S034",
+            "file": "results/campaign/S034-all-pairs.json",
+            "scope": "all-pairs",
+            "value": "110153/78608"
+          }
+        ],
+        "maximum_denominator_bits": 17,
+        "maximum_numerator_bits": 17,
+        "numerator_witnesses": [
+          {
+            "case": "S028",
+            "file": "results/campaign/S028-all-pairs.json",
+            "scope": "all-pairs",
+            "value": "109433/78608"
+          },
+          {
+            "case": "S031",
+            "file": "results/campaign/S031-all-pairs.json",
+            "scope": "all-pairs",
+            "value": "110153/78608"
+          },
+          {
+            "case": "S034",
+            "file": "results/campaign/S034-all-pairs.json",
+            "scope": "all-pairs",
+            "value": "110153/78608"
+          }
+        ],
+        "records": 40
+      },
+      "exact_pair_summary_bound": {
+        "denominator_witnesses": [
+          {
+            "case": "S028",
+            "file": "results/campaign/S028-all-pairs.json",
+            "scope": "all-pairs",
+            "value": "480847/334084"
+          },
+          {
+            "case": "S031",
+            "file": "results/campaign/S031-all-pairs.json",
+            "scope": "all-pairs",
+            "value": "487683/334084"
+          },
+          {
+            "case": "S034",
+            "file": "results/campaign/S034-all-pairs.json",
+            "scope": "all-pairs",
+            "value": "487683/334084"
+          }
+        ],
+        "maximum_denominator_bits": 19,
+        "maximum_numerator_bits": 19,
+        "numerator_witnesses": [
+          {
+            "case": "S028",
+            "file": "results/campaign/S028-all-pairs.json",
+            "scope": "all-pairs",
+            "value": "480847/334084"
+          },
+          {
+            "case": "S031",
+            "file": "results/campaign/S031-all-pairs.json",
+            "scope": "all-pairs",
+            "value": "487683/334084"
+          },
+          {
+            "case": "S034",
+            "file": "results/campaign/S034-all-pairs.json",
+            "scope": "all-pairs",
+            "value": "487683/334084"
+          }
+        ],
+        "records": 40
+      },
+      "uniform_cover_bound": {
+        "denominator_witnesses": [
+          {
+            "case": "S003",
+            "file": "results/campaign/S003-all-pairs.json",
+            "scope": "all-pairs",
+            "value": "124511/65536"
+          },
+          {
+            "case": "S006",
+            "file": "results/campaign/S006-all-pairs.json",
+            "scope": "all-pairs",
+            "value": "124511/65536"
+          },
+          {
+            "case": "S009",
+            "file": "results/campaign/S009-all-pairs.json",
+            "scope": "all-pairs",
+            "value": "124511/65536"
+          },
+          {
+            "case": "S012",
+            "file": "results/campaign/S012-all-pairs.json",
+            "scope": "all-pairs",
+            "value": "242461/65536"
+          },
+          {
+            "case": "S015",
+            "file": "results/campaign/S015-all-pairs.json",
+            "scope": "all-pairs",
+            "value": "242461/65536"
+          },
+          {
+            "case": "S018",
+            "file": "results/campaign/S018-all-pairs.json",
+            "scope": "all-pairs",
+            "value": "242461/65536"
+          },
+          {
+            "case": "S021",
+            "file": "results/campaign/S021-all-pairs.json",
+            "scope": "all-pairs",
+            "value": "478361/65536"
+          },
+          {
+            "case": "S024",
+            "file": "results/campaign/S024-all-pairs.json",
+            "scope": "all-pairs",
+            "value": "478361/65536"
+          },
+          {
+            "case": "S027",
+            "file": "results/campaign/S027-all-pairs.json",
+            "scope": "all-pairs",
+            "value": "478361/65536"
+          },
+          {
+            "case": "S030",
+            "file": "results/campaign/S030-all-pairs.json",
+            "scope": "all-pairs",
+            "value": "950161/65536"
+          },
+          {
+            "case": "S033",
+            "file": "results/campaign/S033-all-pairs.json",
+            "scope": "all-pairs",
+            "value": "950161/65536"
+          },
+          {
+            "case": "S036",
+            "file": "results/campaign/S036-all-pairs.json",
+            "scope": "all-pairs",
+            "value": "950161/65536"
+          }
+        ],
+        "maximum_denominator_bits": 17,
+        "maximum_numerator_bits": 20,
+        "numerator_witnesses": [
+          {
+            "case": "S030",
+            "file": "results/campaign/S030-all-pairs.json",
+            "scope": "all-pairs",
+            "value": "950161/65536"
+          },
+          {
+            "case": "S033",
+            "file": "results/campaign/S033-all-pairs.json",
+            "scope": "all-pairs",
+            "value": "950161/65536"
+          },
+          {
+            "case": "S036",
+            "file": "results/campaign/S036-all-pairs.json",
+            "scope": "all-pairs",
+            "value": "950161/65536"
+          }
+        ],
+        "records": 70
+      }
+    },
+    "field_set": [
+      "capacity_bound",
+      "best_star_bound",
+      "chain_bound",
+      "uniform_cover_bound",
+      "exact_capacity",
+      "exact_pair_summary_bound"
+    ],
+    "maximum_denominator_bits": 82,
+    "maximum_denominator_witnesses": [
+      {
+        "case": "S030",
+        "field": "capacity_bound",
+        "file": "results/campaign/S030-all-pairs.json",
+        "scope": "all-pairs",
+        "value": "9013435616319042053091529/3189059870763703892770816"
+      },
+      {
+        "case": "S030",
+        "field": "chain_bound",
+        "file": "results/campaign/S030-all-pairs.json",
+        "scope": "all-pairs",
+        "value": "9013435616319042053091529/3189059870763703892770816"
+      },
+      {
+        "case": "S030",
+        "field": "capacity_bound",
+        "file": "results/campaign/S030-ordered-chain.json",
+        "scope": "ordered-chain",
+        "value": "9013435616319042053091529/3189059870763703892770816"
+      }
+    ],
+    "maximum_numerator_bits": 84,
+    "maximum_numerator_witnesses": [
+      {
+        "case": "S033",
+        "field": "best_star_bound",
+        "file": "results/campaign/S033-all-pairs.json",
+        "scope": "all-pairs",
+        "value": "10754792593893929175104371/1594529935381851946385408"
+      },
+      {
+        "case": "S036",
+        "field": "best_star_bound",
+        "file": "results/campaign/S036-all-pairs.json",
+        "scope": "all-pairs",
+        "value": "10479599565704130457832119/1594529935381851946385408"
+      }
+    ],
+    "values": 440
   },
-  "exact_rational_values": 1061190,
+  "campaign_record_consistency": {
+    "all_match": true,
+    "maximum_rational_bits_definition": "maximum bit width among that certificate's potential values",
+    "records_checked": 144
+  },
   "interpretation": [
-    "Scientific comparisons use exact integers and fractions; timing and memory remain machine dependent.",
-    "Bit length, not decimal digit count, is the relevant arithmetic-size indicator."
+    "The 82-bit statement applies only to Bellman potential values.",
+    "Aggregated result fields can be wider: the maximum numerator is 84 bits and the maximum denominator is 82 bits.",
+    "Timing and resident memory are environment measurements and are not part of this exact-arithmetic inventory."
   ],
-  "numerator_bits": {
-    "maximum": 84,
-    "median": 1.0,
-    "q90": 31
+  "named_checks": {
+    "S030_capacity_bound_numerator_bits": 83,
+    "S033_best_star_bound_numerator_bits": 84,
+    "S036_best_star_bound_numerator_bits": 84
   },
-  "worst_denominator": {
-    "denominator_bits": 82,
-    "file": "results/campaign/S030-all-pairs.json",
-    "numerator_bits": 83,
-    "path": "capacity_bound"
+  "potential_values": {
+    "field_set": "results/certificates/*.json -> potentials[*]",
+    "maximum_denominator_bits": 82,
+    "maximum_numerator_bits": 82,
+    "maximum_value_bits": 82,
+    "maximum_witness_count": 296,
+    "maximum_witnesses_first_ten": [
+      {
+        "denominator_bits": 82,
+        "file": "results/certificates/S030-all-pairs.json",
+        "numerator_bits": 80,
+        "path": "potentials.0,1,0,1,0,0",
+        "value": "623275356813355992380191/3189059870763703892770816",
+        "value_bits": 82
+      },
+      {
+        "denominator_bits": 82,
+        "file": "results/certificates/S030-all-pairs.json",
+        "numerator_bits": 80,
+        "path": "potentials.0,1,0,1,1,0",
+        "value": "1159409430386980697536441/3189059870763703892770816",
+        "value_bits": 82
+      },
+      {
+        "denominator_bits": 82,
+        "file": "results/certificates/S030-all-pairs.json",
+        "numerator_bits": 82,
+        "path": "potentials.0,11,0,1,0,0",
+        "value": "2653098040026246617380191/3189059870763703892770816",
+        "value_bits": 82
+      },
+      {
+        "denominator_bits": 82,
+        "file": "results/certificates/S030-all-pairs.json",
+        "numerator_bits": 82,
+        "path": "potentials.0,11,0,1,1,0",
+        "value": "2594542165750587906286441/3189059870763703892770816",
+        "value_bits": 82
+      },
+      {
+        "denominator_bits": 82,
+        "file": "results/certificates/S030-all-pairs.json",
+        "numerator_bits": 82,
+        "path": "potentials.0,13,0,1,0,0",
+        "value": "2722925565862192954467295/3189059870763703892770816",
+        "value_bits": 82
+      },
+      {
+        "denominator_bits": 82,
+        "file": "results/certificates/S030-all-pairs.json",
+        "numerator_bits": 82,
+        "path": "potentials.0,13,0,1,1,0",
+        "value": "2634296528005023825279961/3189059870763703892770816",
+        "value_bits": 82
+      },
+      {
+        "denominator_bits": 82,
+        "file": "results/certificates/S030-all-pairs.json",
+        "numerator_bits": 81,
+        "path": "potentials.0,3,0,1,0,0",
+        "value": "1483678000744969229630175/3189059870763703892770816",
+        "value_bits": 82
+      },
+      {
+        "denominator_bits": 82,
+        "file": "results/certificates/S030-all-pairs.json",
+        "numerator_bits": 81,
+        "path": "potentials.0,3,0,1,1,0",
+        "value": "1746043580324627034733481/3189059870763703892770816",
+        "value_bits": 82
+      },
+      {
+        "denominator_bits": 82,
+        "file": "results/certificates/S030-all-pairs.json",
+        "numerator_bits": 81,
+        "path": "potentials.0,5,0,1,0,0",
+        "value": "2008179409968149973583455/3189059870763703892770816",
+        "value_bits": 82
+      },
+      {
+        "denominator_bits": 82,
+        "file": "results/certificates/S030-all-pairs.json",
+        "numerator_bits": 81,
+        "path": "potentials.0,5,0,1,1,0",
+        "value": "2120625739193953719098137/3189059870763703892770816",
+        "value_bits": 82
+      }
+    ],
+    "values": 457555
   },
-  "worst_numerator": {
-    "denominator_bits": 81,
-    "file": "results/campaign/S033-all-pairs.json",
-    "numerator_bits": 84,
-    "path": "best_star_bound"
-  }
+  "schema_version": 2
 }

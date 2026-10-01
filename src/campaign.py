@@ -39,6 +39,7 @@ def instances():
     return cases
 
 def ordered(c):
+    """Frozen supplied-index criterion; this function does not search relabelings."""
     return list(map(F,c['arrival_rates']))==sorted(map(F,c['arrival_rates'])) and c['initial_queues']==sorted(c['initial_queues'])
 
 def write_json(path,value):

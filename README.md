@@ -46,8 +46,9 @@ finite model.
 ## Requirements and resource limits
 
 Use Python 3 on a Unix-like platform providing the standard-library `resource`
-module. Do not run with `python -O`; test and aggregation assertions must remain
-enabled. No dependency installation is required.
+module. No dependency installation is required. Scientific acceptance paths use
+explicit fail-closed checks rather than native Python `assert`, and the retained
+suite is required to pass both ordinary execution and `python -O`.
 
 Scientific workers run one at a time. Each child has a 40 CPU-second limit, a
 44-second parent wall timeout, and a 3500 MiB address-space cap. The surrounding
@@ -61,11 +62,10 @@ Run these commands from the repository root:
 
 ```sh
 python3 -m compileall -q src tests
-python3 tests/test_certificates.py
-python3 tests/test_calibrations.py
-python3 tests/test_oracle_bruteforce.py
-python3 tests/test_reference_audit.py
+python3 tests/run_all.py
+python3 tests/run_all.py --optimized
 python3 src/checker.py inputs/Q014.json results/certificates/Q014-ordered-chain.json
+python3 -O src/checker.py inputs/Q014.json results/certificates/Q014-ordered-chain.json
 python3 src/summarize.py
 ```
 
@@ -79,7 +79,14 @@ Expected scientific outcomes:
 - `test_oracle_bruteforce.py`: an algorithmically separate direct-channel simulator agrees
   with the scalar dynamic program on 192 exhaustive two-slot model cases and 16
   deeper cases, covering 4,832 deterministic policy tables in aggregate. It
-  retains scalar optima and counts, never an optimizing policy.
+  retains scalar optima and counts, never an optimizing policy. Both paths share
+  the declared `model.kernel`; the reference enumeration does not reuse the
+  production recursion, memo table, or certificate/tree algorithms.
+- `test_fail_closed_validation.py`: under ordinary and optimized interpreters,
+  a wrong exact scalar, a copied rate-bound violation, and a corrupt campaign
+  record all exit nonzero and leave no success report or committed scientific
+  output; the test runner also propagates the first nonzero status and does not
+  continue to later tests.
 - `test_reference_audit.py`: 69 unique canonical records pass structural checks;
   the full-text calibration split is exactly 12 same-venue, five influential,
   and five adjacent/theory papers, with 47 remaining records marked metadata-only.
@@ -91,16 +98,21 @@ Expected scientific outcomes:
 
 The test commands refresh `results/tests.json`, `results/calibrations.json`,
 `results/oracle-bruteforce.json`, and `results/reference-audit.json`. Their wall
-time and process timing may vary; exact scientific counts and rational results
-must not. The reference test validates retained provenance and manuscript
-consistency when `paper/` is present; it is not a live-Web resolver and does not
-claim that metadata-only references were read in full.
+time, CPU time, and resident-memory fields may vary; exact scientific counts,
+rational values, and recomputed histograms must not. The semantic metadata makes
+no snapshot-fingerprint promise: the retained oracle record is accepted only
+when required fields, zero failures/errors, exact coverage counts, and a fresh
+scientific-payload recomputation agree. The reference test validates retained
+provenance and manuscript consistency when `paper/` is present; it is not a
+live-Web resolver and does not claim that metadata-only references were read in
+full.
 
 ## Reproduce all scientific results
 
 Use an empty writable directory outside the repository:
 
 ```sh
+set -eu
 python3 src/campaign.py --out /tmp/linkability-reproduction --start 0 --stop 73
 python3 src/campaign.py --out /tmp/linkability-reproduction --repeats
 python3 src/summarize.py --root /tmp/linkability-reproduction
@@ -126,7 +138,7 @@ encodings while excluding only an explicit allowlist of CPU-time and RSS fields.
 It writes `results/reproduction.json` under the fresh output root. The retained
 verification report is `results/verification/clean-reproduction.json`. The final
 retained clean run matched all 74 input, 144 certificate, and 174 result records,
-recording 194.044708 process CPU seconds and 158,676 KiB peak RSS. One Q018 parent-timing record was intentionally refreshed after a parent timeout; its deterministic scientific payload was unchanged. Same-executor
+recording 122.390209 process CPU seconds and 158,740 KiB peak RSS. Same-executor
 clean reproduction is reproducibility evidence, not independent validation.
 
 ## Bibliography provenance boundary
@@ -151,8 +163,12 @@ coexist.
 
 ## Main results and interpretation
 
-All 71 jointly ordered campaign models have identical adjacent and dense canonical
-bounds as reduced rational numbers. Forty tiny models have exact full-history
+All 71 models whose rates and initial queues are jointly nondecreasing in their
+supplied label index have identical adjacent and dense canonical bounds as reduced
+rational numbers. The checker does not search for a relabeling. Frozen A004 and
+A005 are dense-only under that convention, although permutation `(0,2,1)` jointly
+sorts each; regenerated relabeled adjacent and dense bounds both equal `2`.
+Forty tiny models have exact full-history
 oracles; every exact result is below both certificate layers and ten canonical
 bounds are exact. Across these 40 models, the median absolute canonical gap is
 0.0792, the maximum is 0.7872 (Q010), and the maximum bound-to-exact ratio is
@@ -166,6 +182,11 @@ reduction, while returning the same fraction. Their retained encodings occupy
 median generation-plus-check CPU times of 2.824/0.383 seconds for this case.
 Timing is environment-specific; the pair-count reduction and equality of the
 canonical bounds are the theorem-backed claims.
+
+The largest numerator or denominator among certificate **potential values** is
+82 bits. This does not bound every aggregate: S030's capacity-bound numerator is
+83 bits, and the best-star numerators for S033 and S036 are 84 bits. The explicit
+field inventory is `results/verification/numeric-complexity.json`.
 
 The summary-envelope theorem is sharp over arbitrary channels constrained only by
 pairwise TV **upper bounds**. It is not a claim that the witness is a queue channel,

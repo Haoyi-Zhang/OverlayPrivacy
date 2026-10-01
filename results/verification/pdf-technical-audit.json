@@ -1,20 +1,181 @@
 {
+  "successful": true,
+  "scope": "Technical and visual audit of rebuilt PDFs. No checksum or snapshot identity is promised.",
+  "visual_inspection": "All 15 rendered pages were inspected. Pages 8, 9, and 12 of the paper and pages 2 and 3 of the supplement were inspected individually after the final revisions. No clipping, overlap, missing figure, blank or black page, broken glyph, or unreadable table was observed. Existing figure designs were retained.",
   "paper": {
     "file": "paper/paper.pdf",
-    "sha256": "2f70e986065a6656833dd9ae18bf68a2f2cc3a5311594bf5fab28391c687191e",
     "pages": 12,
     "page_size": "612 x 792 pts (letter)",
-    "pdfinfo": "Title:           \nSubject:         \nKeywords:        \nAuthor:          \nCreator:         LaTeX with hyperref\nProducer:        pdfTeX-1.40.26\nCreationDate:    Sun Sep 20 15:47:32 2026 UTC\nModDate:         Sun Sep 20 15:47:32 2026 UTC\nCustom Metadata: yes\nMetadata Stream: no\nTagged:          no\nUserProperties:  no\nSuspects:        no\nForm:            none\nJavaScript:      no\nPages:           12\nEncrypted:       no\nPage size:       612 x 792 pts (letter)\nPage rot:        0\nFile size:       355551 bytes\nOptimized:       no\nPDF version:     1.7\n",
-    "pdffonts": "name                                 type              encoding         emb sub uni object ID\n------------------------------------ ----------------- ---------------- --- --- --- ---------\nPMAZOU+NimbusRomNo9L-Regu            Type 1            Custom           yes yes yes    193  0\nLREKMX+NimbusRomNo9L-MediItal        Type 1            Custom           yes yes yes    195  0\nQYRMZU+NimbusRomNo9L-Medi            Type 1            Custom           yes yes yes    196  0\nJMZESW+CMR9                          Type 1            Builtin          yes yes yes    197  0\nFAQHBI+CMMI9                         Type 1            Builtin          yes yes yes    198  0\nFSFYYG+CMSY9                         Type 1            Builtin          yes yes yes    199  0\nZKTUCL+CMMI10                        Type 1            Builtin          yes yes yes    200  0\nCALZKD+CMR10                         Type 1            Builtin          yes yes yes    202  0\nYWGTTM+CMEX10                        Type 1            Builtin          yes yes yes    203  0\nCOGQBG+CMMI7                         Type 1            Builtin          yes yes yes    204  0\nORUNPB+CMSY10                        Type 1            Builtin          yes yes yes    205  0\nCPEERN+NimbusRomNo9L-ReguItal        Type 1            Custom           yes yes yes    206  0\nUAGOMC+CMBX10                        Type 1            Builtin          yes yes yes    270  0\nVLMDEA+CMSY7                         Type 1            Builtin          yes yes yes    271  0\nTTIHBR+CMR7                          Type 1            Builtin          yes yes yes    274  0\nOCZGSE+CMMI5                         Type 1            Builtin          yes yes yes    326  0\nIPVSCR+MSAM7                         Type 1            Builtin          yes yes yes    328  0\nMIVXUO+CMSY5                         Type 1            Builtin          yes yes yes    330  0\nCZIXWE+CMR5                          Type 1            Builtin          yes yes yes    331  0\nOEXPYN+CMR8                          Type 1            Builtin          yes yes yes    333  0\nVUHGHZ+CMMI8                         Type 1            Builtin          yes yes yes    334  0\nUCGASP+CMR6                          Type 1            Builtin          yes yes yes    335  0\n",
-    "possibly_unembedded": []
+    "encrypted": "no",
+    "font_rows": 22,
+    "possibly_unembedded_font_rows": [],
+    "overfull_boxes": 0,
+    "undefined_reference_or_citation_hits": 0,
+    "rendered_pages": 12,
+    "raster_diagnostics": [
+      {
+        "page": 1,
+        "dimensions_px": [
+          1275,
+          1650
+        ],
+        "mean_luminance": 234.773,
+        "near_white_fraction": 0.867504,
+        "near_black_fraction": 0.036005
+      },
+      {
+        "page": 2,
+        "dimensions_px": [
+          1275,
+          1650
+        ],
+        "mean_luminance": 239.936,
+        "near_white_fraction": 0.893616,
+        "near_black_fraction": 0.021746
+      },
+      {
+        "page": 3,
+        "dimensions_px": [
+          1275,
+          1650
+        ],
+        "mean_luminance": 234.487,
+        "near_white_fraction": 0.857526,
+        "near_black_fraction": 0.031509
+      },
+      {
+        "page": 4,
+        "dimensions_px": [
+          1275,
+          1650
+        ],
+        "mean_luminance": 241.063,
+        "near_white_fraction": 0.902107,
+        "near_black_fraction": 0.020464
+      },
+      {
+        "page": 5,
+        "dimensions_px": [
+          1275,
+          1650
+        ],
+        "mean_luminance": 236.579,
+        "near_white_fraction": 0.871491,
+        "near_black_fraction": 0.027829
+      },
+      {
+        "page": 6,
+        "dimensions_px": [
+          1275,
+          1650
+        ],
+        "mean_luminance": 236.092,
+        "near_white_fraction": 0.868912,
+        "near_black_fraction": 0.029289
+      },
+      {
+        "page": 7,
+        "dimensions_px": [
+          1275,
+          1650
+        ],
+        "mean_luminance": 236.517,
+        "near_white_fraction": 0.870781,
+        "near_black_fraction": 0.027765
+      },
+      {
+        "page": 8,
+        "dimensions_px": [
+          1275,
+          1650
+        ],
+        "mean_luminance": 238.311,
+        "near_white_fraction": 0.882885,
+        "near_black_fraction": 0.025284
+      },
+      {
+        "page": 9,
+        "dimensions_px": [
+          1275,
+          1650
+        ],
+        "mean_luminance": 237.38,
+        "near_white_fraction": 0.87569,
+        "near_black_fraction": 0.026523
+      },
+      {
+        "page": 10,
+        "dimensions_px": [
+          1275,
+          1650
+        ],
+        "mean_luminance": 233.903,
+        "near_white_fraction": 0.854003,
+        "near_black_fraction": 0.032499
+      },
+      {
+        "page": 11,
+        "dimensions_px": [
+          1275,
+          1650
+        ],
+        "mean_luminance": 236.464,
+        "near_white_fraction": 0.864324,
+        "near_black_fraction": 0.023913
+      },
+      {
+        "page": 12,
+        "dimensions_px": [
+          1275,
+          1650
+        ],
+        "mean_luminance": 238.212,
+        "near_white_fraction": 0.872571,
+        "near_black_fraction": 0.018662
+      }
+    ]
   },
   "supplement": {
     "file": "paper/supplement.pdf",
-    "sha256": "4e658bf52737dd96e7bd367c740a3d649c319ac0f0e5258160649f219d539766",
     "pages": 3,
     "page_size": "612 x 792 pts (letter)",
-    "pdfinfo": "Title:           \nSubject:         \nKeywords:        \nAuthor:          \nCreator:         LaTeX with hyperref\nProducer:        pdfTeX-1.40.26\nCreationDate:    Sun Sep 20 15:47:33 2026 UTC\nModDate:         Sun Sep 20 15:47:33 2026 UTC\nCustom Metadata: yes\nMetadata Stream: no\nTagged:          no\nUserProperties:  no\nSuspects:        no\nForm:            none\nJavaScript:      no\nPages:           3\nEncrypted:       no\nPage size:       612 x 792 pts (letter)\nPage rot:        0\nFile size:       129754 bytes\nOptimized:       no\nPDF version:     1.7\n",
-    "pdffonts": "name                                 type              encoding         emb sub uni object ID\n------------------------------------ ----------------- ---------------- --- --- --- ---------\nDXUDJW+NimbusRomNo9L-Regu            Type 1            Custom           yes yes yes     47  0\nQVCFWU+NimbusRomNo9L-MediItal        Type 1            Custom           yes yes yes     49  0\nAGXETI+NimbusRomNo9L-Medi            Type 1            Custom           yes yes yes     50  0\nCGYWTU+CMMI10                        Type 1            Builtin          yes yes yes     51  0\nCXSIPN+NimbusRomNo9L-ReguItal        Type 1            Custom           yes yes yes     52  0\nGDXPAR+NimbusMonL-Regu               Type 1            Custom           yes yes yes     53  0\nRNCZIF+CMR10                         Type 1            Builtin          yes yes yes     54  0\nKJVIKN+CMSY10                        Type 1            Builtin          yes yes yes     55  0\nDMWDNU+CMR7                          Type 1            Builtin          yes yes yes     63  0\nJTXQTF+CMMI7                         Type 1            Builtin          yes yes yes     64  0\n",
-    "possibly_unembedded": []
+    "encrypted": "no",
+    "font_rows": 10,
+    "possibly_unembedded_font_rows": [],
+    "overfull_boxes": 0,
+    "undefined_reference_or_citation_hits": 0,
+    "rendered_pages": 3,
+    "raster_diagnostics": [
+      {
+        "page": 1,
+        "dimensions_px": [
+          1275,
+          1650
+        ],
+        "mean_luminance": 236.083,
+        "near_white_fraction": 0.873829,
+        "near_black_fraction": 0.032429
+      },
+      {
+        "page": 2,
+        "dimensions_px": [
+          1275,
+          1650
+        ],
+        "mean_luminance": 236.554,
+        "near_white_fraction": 0.87162,
+        "near_black_fraction": 0.028012
+      },
+      {
+        "page": 3,
+        "dimensions_px": [
+          1275,
+          1650
+        ],
+        "mean_luminance": 242.043,
+        "near_white_fraction": 0.91023,
+        "near_black_fraction": 0.01979
+      }
+    ]
   }
 }
