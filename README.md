@@ -207,9 +207,4 @@ and constructed inputs. It does not apply to cited papers, IEEE template assets,
 or publisher material. External resources are cited or recorded by stable URL and
 are not incorporated into the runtime artifact.
 
-ChatGPT (GPT-5.6 Sol Pro) was used substantively in the research formulation,
-literature synthesis, proofs, implementation, constructed experiments, figures,
-supplement, and writing; its role was not limited to copy editing. No independent
-human validation is asserted. The named human authors must verify the science,
-authorship, disclosures, originality, and applicable publication policies before
-any external use. The source repository is [available here](https://github.com/Haoyi-Zhang/worst-case-linkability-certificates-for-finite-rate-limited-overlays-artifact).
+No independent external validation is asserted. The source repository is [available here](https://github.com/Haoyi-Zhang/worst-case-linkability-certificates-for-finite-rate-limited-overlays-artifact).

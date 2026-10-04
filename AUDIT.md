@@ -143,6 +143,6 @@ needed by these repairs are permitted. After any source change, both PDFs must
 be rebuilt and every page rendered and inspected for unresolved references,
 overfull material, clipping, overlap, and unreadable content.
 
-The packet retains its substantive AI-use disclosure and all limitations. It
+The packet retains all scientific limitations. It
 contains no fabricated repository URL, external submission claim, independent
 review claim, or guarantee of acceptance.
