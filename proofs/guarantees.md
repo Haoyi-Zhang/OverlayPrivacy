@@ -321,9 +321,11 @@ ordered cut gives all \(m-1\) adjacent edges; together they are already a
 spanning tree, so the adjacent chain is an MST.  Ties may make the MST
 nonunique, but do not change its weight.
 
-The queue-specific part of the theorem proves this cut condition for the exact
-canonical weights by the threshold-component argument.  It is not supplied by
-metricity alone.  For example, the three-point metric
+For the queue-specific canonical weights, Lemma 5 proves this cut condition
+through nested-interval dominance under shared coins and the enlarged filtration.
+The threshold-component construction instead proves the upper-summary envelope
+in Section 3; metricity alone does not supply the ordered cut condition.
+For example, the three-point metric
 \(w(0,1)=w(1,2)=2\), \(w(0,2)=1\) satisfies all triangle inequalities, while
 the adjacent chain weighs 4 and an MST weighs 3.  The executable exhaustive
 check in `tests/test_threshold_mst_lemma.py` covers small integer threshold
