@@ -1,0 +1,60 @@
+name: Finite scientific checks
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  finite-model:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    env:
+      PYTHONUTF8: '1'
+      PYTHONDONTWRITEBYTECODE: '1'
+      PYTHONUNBUFFERED: '1'
+      OMP_NUM_THREADS: '1'
+      OPENBLAS_NUM_THREADS: '1'
+      MKL_NUM_THREADS: '1'
+      NUMEXPR_NUM_THREADS: '1'
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065
+        with:
+          python-version: '3.12'
+      - name: Check and regenerate owned finite models
+        shell: bash
+        run: |
+          set -euo pipefail
+          export EVIDENCE="$RUNNER_TEMP/p070-scientific"
+          mkdir -p "$EVIDENCE"
+          ulimit -v 3584000
+          ulimit -t 900
+          # The whole scientific sequence shares this wall budget, not one per case.
+          timeout --signal=TERM --kill-after=10s 900s bash -euo pipefail <<'CHECKS' 2>&1 | tee "$EVIDENCE/raw-output.log"
+          python -B .github/scripts/check_repository.py
+          python -B tests/run_all.py
+          python -B tests/run_all.py --optimized
+          python -B src/checker.py inputs/Q014.json results/certificates/Q014-ordered-chain.json
+          python -B -O src/checker.py inputs/Q014.json results/certificates/Q014-ordered-chain.json
+          python -B src/campaign.py --out "$EVIDENCE/reproduction" --start 0 --stop 73
+          python -B src/campaign.py --out "$EVIDENCE/reproduction" --repeats
+          python -B src/summarize.py --root "$EVIDENCE/reproduction"
+          python -B tests/compare_reproduction.py --actual "$EVIDENCE/reproduction"
+          CHECKS
+      - name: Retain raw attempts and scientific outputs even after failure
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: p070-finite-scientific-output
+          path: |
+            ${{ runner.temp }}/p070-scientific/
+            results/
+          if-no-files-found: warn
+          retention-days: 14

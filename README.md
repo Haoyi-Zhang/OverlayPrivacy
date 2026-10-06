@@ -107,6 +107,19 @@ provenance and manuscript consistency when `paper/` is present; it is not a
 live-Web resolver and does not claim that metadata-only references were read in
 full.
 
+`tests/test_complexity_endpoints.py` additionally checks zero-horizon coupling
+and terminal work, denominator-one rational widths, and denominator divisibility
+on 90 owned parameter combinations (180 dense/ordered packets). These regressions
+do not add models to the frozen 73-case campaign.
+
+The `Finite scientific checks` workflow is configured for the flat standalone
+artifact repository on Ubuntu 24.04, on pushes to `main`, pull requests, and manual
+dispatch. Its whole scientific sequence has a 900-second wall budget and a
+3500 MiB address-space limit; campaign children retain their narrower limits.
+It runs both interpreter modes and clean regeneration with exact comparisons,
+propagates failures, and uploads raw output and available results even on failure.
+Workflow configuration is not evidence that a remote run has passed.
+
 ## Reproduce all scientific results
 
 Use an empty writable directory outside the repository:
@@ -153,8 +166,12 @@ audit represents them as full-text reads. Corrections made during the final audi
 include the Mittal CCS DOI, the Luo TDSC DOI, the journal form of van Breugel--
 Worrell, the final PriFi record, and the peer-reviewed ISIT form of Makur--Singh.
 A 2026 freshness scan also adds the current ACM website-fingerprinting survey and
-the CSL lower-bound-witness paper while recording two related preprints only as
-novelty-boundary evidence in `results/verification/literature-freshness-2026-09-19.md`.
+the CSL lower-bound-witness paper while recording additional theory-boundary
+sources in `results/verification/literature-freshness-2026-09-19.md`. The Doeblin
+paper's DOI was corrected from its author record; Doeblin Curves is a June 2026
+TIT journal article with an arXiv manuscript, not a preprint-only publication.
+These targeted identity and section checks do not imply a new full-text audit
+of all bibliography or novelty-boundary sources.
 
 Canonical identifiers make the audit inspectable, but metadata can still be
 wrong at a publisher or catalog. Human authors should re-open the cited records
@@ -180,7 +197,9 @@ retain 12,750 potentials and check 18,000 obligations, an exact 87.5% structural
 reduction, while returning the same fraction. Their retained encodings occupy
 4,279,838 and 542,618 bytes. Five fresh-process repetitions give dense/ordered
 median generation-plus-check CPU times of 2.824/0.383 seconds for this case.
-Timing is environment-specific; the pair-count reduction and equality of the
+These timings are historical Linux x86-64, CPython 3.13.5 measurements, whose
+environment record was captured on 2026-09-20, not timings from later local
+exact-value checks. Timing is environment-specific; the pair-count reduction and equality of the
 canonical bounds are the theorem-backed claims.
 
 The largest numerator or denominator among certificate **potential values** is
@@ -207,4 +226,4 @@ and constructed inputs. It does not apply to cited papers, IEEE template assets,
 or publisher material. External resources are cited or recorded by stable URL and
 are not incorporated into the runtime artifact.
 
-No independent external validation is asserted. The source repository is [available here](https://github.com/Haoyi-Zhang/worst-case-linkability-certificates-for-finite-rate-limited-overlays-artifact).
+No independent external validation is asserted. The source repository is [available here](https://github.com/Haoyi-Zhang/OverlayPrivacy-code).

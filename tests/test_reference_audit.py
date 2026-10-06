@@ -84,7 +84,7 @@ EXPECTED_URLS = {
     "vanbreugel2005": "https://doi.org/10.1016/j.tcs.2004.09.035",
     "bacci2013": "https://doi.org/10.1007/978-3-642-40313-2_7",
     "vlasman2025": "https://doi.org/10.4230/LIPIcs.CONCUR.2025.36",
-    "makur2024": "https://doi.org/10.1109/TIT.2024.3378116",
+    "makur2024": "https://doi.org/10.1109/TIT.2024.3367856",
     "makur2025": "https://doi.org/10.1109/ISIT63088.2025.11195488",
     "hunter1976": "https://doi.org/10.1017/S0021900200104164",
     "fill2002": "https://doi.org/10.1007/978-94-017-0061-0_8",
@@ -177,7 +177,8 @@ class ReferenceAuditTest(unittest.TestCase):
         current_additions = {"chaudhary2026", "turkenburg2026"}
         for key, url in EXPECTED_URLS.items():
             self.assertEqual(self.by_key[key]["canonical_url"], url)
-            expected_date = "2026-09-19" if key in current_additions else "2026-09-16"
+            expected_date = ("2026-10-06" if key == "makur2024" else
+                             "2026-09-19" if key in current_additions else "2026-09-16")
             self.assertEqual(self.by_key[key]["metadata_status"], f"manually_checked_{expected_date}")
 
     def test_calibration_counts_are_explicit(self) -> None:
@@ -224,6 +225,25 @@ class ReferenceAuditTest(unittest.TestCase):
         for group in re.findall(r"\\cite\w*\s*\{([^}]*)\}", tex_path.read_text(encoding="utf-8")):
             cited.update(key.strip() for key in group.split(",") if key.strip())
         self.assertEqual(cited, set(entries))
+
+    def test_doeblin_identifier_agrees_across_provenance_consumers(self) -> None:
+        """Retained primary-source identity, not a live resolver or full-text audit."""
+        expected = "https://doi.org/10.1109/TIT.2024.3367856"
+        self.assertEqual(expected, self.by_key["makur2024"]["canonical_url"])
+        with (REPO / "external_resources.csv").open(newline="", encoding="utf-8") as handle:
+            resources = list(csv.DictReader(handle))
+            matches = [row for row in resources
+                       if row["name"] == "Doeblin Coefficients and Related Measures"]
+        self.assertEqual(1, len(matches))
+        self.assertEqual(expected, matches[0]["scholarly_or_official_url"])
+        curves = [row for row in resources if row["name"] == "Doeblin Curves"]
+        self.assertEqual(1, len(curves))
+        self.assertEqual("https://doi.org/10.1109/TIT.2026.3678229", curves[0]["scholarly_or_official_url"])
+        self.assertEqual("journal article with author manuscript", curves[0]["resource_type"])
+        bib_path = PROJECT_PAPER / "references.bib"
+        if bib_path.exists():
+            _, fields = parse_bib(bib_path.read_text(encoding="utf-8"))["makur2024"]
+            self.assertEqual("10.1109/TIT.2024.3367856", fields["doi"])
 
 
 if __name__ == "__main__":

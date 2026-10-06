@@ -198,7 +198,11 @@ precisely, potential entries per pair are (H+1)(C+1)(B+1)^2 and Bellman obligati
 per pair are H(1+2C)(B+1)^2. Total support work also depends on coincident rates,
 zero probabilities, and observation mode; do not infer an exact support ratio when
 these differ across selected pairs. Rational arithmetic complexity additionally
-depends on bit lengths. Generality is over the declared model, not over all
+depends on bit lengths. Including coupling-table construction and terminal
+initialization, direct arithmetic work per pair with support bound L is
+O((H+1)(C+1)(B+1)^2 L), up to integer arithmetic costs. In particular H=0
+still constructs couplings and zero terminal potentials, but has no Bellman
+obligations. Generality is over the declared model, not over all
 traffic shapers, arrival processes, hidden schedulers, or unbounded horizons.
 
 Both rate order and initial-queue order matter. For H=1,lambda=(0,0,0),q=(0,1,0),
@@ -294,12 +298,14 @@ is supplied or inferred in this project.
 
 ### 7.4 Rational bit growth
 
-If D is a common multiple of the denominators of all arrival and cover parameters,
+If the integer D>=1 is a common multiple of the denominators of all arrival and cover parameters,
 canonical transition probabilities admit denominator D^2. With h remaining slots,
 backward values admit denominator D^(2h), by induction: multiply by the transition,
 sum over outcomes, and select a maximizing action. Values are between zero and
-one, so numerator and denominator bit lengths in this representation are
-O(h log D); reducing a fraction cannot increase them. The explicit-state count
+one, so each numerator and denominator has at most 1+floor(2h log_2 D)
+bits, hence O(1+h log D) bits. The additive constant is needed when D=1
+or h=0: even the rational zero has denominator one, with one bit.
+Reducing a fraction cannot increase these widths. The explicit-state count
 is polynomial in numerical B,C,H, not necessarily in their binary encoding length.
 Arbitrary general-scope coupling inputs remain subject to separate parser limits.
 
