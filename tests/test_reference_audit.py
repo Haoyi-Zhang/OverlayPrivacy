@@ -73,7 +73,7 @@ EXPECTED_URLS = {
     "tsang2011": "https://doi.org/10.1109/TDSC.2009.38",
     "shen2022": "https://doi.org/10.1109/TDSC.2021.3052831",
     "wu2021": "https://doi.org/10.1109/TDSC.2019.2949813",
-    "wang2010stepping": "https://doi.org/10.1109/TDSC.2008.28",
+    "wang2010stepping": "https://doi.org/10.1109/TDSC.2010.35",
     "smith2009": "https://doi.org/10.1007/978-3-642-00596-1_21",
     "alvim2012": "https://doi.org/10.1007/978-3-642-22012-8_4",
     "issa2020": "https://doi.org/10.1109/TIT.2019.2962804",
