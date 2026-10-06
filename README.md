@@ -118,7 +118,14 @@ dispatch. Its whole scientific sequence has a 900-second wall budget and a
 3500 MiB address-space limit; campaign children retain their narrower limits.
 It runs both interpreter modes and clean regeneration with exact comparisons,
 propagates failures, and uploads raw output and available results even on failure.
-Workflow configuration is not evidence that a remote run has passed.
+Workflow configuration alone is not evidence that a remote run has passed.
+The current native Ubuntu run passed all 48 methods in each of the normal and
+optimized interpreter modes, then regenerated and exactly compared all 74
+inputs, 144 certificates, and 174 non-timing result payloads. Its campaign
+reported 36.032003 retained process CPU seconds and 80,664 KiB peak RSS. Raw
+test output and fresh summaries are retained in
+`results/measurements/current-linux/`. Historical CPU plots below are unchanged;
+the newer run has a different host environment.
 
 ## Reproduce all scientific results
 

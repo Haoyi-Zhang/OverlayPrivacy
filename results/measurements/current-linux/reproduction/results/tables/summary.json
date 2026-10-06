@@ -1,0 +1,103 @@
+{
+  "successful": true,
+  "models": 73,
+  "dense": 73,
+  "ordered": 71,
+  "ordered_index_convention": "supplied label indices; no automatic relabeling",
+  "oracle_models": 40,
+  "repetition_runs": 30,
+  "all_ordered_bounds_equal": true,
+  "all_oracles_below_bounds": true,
+  "maximum_oracle_nodes": 80,
+  "maximum_potential_value_bits": 82,
+  "aggregate_rational_complexity": {
+    "field_set": [
+      "capacity_bound",
+      "best_star_bound",
+      "chain_bound",
+      "uniform_cover_bound",
+      "exact_capacity",
+      "exact_pair_summary_bound"
+    ],
+    "records": 440,
+    "maximum_numerator_bits": 84,
+    "maximum_denominator_bits": 82,
+    "maximum_numerator_witnesses": [
+      {
+        "case": "S033",
+        "scope": "all-pairs",
+        "field": "best_star_bound",
+        "value": "10754792593893929175104371/1594529935381851946385408"
+      },
+      {
+        "case": "S036",
+        "scope": "all-pairs",
+        "field": "best_star_bound",
+        "value": "10479599565704130457832119/1594529935381851946385408"
+      }
+    ],
+    "maximum_denominator_witnesses": [
+      {
+        "case": "S030",
+        "scope": "all-pairs",
+        "field": "capacity_bound",
+        "value": "9013435616319042053091529/3189059870763703892770816"
+      },
+      {
+        "case": "S030",
+        "scope": "all-pairs",
+        "field": "chain_bound",
+        "value": "9013435616319042053091529/3189059870763703892770816"
+      },
+      {
+        "case": "S030",
+        "scope": "ordered-chain",
+        "field": "capacity_bound",
+        "value": "9013435616319042053091529/3189059870763703892770816"
+      }
+    ],
+    "capacity_bound": {
+      "records": 144,
+      "maximum_numerator_bits": 83,
+      "numerator_witnesses": [
+        {
+          "case": "S030",
+          "scope": "all-pairs",
+          "value": "9013435616319042053091529/3189059870763703892770816"
+        },
+        {
+          "case": "S030",
+          "scope": "ordered-chain",
+          "value": "9013435616319042053091529/3189059870763703892770816"
+        }
+      ],
+      "maximum_denominator_bits": 82
+    },
+    "best_star_bound": {
+      "records": 73,
+      "maximum_numerator_bits": 84,
+      "numerator_witnesses": [
+        {
+          "case": "S033",
+          "scope": "all-pairs",
+          "value": "10754792593893929175104371/1594529935381851946385408"
+        },
+        {
+          "case": "S036",
+          "scope": "all-pairs",
+          "value": "10479599565704130457832119/1594529935381851946385408"
+        }
+      ],
+      "maximum_denominator_bits": 81
+    }
+  },
+  "max_rss_kib": 80664,
+  "retained_process_cpu_seconds": 36.032002999999996,
+  "process_cpu_fallback_records": [],
+  "exact_equals_certificate": 10,
+  "median_absolute_gap": 0.07919999999999999,
+  "maximum_absolute_gap": 0.7872,
+  "maximum_gap_case": "Q010",
+  "maximum_relative_bound_ratio": 1.396774193548387,
+  "note": "Exact finite validation, not deployment evidence. Potential-value bit width is distinct from aggregate-result numerator and denominator widths. RSS is an unadjusted process high-water mark including startup. CPU excludes discarded intake/pilot attempts; resource accounting documents allowance separately."
+}

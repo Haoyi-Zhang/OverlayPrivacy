@@ -1,0 +1,616 @@
+{
+  "check": "repository-material-integrity",
+  "python_sources_parsed": 29,
+  "research_sources_present": 28,
+  "minimum_supplied_sources": 1,
+  "usage_document_present": true,
+  "errors": [],
+  "scope": "Documentation and source/configuration integrity only. Research programs, proofs and experiments are not executed."
+}
+==> /opt/hostedtoolcache/Python/3.12.14/x64/bin/python /home/runner/work/OverlayPrivacy/OverlayPrivacy/tests/test_calibrations.py
+{
+  "successful": true,
+  "one_slot_cases": 600,
+  "continuity_cases": 108,
+  "continuity_seed": 229501,
+  "eligible_retained_rate_cases": 70,
+  "cpu_seconds": 1.432404719,
+  "peak_rss_kib": 17696,
+  "status": "Post-campaign validation of proved analytic calibrations; not a workload extension."
+}
+==> /opt/hostedtoolcache/Python/3.12.14/x64/bin/python /home/runner/work/OverlayPrivacy/OverlayPrivacy/tests/test_certificates.py
+test_hidden_actions_are_excluded (__main__.BoundaryTests.test_hidden_actions_are_excluded) ... ok
+test_padding_observation_boundary (__main__.BoundaryTests.test_padding_observation_boundary) ... ok
+test_queue_reset_does_not_erase_history (__main__.BoundaryTests.test_queue_reset_does_not_erase_history) ... ok
+test_real_only_accounting_boundary (__main__.BoundaryTests.test_real_only_accounting_boundary) ... ok
+test_slot_marginals_do_not_compose (__main__.BoundaryTests.test_slot_marginals_do_not_compose) ... ok
+test_duplicate_json_key (__main__.CertificateTests.test_duplicate_json_key) ... ok
+test_mutations (__main__.CertificateTests.test_mutations) ... ok
+test_nonminimum_tree_is_not_dense_optimal (__main__.CertificateTests.test_nonminimum_tree_is_not_dense_optimal) ... ok
+test_order_and_canonical_specific_mutations (__main__.CertificateTests.test_order_and_canonical_specific_mutations) ... ok
+test_tiny_oracle_and_certificate (__main__.CertificateTests.test_tiny_oracle_and_certificate) ... ok
+test_valid_and_separated_modes (__main__.CertificateTests.test_valid_and_separated_modes) ... ok
+test_exhaustive_upper_summaries (__main__.SummaryTests.test_exhaustive_upper_summaries) ... ok
+test_fixed_prior_boundary (__main__.SummaryTests.test_fixed_prior_boundary) ... ok
+test_random_channels (__main__.SummaryTests.test_random_channels) ... ok
+test_random_summaries (__main__.SummaryTests.test_random_summaries) ... ok
+
+----------------------------------------------------------------------
+Ran 15 tests in 0.592s
+
+OK
+==> /opt/hostedtoolcache/Python/3.12.14/x64/bin/python /home/runner/work/OverlayPrivacy/OverlayPrivacy/tests/test_checker_import_boundary.py
+test_checker_does_not_import_producer_entry_points (__main__.CheckerImportBoundaryTests.test_checker_does_not_import_producer_entry_points) ... ok
+test_checker_has_no_dynamic_import_escape (__main__.CheckerImportBoundaryTests.test_checker_has_no_dynamic_import_escape) ... ok
+
+----------------------------------------------------------------------
+Ran 2 tests in 0.009s
+
+OK
+==> /opt/hostedtoolcache/Python/3.12.14/x64/bin/python /home/runner/work/OverlayPrivacy/OverlayPrivacy/tests/test_claim_language.py
+test_no_unsupported_absolute_priority_language (__main__.ClaimLanguageTests.test_no_unsupported_absolute_priority_language) ... ok
+
+----------------------------------------------------------------------
+Ran 1 test in 0.000s
+
+OK
+==> /opt/hostedtoolcache/Python/3.12.14/x64/bin/python /home/runner/work/OverlayPrivacy/OverlayPrivacy/tests/test_complexity_endpoints.py
+test_exact_denominator_divisibility_and_width_grid (__main__.ComplexityEndpointTests.test_exact_denominator_divisibility_and_width_grid) ... ok
+test_integral_probabilities_have_one_bit_not_zero_bits (__main__.ComplexityEndpointTests.test_integral_probabilities_have_one_bit_not_zero_bits) ... ok
+test_zero_horizon_still_has_coupling_and_terminal_work (__main__.ComplexityEndpointTests.test_zero_horizon_still_has_coupling_and_terminal_work) ... ok
+
+----------------------------------------------------------------------
+Ran 3 tests in 0.149s
+
+OK
+==> /opt/hostedtoolcache/Python/3.12.14/x64/bin/python /home/runner/work/OverlayPrivacy/OverlayPrivacy/tests/test_fail_closed_validation.py
+test_corrupt_campaign_record_makes_summarize_fail_without_outputs (__main__.FailClosedValidationTests.test_corrupt_campaign_record_makes_summarize_fail_without_outputs) ... ok
+test_native_assert_is_absent_from_scientific_acceptance_paths (__main__.FailClosedValidationTests.test_native_assert_is_absent_from_scientific_acceptance_paths) ... ok
+test_rate_bound_violation_copy_exits_nonzero_without_success_report (__main__.FailClosedValidationTests.test_rate_bound_violation_copy_exits_nonzero_without_success_report) ... ok
+test_test_runner_propagates_failure_and_stops (__main__.FailClosedValidationTests.test_test_runner_propagates_failure_and_stops)
+The documented loop must return failure and skip later tests. ... ==> /opt/hostedtoolcache/Python/3.12.14/x64/bin/python /tmp/tmp9q5d1j7n/test_00_ok.py
+==> /opt/hostedtoolcache/Python/3.12.14/x64/bin/python /tmp/tmp9q5d1j7n/test_01_bad.py
+==> /opt/hostedtoolcache/Python/3.12.14/x64/bin/python -O /tmp/tmplfs39785/test_00_ok.py
+==> /opt/hostedtoolcache/Python/3.12.14/x64/bin/python -O /tmp/tmplfs39785/test_01_bad.py
+ok
+test_worker_wrong_scalar_exits_nonzero_without_scientific_outputs (__main__.FailClosedValidationTests.test_worker_wrong_scalar_exits_nonzero_without_scientific_outputs)
+A bad exact scalar must fail before the worker commits either file. ... ok
+test_wrong_one_slot_scalar_exits_nonzero_without_success_report (__main__.FailClosedValidationTests.test_wrong_one_slot_scalar_exits_nonzero_without_success_report) ... ok
+
+----------------------------------------------------------------------
+Ran 6 tests in 4.417s
+
+OK
+==> /opt/hostedtoolcache/Python/3.12.14/x64/bin/python /home/runner/work/OverlayPrivacy/OverlayPrivacy/tests/test_hashseed_determinism.py
+test_checker_payload (__main__.HashSeedDeterminismTests.test_checker_payload) ... ok
+test_reviewer_metrics_payload (__main__.HashSeedDeterminismTests.test_reviewer_metrics_payload) ... ok
+
+----------------------------------------------------------------------
+Ran 2 tests in 0.546s
+
+OK
+==> /opt/hostedtoolcache/Python/3.12.14/x64/bin/python /home/runner/work/OverlayPrivacy/OverlayPrivacy/tests/test_model_coverage.py
+test_frozen_model_inventory (__main__.ModelCoverageTests.test_frozen_model_inventory) ... ok
+
+----------------------------------------------------------------------
+Ran 1 test in 0.167s
+
+OK
+==> /opt/hostedtoolcache/Python/3.12.14/x64/bin/python /home/runner/work/OverlayPrivacy/OverlayPrivacy/tests/test_numeric_complexity.py
+test_aggregate_fields_are_separate (__main__.NumericComplexityTests.test_aggregate_fields_are_separate) ... ok
+test_campaign_metadata_matches_certificates (__main__.NumericComplexityTests.test_campaign_metadata_matches_certificates) ... ok
+test_named_witnesses (__main__.NumericComplexityTests.test_named_witnesses) ... ok
+test_potential_field_width_is_explicit (__main__.NumericComplexityTests.test_potential_field_width_is_explicit) ... ok
+
+----------------------------------------------------------------------
+Ran 4 tests in 12.049s
+
+OK
+==> /opt/hostedtoolcache/Python/3.12.14/x64/bin/python /home/runner/work/OverlayPrivacy/OverlayPrivacy/tests/test_oracle_bruteforce.py
+test_exhaustive_two_slot_grid (__main__.OracleBruteForceTests.test_exhaustive_two_slot_grid) ... ok
+test_three_slot_and_multi_secret_cases (__main__.OracleBruteForceTests.test_three_slot_and_multi_secret_cases) ... ok
+
+----------------------------------------------------------------------
+Ran 2 tests in 0.316s
+
+OK
+==> /opt/hostedtoolcache/Python/3.12.14/x64/bin/python /home/runner/work/OverlayPrivacy/OverlayPrivacy/tests/test_randomized_policy_dominance.py
+test_capacity_is_convex_under_channel_mixing (__main__.RandomizedPolicyDominanceTests.test_capacity_is_convex_under_channel_mixing) ... ok
+
+----------------------------------------------------------------------
+Ran 1 test in 0.086s
+
+OK
+==> /opt/hostedtoolcache/Python/3.12.14/x64/bin/python /home/runner/work/OverlayPrivacy/OverlayPrivacy/tests/test_reference_audit.py
+test_calibration_counts_are_explicit (__main__.ReferenceAuditTest.test_calibration_counts_are_explicit) ... ok
+test_doeblin_identifier_agrees_across_provenance_consumers (__main__.ReferenceAuditTest.test_doeblin_identifier_agrees_across_provenance_consumers)
+Retained primary-source identity, not a live resolver or full-text audit. ... ok
+test_full_project_crosscheck_when_available (__main__.ReferenceAuditTest.test_full_project_crosscheck_when_available) ... skipped 'standalone repository has no paper/ sibling'
+test_inventory_and_identifiers (__main__.ReferenceAuditTest.test_inventory_and_identifiers) ... ok
+test_material_corrections_are_frozen (__main__.ReferenceAuditTest.test_material_corrections_are_frozen) ... ok
+
+----------------------------------------------------------------------
+Ran 5 tests in 0.001s
+
+OK (skipped=1)
+==> /opt/hostedtoolcache/Python/3.12.14/x64/bin/python /home/runner/work/OverlayPrivacy/OverlayPrivacy/tests/test_reviewer_metrics.py
+test_bounds_are_nonnegative (__main__.ReviewerMetricsTests.test_bounds_are_nonnegative) ... ok
+test_expected_exact_slice (__main__.ReviewerMetricsTests.test_expected_exact_slice) ... ok
+test_known_frozen_statistics (__main__.ReviewerMetricsTests.test_known_frozen_statistics) ... ok
+
+----------------------------------------------------------------------
+Ran 3 tests in 0.040s
+
+OK
+==> /opt/hostedtoolcache/Python/3.12.14/x64/bin/python /home/runner/work/OverlayPrivacy/OverlayPrivacy/tests/test_semantic_independence.py
+test_false_or_incomplete_records_are_rejected (__main__.SemanticPathTests.test_false_or_incomplete_records_are_rejected) ... ok
+test_metadata_states_shared_dependencies_without_hash_fingerprints (__main__.SemanticPathTests.test_metadata_states_shared_dependencies_without_hash_fingerprints) ... ok
+test_reference_functions_do_not_reuse_tested_recursion_or_certificates (__main__.SemanticPathTests.test_reference_functions_do_not_reuse_tested_recursion_or_certificates) ... ok
+test_retained_record_is_valid_and_matches_fresh_scientific_payload (__main__.SemanticPathTests.test_retained_record_is_valid_and_matches_fresh_scientific_payload) ... ok
+
+----------------------------------------------------------------------
+Ran 4 tests in 0.391s
+
+OK
+==> /opt/hostedtoolcache/Python/3.12.14/x64/bin/python /home/runner/work/OverlayPrivacy/OverlayPrivacy/tests/test_threshold_mst_lemma.py
+test_exhaustive_small_integer_weights (__main__.ThresholdMSTLemmaTests.test_exhaustive_small_integer_weights) ... ok
+test_triangle_inequality_alone_is_insufficient (__main__.ThresholdMSTLemmaTests.test_triangle_inequality_alone_is_insufficient) ... ok
+
+----------------------------------------------------------------------
+Ran 2 tests in 1.677s
+
+OK
+==> /opt/hostedtoolcache/Python/3.12.14/x64/bin/python -O /home/runner/work/OverlayPrivacy/OverlayPrivacy/tests/test_calibrations.py
+{
+  "successful": true,
+  "one_slot_cases": 600,
+  "continuity_cases": 108,
+  "continuity_seed": 229501,
+  "eligible_retained_rate_cases": 70,
+  "cpu_seconds": 1.279402955,
+  "peak_rss_kib": 20724,
+  "status": "Post-campaign validation of proved analytic calibrations; not a workload extension."
+}
+==> /opt/hostedtoolcache/Python/3.12.14/x64/bin/python -O /home/runner/work/OverlayPrivacy/OverlayPrivacy/tests/test_certificates.py
+test_hidden_actions_are_excluded (__main__.BoundaryTests.test_hidden_actions_are_excluded) ... ok
+test_padding_observation_boundary (__main__.BoundaryTests.test_padding_observation_boundary) ... ok
+test_queue_reset_does_not_erase_history (__main__.BoundaryTests.test_queue_reset_does_not_erase_history) ... ok
+test_real_only_accounting_boundary (__main__.BoundaryTests.test_real_only_accounting_boundary) ... ok
+test_slot_marginals_do_not_compose (__main__.BoundaryTests.test_slot_marginals_do_not_compose) ... ok
+test_duplicate_json_key (__main__.CertificateTests.test_duplicate_json_key) ... ok
+test_mutations (__main__.CertificateTests.test_mutations) ... ok
+test_nonminimum_tree_is_not_dense_optimal (__main__.CertificateTests.test_nonminimum_tree_is_not_dense_optimal) ... ok
+test_order_and_canonical_specific_mutations (__main__.CertificateTests.test_order_and_canonical_specific_mutations) ... ok
+test_tiny_oracle_and_certificate (__main__.CertificateTests.test_tiny_oracle_and_certificate) ... ok
+test_valid_and_separated_modes (__main__.CertificateTests.test_valid_and_separated_modes) ... ok
+test_exhaustive_upper_summaries (__main__.SummaryTests.test_exhaustive_upper_summaries) ... ok
+test_fixed_prior_boundary (__main__.SummaryTests.test_fixed_prior_boundary) ... ok
+test_random_channels (__main__.SummaryTests.test_random_channels) ... ok
+test_random_summaries (__main__.SummaryTests.test_random_summaries) ... ok
+
+----------------------------------------------------------------------
+Ran 15 tests in 0.586s
+
+OK
+==> /opt/hostedtoolcache/Python/3.12.14/x64/bin/python -O /home/runner/work/OverlayPrivacy/OverlayPrivacy/tests/test_checker_import_boundary.py
+test_checker_does_not_import_producer_entry_points (__main__.CheckerImportBoundaryTests.test_checker_does_not_import_producer_entry_points) ... ok
+test_checker_has_no_dynamic_import_escape (__main__.CheckerImportBoundaryTests.test_checker_has_no_dynamic_import_escape) ... ok
+
+----------------------------------------------------------------------
+Ran 2 tests in 0.008s
+
+OK
+==> /opt/hostedtoolcache/Python/3.12.14/x64/bin/python -O /home/runner/work/OverlayPrivacy/OverlayPrivacy/tests/test_claim_language.py
+test_no_unsupported_absolute_priority_language (__main__.ClaimLanguageTests.test_no_unsupported_absolute_priority_language) ... ok
+
+----------------------------------------------------------------------
+Ran 1 test in 0.000s
+
+OK
+==> /opt/hostedtoolcache/Python/3.12.14/x64/bin/python -O /home/runner/work/OverlayPrivacy/OverlayPrivacy/tests/test_complexity_endpoints.py
+test_exact_denominator_divisibility_and_width_grid (__main__.ComplexityEndpointTests.test_exact_denominator_divisibility_and_width_grid) ... ok
+test_integral_probabilities_have_one_bit_not_zero_bits (__main__.ComplexityEndpointTests.test_integral_probabilities_have_one_bit_not_zero_bits) ... ok
+test_zero_horizon_still_has_coupling_and_terminal_work (__main__.ComplexityEndpointTests.test_zero_horizon_still_has_coupling_and_terminal_work) ... ok
+
+----------------------------------------------------------------------
+Ran 3 tests in 0.153s
+
+OK
+==> /opt/hostedtoolcache/Python/3.12.14/x64/bin/python -O /home/runner/work/OverlayPrivacy/OverlayPrivacy/tests/test_fail_closed_validation.py
+test_corrupt_campaign_record_makes_summarize_fail_without_outputs (__main__.FailClosedValidationTests.test_corrupt_campaign_record_makes_summarize_fail_without_outputs) ... ok
+test_native_assert_is_absent_from_scientific_acceptance_paths (__main__.FailClosedValidationTests.test_native_assert_is_absent_from_scientific_acceptance_paths) ... ok
+test_rate_bound_violation_copy_exits_nonzero_without_success_report (__main__.FailClosedValidationTests.test_rate_bound_violation_copy_exits_nonzero_without_success_report) ... ok
+test_test_runner_propagates_failure_and_stops (__main__.FailClosedValidationTests.test_test_runner_propagates_failure_and_stops)
+The documented loop must return failure and skip later tests. ... ==> /opt/hostedtoolcache/Python/3.12.14/x64/bin/python /tmp/tmpwfz4fiz9/test_00_ok.py
+==> /opt/hostedtoolcache/Python/3.12.14/x64/bin/python /tmp/tmpwfz4fiz9/test_01_bad.py
+==> /opt/hostedtoolcache/Python/3.12.14/x64/bin/python -O /tmp/tmpun242fta/test_00_ok.py
+==> /opt/hostedtoolcache/Python/3.12.14/x64/bin/python -O /tmp/tmpun242fta/test_01_bad.py
+ok
+test_worker_wrong_scalar_exits_nonzero_without_scientific_outputs (__main__.FailClosedValidationTests.test_worker_wrong_scalar_exits_nonzero_without_scientific_outputs)
+A bad exact scalar must fail before the worker commits either file. ... ok
+test_wrong_one_slot_scalar_exits_nonzero_without_success_report (__main__.FailClosedValidationTests.test_wrong_one_slot_scalar_exits_nonzero_without_success_report) ... ok
+
+----------------------------------------------------------------------
+Ran 6 tests in 3.390s
+
+OK
+==> /opt/hostedtoolcache/Python/3.12.14/x64/bin/python -O /home/runner/work/OverlayPrivacy/OverlayPrivacy/tests/test_hashseed_determinism.py
+test_checker_payload (__main__.HashSeedDeterminismTests.test_checker_payload) ... ok
+test_reviewer_metrics_payload (__main__.HashSeedDeterminismTests.test_reviewer_metrics_payload) ... ok
+
+----------------------------------------------------------------------
+Ran 2 tests in 0.193s
+
+OK
+==> /opt/hostedtoolcache/Python/3.12.14/x64/bin/python -O /home/runner/work/OverlayPrivacy/OverlayPrivacy/tests/test_model_coverage.py
+test_frozen_model_inventory (__main__.ModelCoverageTests.test_frozen_model_inventory) ... ok
+
+----------------------------------------------------------------------
+Ran 1 test in 0.032s
+
+OK
+==> /opt/hostedtoolcache/Python/3.12.14/x64/bin/python -O /home/runner/work/OverlayPrivacy/OverlayPrivacy/tests/test_numeric_complexity.py
+test_aggregate_fields_are_separate (__main__.NumericComplexityTests.test_aggregate_fields_are_separate) ... ok
+test_campaign_metadata_matches_certificates (__main__.NumericComplexityTests.test_campaign_metadata_matches_certificates) ... ok
+test_named_witnesses (__main__.NumericComplexityTests.test_named_witnesses) ... ok
+test_potential_field_width_is_explicit (__main__.NumericComplexityTests.test_potential_field_width_is_explicit) ... ok
+
+----------------------------------------------------------------------
+Ran 4 tests in 12.231s
+
+OK
+==> /opt/hostedtoolcache/Python/3.12.14/x64/bin/python -O /home/runner/work/OverlayPrivacy/OverlayPrivacy/tests/test_oracle_bruteforce.py
+test_exhaustive_two_slot_grid (__main__.OracleBruteForceTests.test_exhaustive_two_slot_grid) ... ok
+test_three_slot_and_multi_secret_cases (__main__.OracleBruteForceTests.test_three_slot_and_multi_secret_cases) ... ok
+
+----------------------------------------------------------------------
+Ran 2 tests in 0.322s
+
+OK
+==> /opt/hostedtoolcache/Python/3.12.14/x64/bin/python -O /home/runner/work/OverlayPrivacy/OverlayPrivacy/tests/test_randomized_policy_dominance.py
+test_capacity_is_convex_under_channel_mixing (__main__.RandomizedPolicyDominanceTests.test_capacity_is_convex_under_channel_mixing) ... ok
+
+----------------------------------------------------------------------
+Ran 1 test in 0.080s
+
+OK
+==> /opt/hostedtoolcache/Python/3.12.14/x64/bin/python -O /home/runner/work/OverlayPrivacy/OverlayPrivacy/tests/test_reference_audit.py
+test_calibration_counts_are_explicit (__main__.ReferenceAuditTest.test_calibration_counts_are_explicit) ... ok
+test_doeblin_identifier_agrees_across_provenance_consumers (__main__.ReferenceAuditTest.test_doeblin_identifier_agrees_across_provenance_consumers)
+Retained primary-source identity, not a live resolver or full-text audit. ... ok
+test_full_project_crosscheck_when_available (__main__.ReferenceAuditTest.test_full_project_crosscheck_when_available) ... skipped 'standalone repository has no paper/ sibling'
+test_inventory_and_identifiers (__main__.ReferenceAuditTest.test_inventory_and_identifiers) ... ok
+test_material_corrections_are_frozen (__main__.ReferenceAuditTest.test_material_corrections_are_frozen) ... ok
+
+----------------------------------------------------------------------
+Ran 5 tests in 0.001s
+
+OK (skipped=1)
+==> /opt/hostedtoolcache/Python/3.12.14/x64/bin/python -O /home/runner/work/OverlayPrivacy/OverlayPrivacy/tests/test_reviewer_metrics.py
+test_bounds_are_nonnegative (__main__.ReviewerMetricsTests.test_bounds_are_nonnegative) ... ok
+test_expected_exact_slice (__main__.ReviewerMetricsTests.test_expected_exact_slice) ... ok
+test_known_frozen_statistics (__main__.ReviewerMetricsTests.test_known_frozen_statistics) ... ok
+
+----------------------------------------------------------------------
+Ran 3 tests in 0.040s
+
+OK
+==> /opt/hostedtoolcache/Python/3.12.14/x64/bin/python -O /home/runner/work/OverlayPrivacy/OverlayPrivacy/tests/test_semantic_independence.py
+test_false_or_incomplete_records_are_rejected (__main__.SemanticPathTests.test_false_or_incomplete_records_are_rejected) ... ok
+test_metadata_states_shared_dependencies_without_hash_fingerprints (__main__.SemanticPathTests.test_metadata_states_shared_dependencies_without_hash_fingerprints) ... ok
+test_reference_functions_do_not_reuse_tested_recursion_or_certificates (__main__.SemanticPathTests.test_reference_functions_do_not_reuse_tested_recursion_or_certificates) ... ok
+test_retained_record_is_valid_and_matches_fresh_scientific_payload (__main__.SemanticPathTests.test_retained_record_is_valid_and_matches_fresh_scientific_payload) ... ok
+
+----------------------------------------------------------------------
+Ran 4 tests in 0.396s
+
+OK
+==> /opt/hostedtoolcache/Python/3.12.14/x64/bin/python -O /home/runner/work/OverlayPrivacy/OverlayPrivacy/tests/test_threshold_mst_lemma.py
+test_exhaustive_small_integer_weights (__main__.ThresholdMSTLemmaTests.test_exhaustive_small_integer_weights) ... ok
+test_triangle_inequality_alone_is_insufficient (__main__.ThresholdMSTLemmaTests.test_triangle_inequality_alone_is_insufficient) ... ok
+
+----------------------------------------------------------------------
+Ran 2 tests in 1.635s
+
+OK
+{"bellman_obligations": 324, "capacity_bound": "1028/625", "coupling_entries": 129, "maximum_rational_bits": 12, "optimality_checked": true, "optimality_domain": "canonical-dense-family-via-order", "potential_entries": 270, "scope": "ordered-chain", "valid": true, "weighted_support_visits": 768}
+{"bellman_obligations": 324, "capacity_bound": "1028/625", "coupling_entries": 129, "maximum_rational_bits": 12, "optimality_checked": true, "optimality_domain": "canonical-dense-family-via-order", "potential_entries": 270, "scope": "ordered-chain", "valid": true, "weighted_support_visits": 768}
+{"case": "Q001", "scope": "all-pairs", "repeat": 0, "capacity_bound": "52/25", "worker_cpu_seconds": 0.012996183999999997, "peak_rss_kib": 15852}
+{"case": "Q001", "scope": "ordered-chain", "repeat": 0, "capacity_bound": "52/25", "worker_cpu_seconds": 0.005996583999999999, "peak_rss_kib": 15724}
+{"case": "Q002", "scope": "all-pairs", "repeat": 0, "capacity_bound": "42/25", "worker_cpu_seconds": 0.013997867999999997, "peak_rss_kib": 16012}
+{"case": "Q002", "scope": "ordered-chain", "repeat": 0, "capacity_bound": "42/25", "worker_cpu_seconds": 0.006995934999999998, "peak_rss_kib": 15708}
+{"case": "Q003", "scope": "all-pairs", "repeat": 0, "capacity_bound": "42/25", "worker_cpu_seconds": 0.013997368000000003, "peak_rss_kib": 16048}
+{"case": "Q003", "scope": "ordered-chain", "repeat": 0, "capacity_bound": "42/25", "worker_cpu_seconds": 0.005995422999999996, "peak_rss_kib": 15704}
+{"case": "Q004", "scope": "all-pairs", "repeat": 0, "capacity_bound": "157/100", "worker_cpu_seconds": 0.015962733, "peak_rss_kib": 15948}
+{"case": "Q004", "scope": "ordered-chain", "repeat": 0, "capacity_bound": "157/100", "worker_cpu_seconds": 0.007995244999999998, "peak_rss_kib": 15832}
+{"case": "Q005", "scope": "all-pairs", "repeat": 0, "capacity_bound": "67/50", "worker_cpu_seconds": 0.014997378999999998, "peak_rss_kib": 15880}
+{"case": "Q005", "scope": "ordered-chain", "repeat": 0, "capacity_bound": "67/50", "worker_cpu_seconds": 0.0069960240000000035, "peak_rss_kib": 15628}
+{"case": "Q006", "scope": "all-pairs", "repeat": 0, "capacity_bound": "67/50", "worker_cpu_seconds": 0.014997158, "peak_rss_kib": 15840}
+{"case": "Q006", "scope": "ordered-chain", "repeat": 0, "capacity_bound": "67/50", "worker_cpu_seconds": 0.006995513999999998, "peak_rss_kib": 15620}
+{"case": "Q007", "scope": "all-pairs", "repeat": 0, "capacity_bound": "1", "worker_cpu_seconds": 0.011986488000000003, "peak_rss_kib": 15848}
+{"case": "Q007", "scope": "ordered-chain", "repeat": 0, "capacity_bound": "1", "worker_cpu_seconds": 0.005995812999999996, "peak_rss_kib": 15932}
+{"case": "Q008", "scope": "all-pairs", "repeat": 0, "capacity_bound": "1", "worker_cpu_seconds": 0.012996094, "peak_rss_kib": 15836}
+{"case": "Q008", "scope": "ordered-chain", "repeat": 0, "capacity_bound": "1", "worker_cpu_seconds": 0.005995783000000001, "peak_rss_kib": 15748}
+{"case": "Q009", "scope": "all-pairs", "repeat": 0, "capacity_bound": "1", "worker_cpu_seconds": 0.011996062999999998, "peak_rss_kib": 16044}
+{"case": "Q009", "scope": "ordered-chain", "repeat": 0, "capacity_bound": "1", "worker_cpu_seconds": 0.005996853999999999, "peak_rss_kib": 15580}
+{"case": "Q010", "scope": "all-pairs", "repeat": 0, "capacity_bound": "1732/625", "worker_cpu_seconds": 0.024995101, "peak_rss_kib": 16432}
+{"case": "Q010", "scope": "ordered-chain", "repeat": 0, "capacity_bound": "1732/625", "worker_cpu_seconds": 0.007995264999999998, "peak_rss_kib": 15916}
+{"case": "Q011", "scope": "all-pairs", "repeat": 0, "capacity_bound": "11/5", "worker_cpu_seconds": 0.022994978000000003, "peak_rss_kib": 16096}
+{"case": "Q011", "scope": "ordered-chain", "repeat": 0, "capacity_bound": "11/5", "worker_cpu_seconds": 0.007995516000000001, "peak_rss_kib": 15912}
+{"case": "Q012", "scope": "all-pairs", "repeat": 0, "capacity_bound": "1098/625", "worker_cpu_seconds": 0.019997477, "peak_rss_kib": 15980}
+{"case": "Q012", "scope": "ordered-chain", "repeat": 0, "capacity_bound": "1098/625", "worker_cpu_seconds": 0.007995265000000001, "peak_rss_kib": 15920}
+{"case": "Q013", "scope": "all-pairs", "repeat": 0, "capacity_bound": "20317/10000", "worker_cpu_seconds": 0.028995307, "peak_rss_kib": 16524}
+{"case": "Q013", "scope": "ordered-chain", "repeat": 0, "capacity_bound": "20317/10000", "worker_cpu_seconds": 0.008996738999999997, "peak_rss_kib": 15632}
+{"case": "Q014", "scope": "all-pairs", "repeat": 0, "capacity_bound": "1028/625", "worker_cpu_seconds": 0.02399519, "peak_rss_kib": 16312}
+{"case": "Q014", "scope": "ordered-chain", "repeat": 0, "capacity_bound": "1028/625", "worker_cpu_seconds": 0.008996197999999997, "peak_rss_kib": 15932}
+{"case": "Q015", "scope": "all-pairs", "repeat": 0, "capacity_bound": "1723/1250", "worker_cpu_seconds": 0.024966258, "peak_rss_kib": 15960}
+{"case": "Q015", "scope": "ordered-chain", "repeat": 0, "capacity_bound": "1723/1250", "worker_cpu_seconds": 0.008996820000000003, "peak_rss_kib": 15736}
+{"case": "Q016", "scope": "all-pairs", "repeat": 0, "capacity_bound": "1", "worker_cpu_seconds": 0.019993391000000003, "peak_rss_kib": 15980}
+{"case": "Q016", "scope": "ordered-chain", "repeat": 0, "capacity_bound": "1", "worker_cpu_seconds": 0.007995565999999999, "peak_rss_kib": 15932}
+{"case": "Q017", "scope": "all-pairs", "repeat": 0, "capacity_bound": "1", "worker_cpu_seconds": 0.018997965999999998, "peak_rss_kib": 16008}
+{"case": "Q017", "scope": "ordered-chain", "repeat": 0, "capacity_bound": "1", "worker_cpu_seconds": 0.007990847999999998, "peak_rss_kib": 15624}
+{"case": "Q018", "scope": "all-pairs", "repeat": 0, "capacity_bound": "1", "worker_cpu_seconds": 0.018988101999999996, "peak_rss_kib": 15968}
+{"case": "Q018", "scope": "ordered-chain", "repeat": 0, "capacity_bound": "1", "worker_cpu_seconds": 0.006995724000000002, "peak_rss_kib": 15920}
+{"case": "Q019", "scope": "all-pairs", "repeat": 0, "capacity_bound": "1365892/390625", "worker_cpu_seconds": 0.027789269000000002, "peak_rss_kib": 15980}
+{"case": "Q019", "scope": "ordered-chain", "repeat": 0, "capacity_bound": "1365892/390625", "worker_cpu_seconds": 0.011995392, "peak_rss_kib": 15984}
+{"case": "Q020", "scope": "all-pairs", "repeat": 0, "capacity_bound": "1101358/390625", "worker_cpu_seconds": 0.027987474000000002, "peak_rss_kib": 16316}
+{"case": "Q020", "scope": "ordered-chain", "repeat": 0, "capacity_bound": "1101358/390625", "worker_cpu_seconds": 0.011996644, "peak_rss_kib": 15912}
+{"case": "Q021", "scope": "all-pairs", "repeat": 0, "capacity_bound": "836897/390625", "worker_cpu_seconds": 0.027995947000000004, "peak_rss_kib": 16028}
+{"case": "Q021", "scope": "ordered-chain", "repeat": 0, "capacity_bound": "836897/390625", "worker_cpu_seconds": 0.010995008999999997, "peak_rss_kib": 16048}
+{"case": "Q022", "scope": "all-pairs", "repeat": 0, "capacity_bound": "270859837/100000000", "worker_cpu_seconds": 0.02899739, "peak_rss_kib": 15992}
+{"case": "Q022", "scope": "ordered-chain", "repeat": 0, "capacity_bound": "270859837/100000000", "worker_cpu_seconds": 0.011995811999999998, "peak_rss_kib": 15960}
+{"case": "Q023", "scope": "all-pairs", "repeat": 0, "capacity_bound": "6598251/3125000", "worker_cpu_seconds": 0.028995118, "peak_rss_kib": 16316}
+{"case": "Q023", "scope": "ordered-chain", "repeat": 0, "capacity_bound": "6598251/3125000", "worker_cpu_seconds": 0.012995332999999998, "peak_rss_kib": 15756}
+{"case": "Q024", "scope": "all-pairs", "repeat": 0, "capacity_bound": "1265439/781250", "worker_cpu_seconds": 0.028994867, "peak_rss_kib": 16300}
+{"case": "Q024", "scope": "ordered-chain", "repeat": 0, "capacity_bound": "1265439/781250", "worker_cpu_seconds": 0.012995003000000001, "peak_rss_kib": 16012}
+{"case": "Q025", "scope": "all-pairs", "repeat": 0, "capacity_bound": "1", "worker_cpu_seconds": 0.024995291, "peak_rss_kib": 15996}
+{"case": "Q025", "scope": "ordered-chain", "repeat": 0, "capacity_bound": "1", "worker_cpu_seconds": 0.010995209000000002, "peak_rss_kib": 15760}
+{"case": "Q026", "scope": "all-pairs", "repeat": 0, "capacity_bound": "1", "worker_cpu_seconds": 0.024981219, "peak_rss_kib": 16092}
+{"case": "Q026", "scope": "ordered-chain", "repeat": 0, "capacity_bound": "1", "worker_cpu_seconds": 0.010996612000000003, "peak_rss_kib": 15760}
+{"case": "Q027", "scope": "all-pairs", "repeat": 0, "capacity_bound": "1", "worker_cpu_seconds": 0.024996172999999997, "peak_rss_kib": 16304}
+{"case": "Q027", "scope": "ordered-chain", "repeat": 0, "capacity_bound": "1", "worker_cpu_seconds": 0.010996471999999997, "peak_rss_kib": 15768}
+{"case": "S001", "scope": "all-pairs", "repeat": 0, "capacity_bound": "167/144", "worker_cpu_seconds": 0.002997800999999998, "peak_rss_kib": 15804}
+{"case": "S001", "scope": "ordered-chain", "repeat": 0, "capacity_bound": "167/144", "worker_cpu_seconds": 0.0019974489999999984, "peak_rss_kib": 15632}
+{"case": "S002", "scope": "all-pairs", "repeat": 0, "capacity_bound": "26831/20736", "worker_cpu_seconds": 0.0029971500000000005, "peak_rss_kib": 15728}
+{"case": "S002", "scope": "ordered-chain", "repeat": 0, "capacity_bound": "26831/20736", "worker_cpu_seconds": 0.0019773150000000003, "peak_rss_kib": 15496}
+{"case": "S003", "scope": "all-pairs", "repeat": 0, "capacity_bound": "645604511/429981696", "worker_cpu_seconds": 0.004996942999999997, "peak_rss_kib": 15788}
+{"case": "S003", "scope": "ordered-chain", "repeat": 0, "capacity_bound": "645604511/429981696", "worker_cpu_seconds": 0.003995499000000003, "peak_rss_kib": 15580}
+{"case": "S004", "scope": "all-pairs", "repeat": 0, "capacity_bound": "127/108", "worker_cpu_seconds": 0.005997434999999999, "peak_rss_kib": 15472}
+{"case": "S004", "scope": "ordered-chain", "repeat": 0, "capacity_bound": "127/108", "worker_cpu_seconds": 0.002996348999999999, "peak_rss_kib": 15596}
+{"case": "S005", "scope": "all-pairs", "repeat": 0, "capacity_bound": "185447/139968", "worker_cpu_seconds": 0.006996656, "peak_rss_kib": 15728}
+{"case": "S005", "scope": "ordered-chain", "repeat": 0, "capacity_bound": "185447/139968", "worker_cpu_seconds": 0.003996501000000003, "peak_rss_kib": 15704}
+{"case": "S006", "scope": "all-pairs", "repeat": 0, "capacity_bound": "360949614079/235092492288", "worker_cpu_seconds": 0.010994949, "peak_rss_kib": 15884}
+{"case": "S006", "scope": "ordered-chain", "repeat": 0, "capacity_bound": "360949614079/235092492288", "worker_cpu_seconds": 0.007995075, "peak_rss_kib": 15716}
+{"case": "S007", "scope": "all-pairs", "repeat": 0, "capacity_bound": "127/108", "worker_cpu_seconds": 0.011996283, "peak_rss_kib": 15840}
+{"case": "S007", "scope": "ordered-chain", "repeat": 0, "capacity_bound": "127/108", "worker_cpu_seconds": 0.008996318000000003, "peak_rss_kib": 15916}
+{"case": "S008", "scope": "all-pairs", "repeat": 0, "capacity_bound": "61793/46656", "worker_cpu_seconds": 0.0179953, "peak_rss_kib": 16048}
+{"case": "S008", "scope": "ordered-chain", "repeat": 0, "capacity_bound": "61793/46656", "worker_cpu_seconds": 0.012996965000000003, "peak_rss_kib": 15816}
+{"case": "S009", "scope": "all-pairs", "repeat": 0, "capacity_bound": "359274496421/235092492288", "worker_cpu_seconds": 0.028994556999999997, "peak_rss_kib": 16304}
+{"case": "S009", "scope": "ordered-chain", "repeat": 0, "capacity_bound": "359274496421/235092492288", "worker_cpu_seconds": 0.020994023, "peak_rss_kib": 16176}
+{"case": "S010", "scope": "all-pairs", "repeat": 0, "capacity_bound": "13111/10000", "worker_cpu_seconds": 0.012996134, "peak_rss_kib": 16048}
+{"case": "S010", "scope": "ordered-chain", "repeat": 0, "capacity_bound": "13111/10000", "worker_cpu_seconds": 0.003993245999999999, "peak_rss_kib": 15688}
+{"case": "S011", "scope": "all-pairs", "repeat": 0, "capacity_bound": "158567839/100000000", "worker_cpu_seconds": 0.012995302999999996, "peak_rss_kib": 15836}
+{"case": "S011", "scope": "ordered-chain", "repeat": 0, "capacity_bound": "158567839/100000000", "worker_cpu_seconds": 0.005995531999999998, "peak_rss_kib": 15792}
+{"case": "S012", "scope": "all-pairs", "repeat": 0, "capacity_bound": "20472559297357039/10000000000000000", "worker_cpu_seconds": 0.022996269, "peak_rss_kib": 16172}
+{"case": "S012", "scope": "ordered-chain", "repeat": 0, "capacity_bound": "20472559297357039/10000000000000000", "worker_cpu_seconds": 0.009997922, "peak_rss_kib": 15920}
+{"case": "S013", "scope": "all-pairs", "repeat": 0, "capacity_bound": "1667/1250", "worker_cpu_seconds": 0.023996230999999996, "peak_rss_kib": 16104}
+{"case": "S013", "scope": "ordered-chain", "repeat": 0, "capacity_bound": "1667/1250", "worker_cpu_seconds": 0.008996988999999997, "peak_rss_kib": 15920}
+{"case": "S014", "scope": "all-pairs", "repeat": 0, "capacity_bound": "16159759/10000000", "worker_cpu_seconds": 0.028995768, "peak_rss_kib": 16108}
+{"case": "S014", "scope": "ordered-chain", "repeat": 0, "capacity_bound": "16159759/10000000", "worker_cpu_seconds": 0.012995303, "peak_rss_kib": 15844}
+{"case": "S015", "scope": "all-pairs", "repeat": 0, "capacity_bound": "10343235108502409/5000000000000000", "worker_cpu_seconds": 0.050994439999999995, "peak_rss_kib": 16700}
+{"case": "S015", "scope": "ordered-chain", "repeat": 0, "capacity_bound": "10343235108502409/5000000000000000", "worker_cpu_seconds": 0.021996237999999998, "peak_rss_kib": 16140}
+{"case": "S016", "scope": "all-pairs", "repeat": 0, "capacity_bound": "1667/1250", "worker_cpu_seconds": 0.057991336000000004, "peak_rss_kib": 16728}
+{"case": "S016", "scope": "ordered-chain", "repeat": 0, "capacity_bound": "1667/1250", "worker_cpu_seconds": 0.024994890999999998, "peak_rss_kib": 16140}
+{"case": "S017", "scope": "all-pairs", "repeat": 0, "capacity_bound": "3227739/2000000", "worker_cpu_seconds": 0.078993783, "peak_rss_kib": 17160}
+{"case": "S017", "scope": "ordered-chain", "repeat": 0, "capacity_bound": "3227739/2000000", "worker_cpu_seconds": 0.035995699000000006, "peak_rss_kib": 16428}
+{"case": "S018", "scope": "all-pairs", "repeat": 0, "capacity_bound": "40741428633609/20000000000000", "worker_cpu_seconds": 0.143975345, "peak_rss_kib": 17860}
+{"case": "S018", "scope": "ordered-chain", "repeat": 0, "capacity_bound": "40741428633609/20000000000000", "worker_cpu_seconds": 0.058995294000000004, "peak_rss_kib": 16772}
+{"case": "S019", "scope": "all-pairs", "repeat": 0, "capacity_bound": "148957/104976", "worker_cpu_seconds": 0.051983797, "peak_rss_kib": 16816}
+{"case": "S019", "scope": "ordered-chain", "repeat": 0, "capacity_bound": "148957/104976", "worker_cpu_seconds": 0.008994876000000002, "peak_rss_kib": 15724}
+{"case": "S020", "scope": "all-pairs", "repeat": 0, "capacity_bound": "19917896245/11019960576", "worker_cpu_seconds": 0.053947374000000006, "peak_rss_kib": 16652}
+{"case": "S020", "scope": "ordered-chain", "repeat": 0, "capacity_bound": "19917896245/11019960576", "worker_cpu_seconds": 0.013674026000000002, "peak_rss_kib": 15744}
+{"case": "S021", "scope": "all-pairs", "repeat": 0, "capacity_bound": "304496806542522805285/121439531096594251776", "worker_cpu_seconds": 0.089994811, "peak_rss_kib": 17260}
+{"case": "S021", "scope": "ordered-chain", "repeat": 0, "capacity_bound": "304496806542522805285/121439531096594251776", "worker_cpu_seconds": 0.020994875, "peak_rss_kib": 15980}
+{"case": "S022", "scope": "all-pairs", "repeat": 0, "capacity_bound": "18997/13122", "worker_cpu_seconds": 0.10199477900000001, "peak_rss_kib": 17712}
+{"case": "S022", "scope": "ordered-chain", "repeat": 0, "capacity_bound": "18997/13122", "worker_cpu_seconds": 0.020997479, "peak_rss_kib": 15980}
+{"case": "S023", "scope": "all-pairs", "repeat": 0, "capacity_bound": "1266971501/688747536", "worker_cpu_seconds": 0.119994857, "peak_rss_kib": 17772}
+{"case": "S023", "scope": "ordered-chain", "repeat": 0, "capacity_bound": "1266971501/688747536", "worker_cpu_seconds": 0.029974732000000004, "peak_rss_kib": 16132}
+{"case": "S024", "scope": "all-pairs", "repeat": 0, "capacity_bound": "38320874314136654287/15179941387074281472", "worker_cpu_seconds": 0.213970766, "peak_rss_kib": 20036}
+{"case": "S024", "scope": "ordered-chain", "repeat": 0, "capacity_bound": "38320874314136654287/15179941387074281472", "worker_cpu_seconds": 0.050976072, "peak_rss_kib": 16776}
+{"case": "S025", "scope": "all-pairs", "repeat": 0, "capacity_bound": "18997/13122", "worker_cpu_seconds": 0.24297172199999997, "peak_rss_kib": 20336}
+{"case": "S025", "scope": "ordered-chain", "repeat": 0, "capacity_bound": "18997/13122", "worker_cpu_seconds": 0.055989399999999995, "peak_rss_kib": 16468}
+{"case": "S026", "scope": "all-pairs", "repeat": 0, "capacity_bound": "5057266031/2754990144", "worker_cpu_seconds": 0.346925033, "peak_rss_kib": 23436}
+{"case": "S026", "scope": "ordered-chain", "repeat": 0, "capacity_bound": "5057266031/2754990144", "worker_cpu_seconds": 0.081978094, "peak_rss_kib": 17108}
+{"case": "S027", "scope": "all-pairs", "repeat": 0, "capacity_bound": "150610638973649811037/60719765548297125888", "worker_cpu_seconds": 0.599909811, "peak_rss_kib": 31272}
+{"case": "S027", "scope": "ordered-chain", "repeat": 0, "capacity_bound": "150610638973649811037/60719765548297125888", "worker_cpu_seconds": 0.138995056, "peak_rss_kib": 18944}
+{"case": "S028", "scope": "all-pairs", "repeat": 0, "capacity_bound": "1984785/1336336", "worker_cpu_seconds": 0.234915043, "peak_rss_kib": 18492}
+{"case": "S028", "scope": "ordered-chain", "repeat": 0, "capacity_bound": "1984785/1336336", "worker_cpu_seconds": 0.018979599000000003, "peak_rss_kib": 16008}
+{"case": "S029", "scope": "all-pairs", "repeat": 0, "capacity_bound": "3482202709433/1785793904896", "worker_cpu_seconds": 0.22397155200000002, "peak_rss_kib": 20464}
+{"case": "S029", "scope": "ordered-chain", "repeat": 0, "capacity_bound": "3482202709433/1785793904896", "worker_cpu_seconds": 0.027997239, "peak_rss_kib": 16304}
+{"case": "S030", "scope": "all-pairs", "repeat": 0, "capacity_bound": "9013435616319042053091529/3189059870763703892770816", "worker_cpu_seconds": 0.38694697, "peak_rss_kib": 24328}
+{"case": "S030", "scope": "ordered-chain", "repeat": 0, "capacity_bound": "9013435616319042053091529/3189059870763703892770816", "worker_cpu_seconds": 0.046999110999999996, "peak_rss_kib": 16688}
+{"case": "S031", "scope": "all-pairs", "repeat": 0, "capacity_bound": "14905/9826", "worker_cpu_seconds": 0.46389728, "peak_rss_kib": 22380}
+{"case": "S031", "scope": "ordered-chain", "repeat": 0, "capacity_bound": "14905/9826", "worker_cpu_seconds": 0.043995582000000005, "peak_rss_kib": 16348}
+{"case": "S032", "scope": "all-pairs", "repeat": 0, "capacity_bound": "110578556345/55806059528", "worker_cpu_seconds": 0.503959734, "peak_rss_kib": 26892}
+{"case": "S032", "scope": "ordered-chain", "repeat": 0, "capacity_bound": "110578556345/55806059528", "worker_cpu_seconds": 0.06299659199999999, "peak_rss_kib": 17036}
+{"case": "S033", "scope": "all-pairs", "repeat": 0, "capacity_bound": "2268290566701700508973047/797264967690925973192704", "worker_cpu_seconds": 0.890893246, "peak_rss_kib": 37604}
+{"case": "S033", "scope": "ordered-chain", "repeat": 0, "capacity_bound": "2268290566701700508973047/797264967690925973192704", "worker_cpu_seconds": 0.10797032100000001, "peak_rss_kib": 17976}
+{"case": "S034", "scope": "all-pairs", "repeat": 0, "capacity_bound": "14905/9826", "worker_cpu_seconds": 1.078863677, "peak_rss_kib": 38552}
+{"case": "S034", "scope": "ordered-chain", "repeat": 0, "capacity_bound": "14905/9826", "worker_cpu_seconds": 0.120994467, "peak_rss_kib": 18096}
+{"case": "S035", "scope": "all-pairs", "repeat": 0, "capacity_bound": "441394652745/223224238112", "worker_cpu_seconds": 1.403887469, "peak_rss_kib": 51232}
+{"case": "S035", "scope": "ordered-chain", "repeat": 0, "capacity_bound": "441394652745/223224238112", "worker_cpu_seconds": 0.171940646, "peak_rss_kib": 19768}
+{"case": "S036", "scope": "all-pairs", "repeat": 0, "capacity_bound": "2229655204063652893915905/797264967690925973192704", "worker_cpu_seconds": 2.625606084, "peak_rss_kib": 80564}
+{"case": "S036", "scope": "ordered-chain", "repeat": 0, "capacity_bound": "2229655204063652893915905/797264967690925973192704", "worker_cpu_seconds": 0.30990303399999997, "peak_rss_kib": 22728}
+{"case": "A001", "scope": "all-pairs", "repeat": 0, "capacity_bound": "1264/625", "worker_cpu_seconds": 0.022995107999999997, "peak_rss_kib": 16180}
+{"case": "A001", "scope": "ordered-chain", "repeat": 0, "capacity_bound": "1264/625", "worker_cpu_seconds": 0.008996328000000001, "peak_rss_kib": 15856}
+{"case": "A002", "scope": "all-pairs", "repeat": 0, "capacity_bound": "5561/2500", "worker_cpu_seconds": 0.028995768, "peak_rss_kib": 16560}
+{"case": "A002", "scope": "ordered-chain", "repeat": 0, "capacity_bound": "5561/2500", "worker_cpu_seconds": 0.009995209000000001, "peak_rss_kib": 15528}
+{"case": "A003", "scope": "all-pairs", "repeat": 0, "capacity_bound": "1", "worker_cpu_seconds": 0.021995146, "peak_rss_kib": 15980}
+{"case": "A003", "scope": "ordered-chain", "repeat": 0, "capacity_bound": "1", "worker_cpu_seconds": 0.007996908, "peak_rss_kib": 15592}
+{"case": "A004", "scope": "all-pairs", "repeat": 0, "capacity_bound": "2", "worker_cpu_seconds": 0.0019964579999999996, "peak_rss_kib": 15756}
+{"case": "A005", "scope": "all-pairs", "repeat": 0, "capacity_bound": "2", "worker_cpu_seconds": 0.001997780000000001, "peak_rss_kib": 15468}
+{"case": "A006", "scope": "all-pairs", "repeat": 0, "capacity_bound": "4307/2500", "worker_cpu_seconds": 0.023996241999999997, "peak_rss_kib": 16184}
+{"case": "A006", "scope": "ordered-chain", "repeat": 0, "capacity_bound": "4307/2500", "worker_cpu_seconds": 0.008996147999999999, "peak_rss_kib": 15704}
+{"case": "A007", "scope": "all-pairs", "repeat": 0, "capacity_bound": "1", "worker_cpu_seconds": 0.008995898000000002, "peak_rss_kib": 15636}
+{"case": "A007", "scope": "ordered-chain", "repeat": 0, "capacity_bound": "1", "worker_cpu_seconds": 0.004996472999999998, "peak_rss_kib": 15804}
+{"case": "A008", "scope": "all-pairs", "repeat": 0, "capacity_bound": "9577/5000", "worker_cpu_seconds": 0.033995025, "peak_rss_kib": 16688}
+{"case": "A008", "scope": "ordered-chain", "repeat": 0, "capacity_bound": "9577/5000", "worker_cpu_seconds": 0.010995350000000001, "peak_rss_kib": 15708}
+{"case": "A009", "scope": "all-pairs", "repeat": 0, "capacity_bound": "63/32", "worker_cpu_seconds": 0.017995350999999996, "peak_rss_kib": 15964}
+{"case": "A009", "scope": "ordered-chain", "repeat": 0, "capacity_bound": "63/32", "worker_cpu_seconds": 0.006995513999999998, "peak_rss_kib": 15700}
+{"case": "A010", "scope": "all-pairs", "repeat": 0, "capacity_bound": "316/125", "worker_cpu_seconds": 0.025985078, "peak_rss_kib": 16396}
+{"case": "A010", "scope": "ordered-chain", "repeat": 0, "capacity_bound": "316/125", "worker_cpu_seconds": 0.008996058000000001, "peak_rss_kib": 15832}
+{"case": "S018", "scope": "ordered-chain", "repeat": 1, "capacity_bound": "40741428633609/20000000000000", "worker_cpu_seconds": 0.058926041, "peak_rss_kib": 16776}
+{"case": "S018", "scope": "all-pairs", "repeat": 1, "capacity_bound": "40741428633609/20000000000000", "worker_cpu_seconds": 0.10799429799999999, "peak_rss_kib": 18092}
+{"case": "S018", "scope": "all-pairs", "repeat": 2, "capacity_bound": "40741428633609/20000000000000", "worker_cpu_seconds": 0.10798899, "peak_rss_kib": 18060}
+{"case": "S018", "scope": "ordered-chain", "repeat": 2, "capacity_bound": "40741428633609/20000000000000", "worker_cpu_seconds": 0.059995736, "peak_rss_kib": 16784}
+{"case": "S018", "scope": "ordered-chain", "repeat": 3, "capacity_bound": "40741428633609/20000000000000", "worker_cpu_seconds": 0.058984338000000004, "peak_rss_kib": 16944}
+{"case": "S018", "scope": "all-pairs", "repeat": 3, "capacity_bound": "40741428633609/20000000000000", "worker_cpu_seconds": 0.10798602500000001, "peak_rss_kib": 17900}
+{"case": "S018", "scope": "all-pairs", "repeat": 4, "capacity_bound": "40741428633609/20000000000000", "worker_cpu_seconds": 0.118994485, "peak_rss_kib": 18060}
+{"case": "S018", "scope": "ordered-chain", "repeat": 4, "capacity_bound": "40741428633609/20000000000000", "worker_cpu_seconds": 0.059983067, "peak_rss_kib": 16908}
+{"case": "S018", "scope": "ordered-chain", "repeat": 5, "capacity_bound": "40741428633609/20000000000000", "worker_cpu_seconds": 0.05971471700000001, "peak_rss_kib": 16732}
+{"case": "S018", "scope": "all-pairs", "repeat": 5, "capacity_bound": "40741428633609/20000000000000", "worker_cpu_seconds": 0.108995321, "peak_rss_kib": 17936}
+{"case": "S027", "scope": "ordered-chain", "repeat": 1, "capacity_bound": "150610638973649811037/60719765548297125888", "worker_cpu_seconds": 0.138994646, "peak_rss_kib": 18976}
+{"case": "S027", "scope": "all-pairs", "repeat": 1, "capacity_bound": "150610638973649811037/60719765548297125888", "worker_cpu_seconds": 0.51296093, "peak_rss_kib": 31176}
+{"case": "S027", "scope": "all-pairs", "repeat": 2, "capacity_bound": "150610638973649811037/60719765548297125888", "worker_cpu_seconds": 0.511929209, "peak_rss_kib": 31460}
+{"case": "S027", "scope": "ordered-chain", "repeat": 2, "capacity_bound": "150610638973649811037/60719765548297125888", "worker_cpu_seconds": 0.137994333, "peak_rss_kib": 18872}
+{"case": "S027", "scope": "ordered-chain", "repeat": 3, "capacity_bound": "150610638973649811037/60719765548297125888", "worker_cpu_seconds": 0.13897702, "peak_rss_kib": 18752}
+{"case": "S027", "scope": "all-pairs", "repeat": 3, "capacity_bound": "150610638973649811037/60719765548297125888", "worker_cpu_seconds": 0.5039385999999999, "peak_rss_kib": 31248}
+{"case": "S027", "scope": "all-pairs", "repeat": 4, "capacity_bound": "150610638973649811037/60719765548297125888", "worker_cpu_seconds": 0.50791893, "peak_rss_kib": 31288}
+{"case": "S027", "scope": "ordered-chain", "repeat": 4, "capacity_bound": "150610638973649811037/60719765548297125888", "worker_cpu_seconds": 0.13794737399999998, "peak_rss_kib": 18988}
+{"case": "S027", "scope": "ordered-chain", "repeat": 5, "capacity_bound": "150610638973649811037/60719765548297125888", "worker_cpu_seconds": 0.139993957, "peak_rss_kib": 18752}
+{"case": "S027", "scope": "all-pairs", "repeat": 5, "capacity_bound": "150610638973649811037/60719765548297125888", "worker_cpu_seconds": 0.5149292919999999, "peak_rss_kib": 31456}
+{"case": "S036", "scope": "ordered-chain", "repeat": 1, "capacity_bound": "2229655204063652893915905/797264967690925973192704", "worker_cpu_seconds": 0.306850469, "peak_rss_kib": 22868}
+{"case": "S036", "scope": "all-pairs", "repeat": 1, "capacity_bound": "2229655204063652893915905/797264967690925973192704", "worker_cpu_seconds": 2.363057557, "peak_rss_kib": 80556}
+{"case": "S036", "scope": "all-pairs", "repeat": 2, "capacity_bound": "2229655204063652893915905/797264967690925973192704", "worker_cpu_seconds": 2.3367343000000003, "peak_rss_kib": 80392}
+{"case": "S036", "scope": "ordered-chain", "repeat": 2, "capacity_bound": "2229655204063652893915905/797264967690925973192704", "worker_cpu_seconds": 0.304924781, "peak_rss_kib": 22904}
+{"case": "S036", "scope": "ordered-chain", "repeat": 3, "capacity_bound": "2229655204063652893915905/797264967690925973192704", "worker_cpu_seconds": 0.336144316, "peak_rss_kib": 22728}
+{"case": "S036", "scope": "all-pairs", "repeat": 3, "capacity_bound": "2229655204063652893915905/797264967690925973192704", "worker_cpu_seconds": 2.335608049, "peak_rss_kib": 80396}
+{"case": "S036", "scope": "all-pairs", "repeat": 4, "capacity_bound": "2229655204063652893915905/797264967690925973192704", "worker_cpu_seconds": 2.374619687, "peak_rss_kib": 80596}
+{"case": "S036", "scope": "ordered-chain", "repeat": 4, "capacity_bound": "2229655204063652893915905/797264967690925973192704", "worker_cpu_seconds": 0.30995877099999997, "peak_rss_kib": 22724}
+{"case": "S036", "scope": "ordered-chain", "repeat": 5, "capacity_bound": "2229655204063652893915905/797264967690925973192704", "worker_cpu_seconds": 0.31190470800000003, "peak_rss_kib": 22868}
+{"case": "S036", "scope": "all-pairs", "repeat": 5, "capacity_bound": "2229655204063652893915905/797264967690925973192704", "worker_cpu_seconds": 2.368684789, "peak_rss_kib": 80664}
+{
+  "successful": true,
+  "models": 73,
+  "dense": 73,
+  "ordered": 71,
+  "ordered_index_convention": "supplied label indices; no automatic relabeling",
+  "oracle_models": 40,
+  "repetition_runs": 30,
+  "all_ordered_bounds_equal": true,
+  "all_oracles_below_bounds": true,
+  "maximum_oracle_nodes": 80,
+  "maximum_potential_value_bits": 82,
+  "aggregate_rational_complexity": {
+    "field_set": [
+      "capacity_bound",
+      "best_star_bound",
+      "chain_bound",
+      "uniform_cover_bound",
+      "exact_capacity",
+      "exact_pair_summary_bound"
+    ],
+    "records": 440,
+    "maximum_numerator_bits": 84,
+    "maximum_denominator_bits": 82,
+    "maximum_numerator_witnesses": [
+      {
+        "case": "S033",
+        "scope": "all-pairs",
+        "field": "best_star_bound",
+        "value": "10754792593893929175104371/1594529935381851946385408"
+      },
+      {
+        "case": "S036",
+        "scope": "all-pairs",
+        "field": "best_star_bound",
+        "value": "10479599565704130457832119/1594529935381851946385408"
+      }
+    ],
+    "maximum_denominator_witnesses": [
+      {
+        "case": "S030",
+        "scope": "all-pairs",
+        "field": "capacity_bound",
+        "value": "9013435616319042053091529/3189059870763703892770816"
+      },
+      {
+        "case": "S030",
+        "scope": "all-pairs",
+        "field": "chain_bound",
+        "value": "9013435616319042053091529/3189059870763703892770816"
+      },
+      {
+        "case": "S030",
+        "scope": "ordered-chain",
+        "field": "capacity_bound",
+        "value": "9013435616319042053091529/3189059870763703892770816"
+      }
+    ],
+    "capacity_bound": {
+      "records": 144,
+      "maximum_numerator_bits": 83,
+      "numerator_witnesses": [
+        {
+          "case": "S030",
+          "scope": "all-pairs",
+          "value": "9013435616319042053091529/3189059870763703892770816"
+        },
+        {
+          "case": "S030",
+          "scope": "ordered-chain",
+          "value": "9013435616319042053091529/3189059870763703892770816"
+        }
+      ],
+      "maximum_denominator_bits": 82
+    },
+    "best_star_bound": {
+      "records": 73,
+      "maximum_numerator_bits": 84,
+      "numerator_witnesses": [
+        {
+          "case": "S033",
+          "scope": "all-pairs",
+          "value": "10754792593893929175104371/1594529935381851946385408"
+        },
+        {
+          "case": "S036",
+          "scope": "all-pairs",
+          "value": "10479599565704130457832119/1594529935381851946385408"
+        }
+      ],
+      "maximum_denominator_bits": 81
+    }
+  },
+  "max_rss_kib": 80664,
+  "retained_process_cpu_seconds": 36.032002999999996,
+  "process_cpu_fallback_records": [],
+  "exact_equals_certificate": 10,
+  "median_absolute_gap": 0.07919999999999999,
+  "maximum_absolute_gap": 0.7872,
+  "maximum_gap_case": "Q010",
+  "maximum_relative_bound_ratio": 1.396774193548387,
+  "note": "Exact finite validation, not deployment evidence. Potential-value bit width is distinct from aggregate-result numerator and denominator widths. RSS is an unadjusted process high-water mark including startup. CPU excludes discarded intake/pilot attempts; resource accounting documents allowance separately."
+}
+{
+  "successful": true,
+  "exact_payload_counts": {
+    "inputs": 74,
+    "results/certificates": 144,
+    "results/campaign": 174
+  },
+  "excluded_measurement_fields": [
+    "checking_cpu_seconds",
+    "generation_cpu_seconds",
+    "oracle_cpu_seconds",
+    "peak_rss_kib",
+    "process_cpu_seconds",
+    "process_wall_seconds",
+    "startup_peak_rss_kib",
+    "worker_cpu_seconds",
+    "worker_wall_seconds"
+  ],
+  "fresh_retained_process_cpu_seconds": 36.032002999999996,
+  "fresh_max_rss_kib": 80664,
+  "interpretation": "Clean-extraction reproduction by the same executor; not independent human validation."
+}

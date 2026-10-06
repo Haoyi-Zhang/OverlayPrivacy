@@ -1,0 +1,22 @@
+{
+  "successful": true,
+  "exact_payload_counts": {
+    "inputs": 74,
+    "results/certificates": 144,
+    "results/campaign": 174
+  },
+  "excluded_measurement_fields": [
+    "checking_cpu_seconds",
+    "generation_cpu_seconds",
+    "oracle_cpu_seconds",
+    "peak_rss_kib",
+    "process_cpu_seconds",
+    "process_wall_seconds",
+    "startup_peak_rss_kib",
+    "worker_cpu_seconds",
+    "worker_wall_seconds"
+  ],
+  "fresh_retained_process_cpu_seconds": 36.032002999999996,
+  "fresh_max_rss_kib": 80664,
+  "interpretation": "Clean-extraction reproduction by the same executor; not independent human validation."
+}
