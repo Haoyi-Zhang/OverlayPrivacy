@@ -18,6 +18,12 @@ def minimum_tree(n, distances):
     return edges
 
 
+def _token_actions(t, b, C, R):
+    """Public-state transitions in the existing legal-action order."""
+    return tuple((a, min(C, b-a+int((t+1)%R==0)))
+                 for a in range(2 if b else 1))
+
+
 def make(model, mode="all-pairs"):
     c=model['config']; n=len(c['arrival_rates']); B=c['queue_capacity']
     C=c['token_capacity']; H=c['horizon']; R=c['refill_period']
@@ -30,7 +36,7 @@ def make(model, mode="all-pairs"):
         pairs=[(i,i+1) for i in range(n-1)]
     else:
         pairs=list(combinations(range(n),2))
-    gammas={};values={};distances={}
+    gammas={};values={};distances={};token_actions={}
     for i,j in pairs:
         local={}
         for q,r,a in product(range(B+1),range(B+1),range(2)):
@@ -43,8 +49,10 @@ def make(model, mode="all-pairs"):
         for t in reversed(range(H)):
             for b,q,r in product(range(C+1),range(B+1),range(B+1)):
                 costs=[]
-                for a in range(2 if b else 1):
-                    bn=min(C,b-a+int((t+1)%R==0))
+                # Lazy first use preserves zero-horizon and coupling-error order.
+                if (t,b) not in token_actions:
+                    token_actions[t,b]=_token_actions(t,b,C,R)
+                for a,bn in token_actions[t,b]:
                     costs.append(sum((p*(1 if yi!=yj else v[t+1,bn,qi,qj])
                                       for yi,qi,yj,qj,p in local[q,r,a]),F(0)))
                 v[t,b,q,r]=max(costs)

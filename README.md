@@ -58,6 +58,16 @@ request four concurrent workers. The largest retained main-run high-water mark i
 
 ## Validate retained evidence
 
+The producer reuses legal actions and deterministic token successors once per
+public `(time, tokens)` state within one synthesis call. Preparation is lazy so
+zero horizon performs no token-step work. Queue/pair loops, exact rational
+values, insertion order and every certificate/checker counter are unchanged;
+there is no cross-call cache or measured speedup claim. Six additional portable
+regressions in `tests/test_token_actions.py` compare a test-local analytic-coin
+recursion and cover all admitted time/token/refill arithmetic. The existing
+`tests/run_all.py` discovers them in both CI interpreter modes; the retained
+48-method native run below remains its original historical record.
+
 Run these commands from the repository root:
 
 ```sh
