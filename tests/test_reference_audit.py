@@ -65,9 +65,9 @@ EXPECTED_URLS = {
     "cai2014": "https://doi.org/10.1145/2660267.2660362",
     "juarez2016": "https://doi.org/10.1007/978-3-319-45744-4_2",
     "wang2017": "https://www.usenix.org/conference/usenixsecurity17/technical-sessions/presentation/wang-tao",
-    "alnaami2021": "https://doi.org/10.1109/TDSC.2019.2906390",
+    "alnaami2021": "https://doi.org/10.1109/TDSC.2019.2907240",
     "smith2022": "https://www.usenix.org/conference/usenixsecurity22/presentation/smith",
-    "liu2014": "https://doi.org/10.1109/TDSC.2013.17",
+    "liu2014": "https://doi.org/10.1109/TDSC.2014.2302308",
     "backes2013": "https://www.ndss-symposium.org/ndss2013/ndss-2013-programme/preventing-side-channel-leaks-web-traffic-formal-approach/",
     "snader2011": "https://doi.org/10.1109/TDSC.2010.17",
     "tsang2011": "https://doi.org/10.1109/TDSC.2009.38",
@@ -82,7 +82,7 @@ EXPECTED_URLS = {
     "turkenburg2026": "https://doi.org/10.4230/LIPIcs.CSL.2026.25",
     "desharnais2004": "https://doi.org/10.1016/j.tcs.2003.09.013",
     "vanbreugel2005": "https://doi.org/10.1016/j.tcs.2004.09.035",
-    "bacci2013": "https://doi.org/10.1007/978-3-642-40313-2_7",
+    "bacci2013": "https://doi.org/10.1007/978-3-642-40313-2_9",
     "vlasman2025": "https://doi.org/10.4230/LIPIcs.CONCUR.2025.36",
     "makur2024": "https://doi.org/10.1109/TIT.2024.3367856",
     "makur2025": "https://doi.org/10.1109/ISIT63088.2025.11195488",
@@ -179,7 +179,35 @@ class ReferenceAuditTest(unittest.TestCase):
             self.assertEqual(self.by_key[key]["canonical_url"], url)
             expected_date = ("2026-10-06" if key == "makur2024" else
                              "2026-09-19" if key in current_additions else "2026-09-16")
-            self.assertEqual(self.by_key[key]["metadata_status"], f"manually_checked_{expected_date}")
+            expected_status = ("publisher_metadata_checked"
+                               if key in {"alnaami2021", "liu2014", "bacci2013"}
+                               else f"manually_checked_{expected_date}")
+            self.assertEqual(self.by_key[key]["metadata_status"], expected_status)
+
+    def test_corrected_primary_records_agree_across_consumers(self) -> None:
+        expected = {
+            "bacci2013": ("Computing Behavioral Distances, Compositionally",
+                          "Giorgio Bacci and Giovanni Bacci and Kim G. Larsen and Radu Mardare"),
+            "alnaami2021": ("BiMorphing: A Bi-Directional Bursting Defense Against Website Fingerprinting Attacks",
+                            "Khaled Al-Naami and Amir El-Ghamry and Md Shihabul Islam and Latifur Khan and Bhavani Thuraisingham and Kevin W. Hamlen and Mohammed Alrahmawy and Magdi Z. Rashad"),
+            "liu2014": ("PPTP: Privacy-Preserving Traffic Padding in Web-Based Applications",
+                         "Wen Ming Liu and Lingyu Wang and Pengsu Cheng and Kui Ren and Shunzhi Zhu and Mourad Debbabi"),
+        }
+        with (REPO / "external_resources.csv").open(newline="", encoding="utf-8") as handle:
+            resources = list(csv.DictReader(handle))
+        bib_path = PROJECT_PAPER / "references.bib"
+        entries = parse_bib(bib_path.read_text(encoding="utf-8")) if bib_path.exists() else None
+        for key, (title, authors) in expected.items():
+            self.assertEqual(title, self.by_key[key]["title"])
+            self.assertEqual(authors, self.by_key[key]["authors"])
+            url = EXPECTED_URLS[key]
+            if key in {"alnaami2021", "liu2014"}:
+                matching = [row for row in resources if row["name"] == title]
+                self.assertEqual(1, len(matching))
+                self.assertEqual(url, matching[0]["scholarly_or_official_url"])
+            if entries is not None:
+                _, fields = entries[key]
+                self.assertEqual(url.removeprefix("https://doi.org/"), fields["doi"])
 
     def test_calibration_counts_are_explicit(self) -> None:
         calibrated = {row["key"] for row in self.rows if row["full_text_calibration"] == "yes"}
