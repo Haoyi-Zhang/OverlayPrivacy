@@ -236,7 +236,7 @@ binding. Ordered equivalence additionally requires one common order of rates and
 initial queues, the explicit grand coupling, and exact canonical backward values.
 The generic `tree` scope makes no equivalence claim about omitted pairs.
 
-## Licensing, provenance, and AI disclosure
+## Licensing and provenance
 
 The MIT license applies to this repository's original code, documentation, proofs,
 and constructed inputs. It does not apply to cited papers, IEEE template assets,
