@@ -72,7 +72,7 @@ EXPECTED_URLS = {
     "snader2011": "https://doi.org/10.1109/TDSC.2010.17",
     "tsang2011": "https://doi.org/10.1109/TDSC.2009.38",
     "shen2022": "https://doi.org/10.1109/TDSC.2021.3052831",
-    "wu2021": "https://doi.org/10.1109/TDSC.2019.2949813",
+    "wu2021": "https://doi.org/10.1109/TDSC.2019.2948835",
     "wang2010stepping": "https://doi.org/10.1109/TDSC.2010.35",
     "smith2009": "https://doi.org/10.1007/978-3-642-00596-1_21",
     "alvim2012": "https://doi.org/10.1007/978-3-642-22012-8_4",
@@ -180,7 +180,7 @@ class ReferenceAuditTest(unittest.TestCase):
             expected_date = ("2026-10-06" if key == "makur2024" else
                              "2026-09-19" if key in current_additions else "2026-09-16")
             expected_status = ("publisher_metadata_checked"
-                               if key in {"alnaami2021", "liu2014", "bacci2013"}
+                               if key in {"alnaami2021", "liu2014", "bacci2013", "wu2021"}
                                else f"manually_checked_{expected_date}")
             self.assertEqual(self.by_key[key]["metadata_status"], expected_status)
 
@@ -211,12 +211,30 @@ class ReferenceAuditTest(unittest.TestCase):
 
     def test_calibration_counts_are_explicit(self) -> None:
         calibrated = {row["key"] for row in self.rows if row["full_text_calibration"] == "yes"}
-        self.assertEqual(calibrated, TDSC | INFLUENTIAL | ADJACENT)
+        self.assertEqual(calibrated, (TDSC - {"wu2021"}) | INFLUENTIAL | ADJACENT)
         counts = Counter(row["calibration_category"] for row in self.rows)
-        self.assertEqual(counts["same-venue TDSC"], 12)
+        self.assertEqual(counts["same-venue TDSC"], 11)
         self.assertEqual(counts["influential field paper"], 5)
         self.assertEqual(counts["adjacent venue/theory"], 5)
-        self.assertEqual(counts["metadata_only"], 47)
+        self.assertEqual(counts["metadata_only"], 48)
+
+    def test_oblicomm_identity_agrees_across_consumers(self) -> None:
+        """Identity regression, not automated technical-body certification."""
+        authors = "Pengfei Wu and Robert H. Deng and Qingni Shen and Ximeng Liu and Qi Li and Zhonghai Wu"
+        row = self.by_key["wu2021"]
+        self.assertEqual(authors, row["authors"])
+        self.assertEqual("no", row["full_text_calibration"])
+        self.assertEqual("metadata_only", row["calibration_category"])
+        with (REPO / "external_resources.csv").open(newline="", encoding="utf-8") as handle:
+            matches = [r for r in csv.DictReader(handle) if r["name"] == row["title"]]
+        self.assertEqual(1, len(matches))
+        self.assertEqual(EXPECTED_URLS["wu2021"], matches[0]["scholarly_or_official_url"])
+        self.assertIn("technical body not recovered", matches[0]["supported_claim"])
+        bib_path = PROJECT_PAPER / "references.bib"
+        if bib_path.exists():
+            _, fields = parse_bib(bib_path.read_text(encoding="utf-8"))["wu2021"]
+            self.assertEqual(authors, fields["author"])
+            self.assertEqual("10.1109/TDSC.2019.2948835", fields["doi"])
 
     def test_material_corrections_are_frozen(self) -> None:
         self.assertEqual(self.by_key["chaum1981"]["authors"], "David L. Chaum")
