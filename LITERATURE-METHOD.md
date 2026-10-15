@@ -56,5 +56,7 @@ Survey and system papers are used for context, not as theorem substitutes.
 The paper avoids absolute phrases such as “the first method” or “the only
 framework.” The positive contribution is stated as a specific conjunction of
 model, certificate, envelope, and ordered representation. The artifact's
-`novelty-claim-audit.json` enforces this language boundary, while the literature
-freshness report lists remaining uncertainty.
+`tests/test_claim_language.py` checks unsupported absolute-priority wording
+when the sibling manuscript directory is present. The retained observation is
+`results/verification/novelty-claim-audit.json`; it is not itself an executable
+check. The literature freshness report lists remaining uncertainty.

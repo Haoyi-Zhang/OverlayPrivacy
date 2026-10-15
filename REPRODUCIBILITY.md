@@ -10,17 +10,26 @@ resident memory are recorded but excluded from byte-for-byte equality.
 ## Minimal verification
 
 ```sh
-python3 -m compileall -q src tests
-python3 tests/run_all.py
-python3 tests/run_all.py --optimized
-python3 src/checker.py inputs/Q014.json \
+python3 -B src/checker.py inputs/Q014.json \
   results/certificates/Q014-ordered-chain.json
-python3 -O src/checker.py inputs/Q014.json \
+python3 -B -O src/checker.py inputs/Q014.json \
   results/certificates/Q014-ordered-chain.json
-python3 src/reviewer_metrics.py
-python3 src/model_coverage.py
-python3 src/numeric_complexity.py
 ```
+
+These checker calls only read retained inputs. Full tests and derived-data tools
+write reports; use a writable disposable checkout when preserving reference files:
+
+```sh
+python3 -B tests/run_all.py
+python3 -B tests/run_all.py --optimized
+python3 -B src/reviewer_metrics.py
+python3 -B src/model_coverage.py
+python3 -B src/numeric_complexity.py
+```
+
+Tests refresh JSON reports under `results/`; the three extractors rewrite
+their reports under `results/verification/`, and the metrics extractor also
+writes `paper-generated/reviewer-metrics.tex`. They do not rerun campaign timing.
 
 The optimized-mode pass is intentional: native Python `assert` statements are
 removed under `-O`, so the calibration, worker, and summary acceptance paths use
@@ -42,11 +51,11 @@ recomputation. No source/result checksum or snapshot fingerprint is promised.
 
 ```sh
 set -eu
-rm -rf /tmp/linkability-reproduction
-python3 src/campaign.py --out /tmp/linkability-reproduction --start 0 --stop 73
-python3 src/campaign.py --out /tmp/linkability-reproduction --repeats
-python3 src/summarize.py --root /tmp/linkability-reproduction
-python3 tests/compare_reproduction.py --actual /tmp/linkability-reproduction
+work=$(mktemp -d "${TMPDIR:-/tmp}/linkability-reproduction.XXXXXX")
+python3 -B src/campaign.py --out "$work" --start 0 --stop 73
+python3 -B src/campaign.py --out "$work" --repeats
+python3 -B src/summarize.py --root "$work"
+python3 -B tests/compare_reproduction.py --actual "$work"
 ```
 
 Run in a fresh extraction of the delivered repository. Set `PYTHONHASHSEED` to

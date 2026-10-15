@@ -1,246 +1,83 @@
 # Worst-case linkability certificates
 
-This standalone exact-rational artifact supports the internal research manuscript
-*Worst-Case Linkability Certificates for Finite Rate-Limited Overlays*. It studies
-an owned finite reservation-charged queue abstraction. It is not a deployed
-privacy system, a traffic-analysis tool, or a source of operational linkage
-policies. The ordered theorem preserves the dense **canonical certificate bound**;
-it does not compute exact disclosure for every queue or prove conformance of a
-real network implementation.
+An exact-rational artifact for *Worst-Case Linkability Certificates for Finite Rate-Limited Overlays*. It studies constructed finite reservation-charged queues. The ordered theorem preserves the dense canonical certificate bound, not exact disclosure for every queue or conformance of a deployed network. No captured traffic, personal data, live service, operational linkage policy, solver, GPU, external compute, model API, or third-party implementation is needed.
 
-No captured traffic, personal data, live service, GPU, external compute, model
-API, solver, or third-party implementation is required. Python's standard library
-is sufficient.
+## Requirements and read-only smoke check
 
-## Repository map and trust boundary
-
-- `proofs/guarantees.md` contains the complete handwritten mathematical arguments.
-- `src/model.py` expands the declared queue semantics.
-- `src/producer.py` synthesizes exact rational couplings, potentials, and trees.
-- `src/checker.py` reconstructs the model and checks exact obligations without
-  importing the producer, campaign driver, or oracle.
-- `src/oracle.py` computes exact scalar public-history capacity for bounded tiny
-  models and emits no policy, estimator, or linking procedure.
-- `inputs/selection.json` freezes the 73-model campaign.
-- `results/certificates/` contains 144 checked certificate encodings.
-- `results/campaign/` contains 144 main records and 30 timing repetitions.
-- `results/tables/` contains summaries derived from retained records.
-- `results/verification/` records the completed clean reproduction.
-- `claim_evidence_ledger.csv` maps every material manuscript claim to proof,
-  executable evidence, raw results, display location, maturity, and recheck.
-- `external_resources.csv` records scholarly and workflow provenance; no cited
-  paper or publisher asset is redistributed or needed by the code.
-- `reference_audit.csv` records the 69 cited works, one unique canonical DOI or
-  official publication page per work, and an explicit split between 22 full-text
-  calibration papers and 47 metadata-only records.
-
-Implementation separation can expose disagreements between code paths, but it is
-not proof-assistant mechanization, a verified compiler, or independent human
-review. Exact arithmetic removes numerical tolerances, not every possible semantic
-or implementation error. The checker accepts only exact declared schemas and
-canonical reduced rational strings, rejects duplicate keys and unknown fields,
-and bounds input size and rational bit width. These parser checks harden the
-certificate interface but do not establish that another system conforms to the
-finite model.
-
-## Requirements and resource limits
-
-Use Python 3 on a Unix-like platform providing the standard-library `resource`
-module. No dependency installation is required. Scientific acceptance paths use
-explicit fail-closed checks rather than native Python `assert`, and the retained
-suite is required to pass both ordinary execution and `python -O`.
-
-Scientific workers run one at a time. Each child has a 40 CPU-second limit, a
-44-second parent wall timeout, and a 3500 MiB address-space cap. The surrounding
-campaign ceiling is four CPUs and 4 GiB RAM with no swap, but the commands do not
-request four concurrent workers. The largest retained main-run high-water mark is
-158,676 KiB (about 155 MiB).
-
-## Validate retained evidence
-
-The producer reuses legal actions and deterministic token successors once per
-public `(time, tokens)` state within one synthesis call. Preparation is lazy so
-zero horizon performs no token-step work. Queue/pair loops, exact rational
-values, insertion order and every certificate/checker counter are unchanged;
-there is no cross-call cache or measured speedup claim. Six additional portable
-regressions in `tests/test_token_actions.py` compare a test-local analytic-coin
-recursion and cover all admitted time/token/refill arithmetic. The existing
-`tests/run_all.py` discovers them in both CI interpreter modes; the retained
-48-method native run below remains its original historical record.
-
-Run these commands from the repository root:
+Use Python 3.10+ and the standard library; there is no package installation. Full campaigns/tests require a Unix-like platform with the `resource` module. The standalone checker does not import that campaign machinery and reads its two input files without writing results:
 
 ```sh
-python3 -m compileall -q src tests
-python3 tests/run_all.py
-python3 tests/run_all.py --optimized
-python3 src/checker.py inputs/Q014.json results/certificates/Q014-ordered-chain.json
-python3 -O src/checker.py inputs/Q014.json results/certificates/Q014-ordered-chain.json
-python3 src/summarize.py
+python3 -B src/checker.py inputs/Q014.json results/certificates/Q014-ordered-chain.json
+python3 -B -O src/checker.py inputs/Q014.json results/certificates/Q014-ordered-chain.json
 ```
 
-Expected scientific outcomes:
+Both report `valid: true` and exact bound `1028/625`; invalid certificates exit 2. The checker independently reconstructs queue semantics and exact Bellman/tree obligations without importing model, producer, or oracle code. It rejects duplicate keys, unknown fields, noncanonical rationals, oversized input, and excess rational bit width. These interface checks do not establish real-network conformance. Details are in `TRUST-BOUNDARY.md`.
 
-- `test_certificates.py`: 15 methods; 854 exhaustive pair-summary matrices,
-  140 fixed-seed summaries, 280 finite channels, 32 basic packet/schema
-  mutations, five ordered-specific mutations, and semantic controls all pass.
-- `test_calibrations.py`: 600 one-slot cases, 108 whole-row continuity cases,
-  and all 70 eligible retained rate-bound cases pass.
-- `test_oracle_bruteforce.py`: an algorithmically separate direct-channel simulator agrees
-  with the scalar dynamic program on 192 exhaustive two-slot model cases and 16
-  deeper cases, covering 4,832 deterministic policy tables in aggregate. It
-  retains scalar optima and counts, never an optimizing policy. Both paths share
-  the declared `model.kernel`; the reference enumeration does not reuse the
-  production recursion, memo table, or certificate/tree algorithms.
-- `test_fail_closed_validation.py`: under ordinary and optimized interpreters,
-  a wrong exact scalar, a copied rate-bound violation, and a corrupt campaign
-  record all exit nonzero and leave no success report or committed scientific
-  output; the test runner also propagates the first nonzero status and does not
-  continue to later tests.
-- `test_reference_audit.py`: 69 unique canonical records pass structural checks;
-  the full-text calibration split is exactly 12 same-venue, five influential,
-  and five adjacent/theory papers, with 47 remaining records marked metadata-only.
-- the Q014 checker invocation reports `valid: true` and exact bound `1028/625`;
-  invalid certificates exit with status 2;
-- the summary verifies 73 models, 144 main certificates, 71 ordered/dense exact
-  equalities, 40 full-secret oracles, 10 exact canonical cases, and all retained
-  structural counts.
+## Tests and retained-data summaries
 
-The test commands refresh `results/tests.json`, `results/calibrations.json`,
-`results/oracle-bruteforce.json`, and `results/reference-audit.json`. Their wall
-time, CPU time, and resident-memory fields may vary; exact scientific counts,
-rational values, and recomputed histograms must not. The semantic metadata makes
-no snapshot-fingerprint promise: the retained oracle record is accepted only
-when required fields, zero failures/errors, exact coverage counts, and a fresh
-scientific-payload recomputation agree. The reference test validates retained
-provenance and manuscript consistency when `paper/` is present; it is not a
-live-Web resolver and does not claim that metadata-only references were read in
-full.
+Run in a writable disposable checkout when preserving every retained report:
 
-`tests/test_complexity_endpoints.py` additionally checks zero-horizon coupling
-and terminal work, denominator-one rational widths, and denominator divisibility
-on 90 owned parameter combinations (180 dense/ordered packets). These regressions
-do not add models to the frozen 73-case campaign.
+```sh
+python3 -B tests/run_all.py
+python3 -B tests/run_all.py --optimized
+python3 -B src/summarize.py
+```
 
-The `Finite scientific checks` workflow is configured for the flat standalone
-artifact repository on Ubuntu 24.04, on pushes to `main`, pull requests, and manual
-dispatch. Its whole scientific sequence has a 900-second wall budget and a
-3500 MiB address-space limit; campaign children retain their narrower limits.
-It runs both interpreter modes and clean regeneration with exact comparisons,
-propagates failures, and uploads raw output and available results even on failure.
-Workflow configuration alone is not evidence that a remote run has passed.
-The current native Ubuntu run passed all 48 methods in each of the normal and
-optimized interpreter modes, then regenerated and exactly compared all 74
-inputs, 144 certificates, and 174 non-timing result payloads. Its campaign
-reported 36.032003 retained process CPU seconds and 80,664 KiB peak RSS. Raw
-test output and fresh summaries are retained in
-`results/measurements/current-linux/`. Historical CPU plots below are unchanged;
-the newer run has a different host environment.
+The test runner executes every `test_*.py` script and stops at the first failure. Scientific acceptance checks remain active with `-O`. Tests refresh reports including `results/tests.json`, `results/calibrations.json`, `results/oracle-bruteforce.json`, and `results/reference-audit.json`; they are not read-only inspection commands. `src/summarize.py` validates all retained main/repetition records and rewrites three files under `results/tables/` only after success; it first removes the old derived success files so failure cannot leave a stale pass.
 
-## Reproduce all scientific results
+The retained certificate suite covers 854 exhaustive pair-summary matrices, 140 fixed-seed summaries, 280 finite channels, packet/schema mutations, and ordered controls. Calibrations cover 600 one-slot cases, 108 whole-row continuity cases, and 70 eligible rate-bound cases. A direct policy-table enumeration agrees with the scalar dynamic program on 192 two-slot and 16 deeper models (4,832 policy tables); both deliberately share `model.kernel`, not an independent semantics. Only scalar values/counts are retained, not optimizing policies. Fail-closed regressions exercise wrong scalars, rate violations, corrupted records, and test-runner failure propagation in both modes.
 
-Use an empty writable directory outside the repository:
+Six token-action regressions compare a test-local analytic recursion and check token/refill arithmetic; endpoint regressions cover zero horizon and rational widths. These do not add campaign models or establish a measured speedup. Synthesis reuses legal actions/token successors within one call, lazily at zero horizon; no cross-call cache is used. Historical native reports with 48 methods per mode remain their original records, not a rerun of later additions.
+
+## Full isolated reproduction
+
+Run from the artifact root. Create a fresh output directory outside it:
 
 ```sh
 set -eu
-python3 src/campaign.py --out /tmp/linkability-reproduction --start 0 --stop 73
-python3 src/campaign.py --out /tmp/linkability-reproduction --repeats
-python3 src/summarize.py --root /tmp/linkability-reproduction
-python3 tests/compare_reproduction.py --actual /tmp/linkability-reproduction
+work=$(mktemp -d "${TMPDIR:-/tmp}/linkability-reproduction.XXXXXX")
+python3 -B src/campaign.py --out "$work" --start 0 --stop 73
+python3 -B src/campaign.py --out "$work" --repeats
+python3 -B src/summarize.py --root "$work"
+python3 -B tests/compare_reproduction.py --actual "$work"
 ```
 
-For short execution windows, split the first command into deterministic intervals,
-for example `[0,5)`, `[5,10)`, through `[70,73)`, using `--start` and `--stop`.
-Repetition work can be split into `[44,45)`, `[53,54)`, and `[62,63)` for the
-three measured scaling cases. This is resumable execution of the same frozen
-selection, not subsampling. Results are written atomically; a failed or timed-out
-child is not counted as success. Use `--overwrite` only to replace a chosen record
-intentionally.
+This regenerates 74 input files including selection metadata, 144 certificate encodings, and 174 main/repetition records. The comparison excludes only the explicit timing/RSS allowlist and writes `$work/results/reproduction.json`; inputs and certificate encodings also require exact bytes. It is same-artifact computational reproduction, not independent human validation.
 
-The completed clean run regenerated and compared:
+For short windows, split main work into `[0,5)`, `[5,10)`, …, `[70,73)` with `--start/--stop`. Repetitions can be split into `[44,45)`, `[53,54)`, and `[62,63)`. These intervals cover the same frozen selection, not subsampling. Existing campaign records are reused unless `--overwrite` is explicitly requested. Results are committed atomically after checks; a failed child is not a pass. Do not run several drivers against the same output directory.
 
-- 74 input files, including selection metadata;
-- 144 full certificate encodings;
-- 174 scientific campaign and repetition records.
+Workers run serially with 40 CPU seconds, a 44-second parent wall timeout, and 3500 MiB address-space cap per child. The configured campaign envelope is four CPUs/4 GiB/no swap, not four concurrent workers. The scientific workflow on Ubuntu 24.04 runs both test modes, the checker, and clean regeneration/comparison within a 900-second scientific-step budget, retaining raw output on failure or success. Material-integrity CI checks files/syntax, not scientific correctness.
 
-`tests/compare_reproduction.py` compares deterministic scientific payloads and
-encodings while excluding only an explicit allowlist of CPU-time and RSS fields.
-It writes `results/reproduction.json` under the fresh output root. The retained
-verification report is `results/verification/clean-reproduction.json`. The final
-retained clean run matched all 74 input, 144 certificate, and 174 result records,
-recording 122.390209 process CPU seconds and 158,740 KiB peak RSS. Same-executor
-clean reproduction is reproducibility evidence, not independent validation.
+## Inputs, results, and data consumers
 
-## Bibliography provenance boundary
+`inputs/selection.json` freezes 73 models: 27 Q, 36 S, and 10 A cases. `results/certificates/` holds 144 encodings; `results/campaign/` holds 144 main records and 30 timing repetitions. `results/tables/` contains derived CSV/scalar summaries. `results/verification/` retains clean-reproduction, numeric-field, coverage, and provenance records.
 
-The manuscript bibliography is relevance-first rather than quota-filled. Each of
-its 69 records has a unique canonical DOI or official publication page in
-`reference_audit.csv`. Twenty-two papers were used for the recorded full-text
-calibration matrix (12 TDSC, five influential field papers, and five adjacent or
-theory papers). The other 47 records were checked at the publication-metadata
-level and are explicitly labeled `metadata_only`; neither this README nor the
-audit represents them as full-text reads. Corrections made during the final audit
-include the Mittal CCS DOI, the Luo TDSC DOI, the journal form of van Breugel--
-Worrell, the final PriFi record, and the peer-reviewed ISIT form of Makur--Singh.
-A 2026 freshness scan also adds the current ACM website-fingerprinting survey and
-the CSL lower-bound-witness paper while recording additional theory-boundary
-sources in `results/verification/literature-freshness-2026-09-19.md`. The Doeblin
-paper's DOI was corrected from its author record; Doeblin Curves is a June 2026
-TIT journal article with an arXiv manuscript, not a preprint-only publication.
-These targeted identity and section checks do not imply a new full-text audit
-of all bibliography or novelty-boundary sources.
+`src/model.py` expands the finite semantics; `src/producer.py` synthesizes rational couplings, potentials, and trees. `src/oracle.py` computes bounded tiny-model scalar public-history capacity. `proofs/guarantees.md` contains the written arguments. Exact arithmetic removes rounding tolerance, not specification/implementation risk or the need for the general proof.
 
-Canonical identifiers make the audit inspectable, but metadata can still be
-wrong at a publisher or catalog. Human authors should re-open the cited records
-before external submission, especially where conference and journal versions
-coexist.
+To refresh auxiliary reports from retained observations, use a disposable checkout:
 
-## Main results and interpretation
+```sh
+python3 -B src/reviewer_metrics.py
+python3 -B src/model_coverage.py
+python3 -B src/numeric_complexity.py
+```
 
-All 71 models whose rates and initial queues are jointly nondecreasing in their
-supplied label index have identical adjacent and dense canonical bounds as reduced
-rational numbers. The checker does not search for a relabeling. Frozen A004 and
-A005 are dense-only under that convention, although permutation `(0,2,1)` jointly
-sorts each; regenerated relabeled adjacent and dense bounds both equal `2`.
-Forty tiny models have exact full-history
-oracles; every exact result is below both certificate layers and ten canonical
-bounds are exact. Across these 40 models, the median absolute canonical gap is
-0.0792, the maximum is 0.7872 (Q010), and the maximum bound-to-exact ratio is
-approximately 1.397.
+The metrics extractor writes tightness JSON/CSV under `results/verification/` and `paper-generated/reviewer-metrics.tex`. Coverage/numeric extractors rewrite their corresponding verification reports. None reruns campaign timings. `REPRODUCIBILITY.md` gives the detailed workflow, including the separate full-project paper build.
 
-At the largest tested grid (`m=16`, `B=4`, `H=16`), dense certificates retain
-102,000 potentials and check 144,000 Bellman obligations. Ordered certificates
-retain 12,750 potentials and check 18,000 obligations, an exact 87.5% structural
-reduction, while returning the same fraction. Their retained encodings occupy
-4,279,838 and 542,618 bytes. Five fresh-process repetitions give dense/ordered
-median generation-plus-check CPU times of 2.824/0.383 seconds for this case.
-These timings are historical Linux x86-64, CPython 3.13.5 measurements, whose
-environment record was captured on 2026-09-20, not timings from later local
-exact-value checks. Timing is environment-specific; the pair-count reduction and equality of the
-canonical bounds are the theorem-backed claims.
+## Results and assumptions
 
-The largest numerator or denominator among certificate **potential values** is
-82 bits. This does not bound every aggregate: S030's capacity-bound numerator is
-83 bits, and the best-star numerators for S033 and S036 are 84 bits. The explicit
-field inventory is `results/verification/numeric-complexity.json`.
+All 71 supplied-index ordered models have identical adjacent/dense canonical bounds as reduced fractions. The checker does not search for a relabeling: A004/A005 remain dense-only in the frozen convention, although permutation `(0,2,1)` jointly sorts either, and relabeled adjacent/dense bounds both equal `2`. Forty tiny models have exact full-history oracles; ten canonical bounds are exact. Their median absolute gap is 0.0792, maximum gap 0.7872 (Q010), and maximum bound/exact ratio about 1.397.
 
-The summary-envelope theorem is sharp over arbitrary channels constrained only by
-pairwise TV **upper bounds**. It is not a claim that the witness is a queue channel,
-that every constraint is tight, or that the result optimizes a fixed-prior decision
-problem. The tiny oracle, exact-pair tree, and canonical certificate are separate
-layers and can differ.
+At `m=16, B=4, H=16`, dense/ordered encodings contain 102,000/12,750 potentials and 144,000/18,000 Bellman obligations: 87.5% fewer while retaining the same bound. Encoding sizes are 4,279,838/542,618 bytes. Five historical Linux x86-64/CPython 3.13.5 repetitions have median generation-plus-check CPU times of 2.824/0.383 seconds; the environment record is dated 2026-09-20. These are host-specific observations, not later-check timings or a deployment speed guarantee.
 
-Observation mode, action-before-fresh-randomness timing, common public-history
-scheduling, iid arrivals, reservation-charged tokens, and finite horizon are
-binding. Ordered equivalence additionally requires one common order of rates and
-initial queues, the explicit grand coupling, and exact canonical backward values.
-The generic `tree` scope makes no equivalence claim about omitted pairs.
+Potential values have at most 82 numerator/denominator bits. Aggregates can be wider: S030's capacity numerator is 83 bits and S033/S036 best-star numerators are 84; `results/verification/numeric-complexity.json` records the field distinction.
 
-## Licensing and provenance
+The envelope is sharp over arbitrary channels satisfying pairwise TV upper bounds; its witness need not be a queue channel or make every constraint tight. Tiny oracle, exact-pair summary, and canonical certificate are distinct layers. Binding premises include finite horizon, the observation alphabet, action before fresh randomness, common public-history scheduling, iid arrivals, and reservation-charged tokens. Ordered equivalence also needs a common rate/initial-queue order, the grand coupling, and exact canonical backward values. Generic `tree` scope claims no equivalence for omitted pairs.
 
-The MIT license applies to this repository's original code, documentation, proofs,
-and constructed inputs. It does not apply to cited papers, IEEE template assets,
-or publisher material. External resources are cited or recorded by stable URL and
-are not incorporated into the runtime artifact.
+The retained clean comparison matches all 74/144/174 files and records 122.390209 process CPU seconds/158,740 KiB peak RSS. `results/measurements/current-linux/` separately retains an Ubuntu run with 48 methods per mode and exact regeneration, 36.032003 process CPU seconds/80,664 KiB peak RSS. Historical plots are not relabelled with newer environments.
 
-No independent external validation is asserted. The source repository is [available here](https://github.com/Haoyi-Zhang/OverlayPrivacy-code).
+## Sources and licensing
+
+`claim_evidence_ledger.csv` maps claims to proofs/results; `external_resources.csv` retains source/workflow provenance. `reference_audit.csv` has 69 canonical records, explicitly separating 22 recorded full-text calibration papers (12 same-venue, five influential, five adjacent/theory) from 47 metadata-only entries. A structural audit is not a live resolver or certification of every claim-bearing source body. Reading and version boundaries remain in `LITERATURE-METHOD.md` and retained source records; no scholarly PDFs are redistributed.
+
+MIT (`LICENSE`, `licenses/README.md`) covers original code, documentation, proofs, and constructed data, not cited papers, IEEE template assets, or publisher material. The source repository is [OverlayPrivacy-code](https://github.com/Haoyi-Zhang/OverlayPrivacy-code).
