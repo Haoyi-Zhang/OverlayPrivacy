@@ -80,4 +80,4 @@ The retained clean comparison matches all 74/144/174 files and records 122.39020
 
 `claim_evidence_ledger.csv` maps claims to proofs/results; `external_resources.csv` retains source/workflow provenance. `reference_audit.csv` has 69 canonical records, explicitly separating 22 recorded full-text calibration papers (12 same-venue, five influential, five adjacent/theory) from 47 metadata-only entries. A structural audit is not a live resolver or certification of every claim-bearing source body. Reading and version boundaries remain in `LITERATURE-METHOD.md` and retained source records; no scholarly PDFs are redistributed.
 
-MIT (`LICENSE`, `licenses/README.md`) covers original code, documentation, proofs, and constructed data, not cited papers, IEEE template assets, or publisher material. The source repository is [OverlayPrivacy-code](https://github.com/Haoyi-Zhang/OverlayPrivacy-code).
+MIT (`LICENSE`, `licenses/README.md`) covers original code, documentation, proofs, and constructed data, not cited papers, IEEE template assets, or publisher material. The source repository is [OverlayPrivacy](https://github.com/Haoyi-Zhang/OverlayPrivacy).
