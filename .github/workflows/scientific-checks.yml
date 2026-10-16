@@ -48,6 +48,10 @@ jobs:
           python -B src/summarize.py --root "$EVIDENCE/reproduction"
           python -B tests/compare_reproduction.py --actual "$EVIDENCE/reproduction"
           CHECKS
+      - name: Verify direct-Python threshold schematic
+        run: |
+          python -m pip install -r requirements-figures.txt
+          python -B figures/check_figures.py
       - name: Retain raw attempts and scientific outputs even after failure
         if: always()
         uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02

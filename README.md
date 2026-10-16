@@ -76,6 +76,14 @@ The envelope is sharp over arbitrary channels satisfying pairwise TV upper bound
 
 The retained clean comparison matches all 74/144/174 files and records 122.390209 process CPU seconds/158,740 KiB peak RSS. `results/measurements/current-linux/` separately retains an Ubuntu run with 48 methods per mode and exact regeneration, 36.032003 process CPU seconds/80,664 KiB peak RSS. Historical plots are not relabelled with newer environments.
 
+## Optional vector figure
+
+The threshold-component diagram is drawn directly by Python with embedded fonts.
+Install `requirements-figures.txt`, then run `python -B figures/draw_schematics.py`
+and `python -B figures/check_figures.py`. Use `--output /path/to/paper/figures`
+to regenerate the manuscript copy. This optional drawing dependency does not
+change the standard-library scientific checker or regenerate measurements.
+
 ## Sources and licensing
 
 `claim_evidence_ledger.csv` maps claims to proofs/results; `external_resources.csv` retains source/workflow provenance. `reference_audit.csv` has 69 canonical records, explicitly separating 22 recorded full-text calibration papers (12 same-venue, five influential, five adjacent/theory) from 47 metadata-only entries. A structural audit is not a live resolver or certification of every claim-bearing source body. Reading and version boundaries remain in `LITERATURE-METHOD.md` and retained source records; no scholarly PDFs are redistributed.

@@ -64,6 +64,7 @@ hash-seed test compares two distinct values.
 
 ## Paper build
 
+Install `requirements-figures.txt` for the optional embedded-font schematic.
 From the sibling `paper/` directory in the complete project:
 
 ```sh
