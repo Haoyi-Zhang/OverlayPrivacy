@@ -27,7 +27,7 @@ The test runner executes every `test_*.py` script and stops at the first failure
 
 The retained certificate suite covers 854 exhaustive pair-summary matrices, 140 fixed-seed summaries, 280 finite channels, packet/schema mutations, and ordered controls. Calibrations cover 600 one-slot cases, 108 whole-row continuity cases, and 70 eligible rate-bound cases. A direct policy-table enumeration agrees with the scalar dynamic program on 192 two-slot and 16 deeper models (4,832 policy tables); both deliberately share `model.kernel`, not an independent semantics. Only scalar values/counts are retained, not optimizing policies. Fail-closed regressions exercise wrong scalars, rate violations, corrupted records, and test-runner failure propagation in both modes.
 
-Six token-action regressions compare a test-local analytic recursion and check token/refill arithmetic; endpoint regressions cover zero horizon and rational widths. These do not add campaign models or establish a measured speedup. Synthesis reuses legal actions/token successors within one call, lazily at zero horizon; no cross-call cache is used. Historical native reports with 48 methods per mode remain their original records, not a rerun of later additions.
+Six token-action regressions compare a test-local analytic recursion and check token/refill arithmetic; endpoint regressions cover zero horizon and rational widths. These do not add campaign models or establish a measured speedup. Synthesis reuses legal actions/token successors within one call, lazily at zero horizon; no cross-call cache is used. Historical native reports with 51 methods per mode remain their original records, not a rerun of later additions.
 
 ## Full isolated reproduction
 
@@ -74,7 +74,7 @@ Potential values have at most 82 numerator/denominator bits. Aggregates can be w
 
 The envelope is sharp over arbitrary channels satisfying pairwise TV upper bounds; its witness need not be a queue channel or make every constraint tight. Tiny oracle, exact-pair summary, and canonical certificate are distinct layers. Binding premises include finite horizon, the observation alphabet, action before fresh randomness, common public-history scheduling, iid arrivals, and reservation-charged tokens. Ordered equivalence also needs a common rate/initial-queue order, the grand coupling, and exact canonical backward values. Generic `tree` scope claims no equivalence for omitted pairs.
 
-The retained clean comparison matches all 74/144/174 files and records 122.390209 process CPU seconds/158,740 KiB peak RSS. `results/measurements/current-linux/` separately retains an Ubuntu run with 48 methods per mode and exact regeneration, 36.032003 process CPU seconds/80,664 KiB peak RSS. Historical plots are not relabelled with newer environments.
+The retained clean comparison matches all 74/144/174 files and records 122.390209 process CPU seconds/158,740 KiB peak RSS. `results/measurements/current-linux/` separately retains an Ubuntu run with 51 methods per mode and exact regeneration, 36.032003 process CPU seconds/80,664 KiB peak RSS. Historical plots are not relabelled with newer environments.
 
 ## Optional vector figure
 

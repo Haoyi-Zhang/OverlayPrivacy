@@ -65,6 +65,11 @@ hash-seed test compares two distinct values.
 ## Paper build
 
 Install `requirements-figures.txt` for the optional embedded-font schematic.
+The complete paper build also requires ReportLab for the two retained-observation
+charts. `make all` redraws all three figures without running experiments. It uses
+the original TeX distribution's native Type 1 fonts at
+`$(kpsewhich -var-value=TEXMFDIST)/fonts`; override `FONT_ROOT` if that distribution
+is elsewhere. Both chart `.dat` inputs retain the historical observations.
 From the sibling `paper/` directory in the complete project:
 
 ```sh
